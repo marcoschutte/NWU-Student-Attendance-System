@@ -1,0 +1,8 @@
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.exe.config
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.exe
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.pdb
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.User.resources
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Properties.Resources.resources
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.GenerateResource.Cache
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.exe
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.pdb
