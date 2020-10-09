@@ -19,7 +19,10 @@ namespace Student_Attendance_System
 
         private void btnExitApplication_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult close = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (DialogResult.Yes == close)
+                Application.Exit();
         }
 
         private void btnLecturer_Click(object sender, EventArgs e)

@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lecturer Login.resx">
+      <DependentUpon>Lecturer Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Login.resx">
+      <DependentUpon>Student Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
