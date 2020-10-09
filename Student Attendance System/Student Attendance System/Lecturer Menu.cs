@@ -24,5 +24,23 @@ namespace Student_Attendance_System
             if (DialogResult.Yes == close)
                 Application.Exit();
         }
+
+        private void btnMaintainStudents_Click(object sender, EventArgs e)
+        {
+            Maintain_Students maintainStudents = new Maintain_Students();
+            maintainStudents.Show();
+        }
+
+        private void btnMaintainLecturers_Click(object sender, EventArgs e)
+        {
+            Maintain_Lecturers maintainLecturers = new Maintain_Lecturers();
+            maintainLecturers.Show();
+        }
+
+        private void btnMaintainModules_Click(object sender, EventArgs e)
+        {
+            Maintain_Modules maintainModules = new Maintain_Modules();
+            maintainModules.Show();
+        }
     }
 }

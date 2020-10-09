@@ -74,6 +74,7 @@
             this.btnMaintainStudents.TabIndex = 44;
             this.btnMaintainStudents.Text = "Maintain Students";
             this.btnMaintainStudents.UseVisualStyleBackColor = false;
+            this.btnMaintainStudents.Click += new System.EventHandler(this.btnMaintainStudents_Click);
             // 
             // btnMaintainLecturers
             // 
@@ -87,6 +88,7 @@
             this.btnMaintainLecturers.TabIndex = 45;
             this.btnMaintainLecturers.Text = "Maintain Lecturers";
             this.btnMaintainLecturers.UseVisualStyleBackColor = false;
+            this.btnMaintainLecturers.Click += new System.EventHandler(this.btnMaintainLecturers_Click);
             // 
             // btnMaintainModules
             // 
@@ -100,6 +102,7 @@
             this.btnMaintainModules.TabIndex = 46;
             this.btnMaintainModules.Text = "Maintain Modules";
             this.btnMaintainModules.UseVisualStyleBackColor = false;
+            this.btnMaintainModules.Click += new System.EventHandler(this.btnMaintainModules_Click);
             // 
             // btnStudentAttendance
             // 

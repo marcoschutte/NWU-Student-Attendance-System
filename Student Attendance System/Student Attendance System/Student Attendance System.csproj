@@ -79,6 +79,12 @@
     <Compile Include="Maintain Lecturers.Designer.cs">
       <DependentUpon>Maintain Lecturers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintain Modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain Modules.Designer.cs">
+      <DependentUpon>Maintain Modules.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintain Students.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain Lecturers.resx">
       <DependentUpon>Maintain Lecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain Modules.resx">
+      <DependentUpon>Maintain Modules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain Students.resx">
       <DependentUpon>Maintain Students.cs</DependentUpon>
