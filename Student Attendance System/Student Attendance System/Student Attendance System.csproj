@@ -73,6 +73,12 @@
     <Compile Include="Lecturer Menu.Designer.cs">
       <DependentUpon>Lecturer Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintain Lecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain Lecturers.Designer.cs">
+      <DependentUpon>Maintain Lecturers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintain Students.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Menu.resx">
       <DependentUpon>Lecturer Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain Lecturers.resx">
+      <DependentUpon>Maintain Lecturers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain Students.resx">
       <DependentUpon>Maintain Students.cs</DependentUpon>
