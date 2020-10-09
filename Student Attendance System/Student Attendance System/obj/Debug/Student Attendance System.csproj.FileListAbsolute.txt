@@ -17,3 +17,6 @@ C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Stude
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.User.resources
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Properties.Resources.resources
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.GenerateResource.Cache
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS.mdf
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_log.ldf
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Student_Attendance.resources
