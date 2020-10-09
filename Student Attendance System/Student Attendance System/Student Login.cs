@@ -19,7 +19,22 @@ namespace Student_Attendance_System
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtStudentID.Text = "";
+            txtPassword.Text = "";
+        }
+
+        private void btnStudentLogIn_Click(object sender, EventArgs e)
+        {
+            //if login credentials are valid & exist within STUDENT table --> open student attendance form
+            Student_Attendance studentAttendance = new Student_Attendance();
+            studentAttendance.Show();
         }
     }
 }

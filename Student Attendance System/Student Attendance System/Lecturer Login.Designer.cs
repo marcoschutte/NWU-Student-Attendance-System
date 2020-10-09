@@ -76,6 +76,7 @@
             this.btnClear.TabIndex = 33;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnReturnToMenu
             // 
@@ -89,6 +90,7 @@
             this.btnReturnToMenu.TabIndex = 34;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToMenu.Click += new System.EventHandler(this.btnReturnToMenu_Click);
             // 
             // label5
             // 
@@ -137,6 +139,7 @@
             this.btnLecturerLogIn.TabIndex = 32;
             this.btnLecturerLogIn.Text = "Log In";
             this.btnLecturerLogIn.UseVisualStyleBackColor = false;
+            this.btnLecturerLogIn.Click += new System.EventHandler(this.btnLecturerLogIn_Click);
             // 
             // label4
             // 

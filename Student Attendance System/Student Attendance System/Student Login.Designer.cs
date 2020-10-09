@@ -39,9 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnReturnToMenu
             // 
@@ -119,6 +120,7 @@
             this.btnStudentLogIn.TabIndex = 18;
             this.btnStudentLogIn.Text = "Log In";
             this.btnStudentLogIn.UseVisualStyleBackColor = false;
+            this.btnStudentLogIn.Click += new System.EventHandler(this.btnStudentLogIn_Click);
             // 
             // label4
             // 
@@ -165,17 +167,6 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Student Login";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Student_Attendance_System.Properties.Resources.Building;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 292);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(444, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(133, 206);
@@ -194,6 +185,17 @@
             this.label6.Size = new System.Drawing.Size(97, 20);
             this.label6.TabIndex = 27;
             this.label6.Text = "Password:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Student_Attendance_System.Properties.Resources.Building;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 292);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(444, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Student_Login
             // 

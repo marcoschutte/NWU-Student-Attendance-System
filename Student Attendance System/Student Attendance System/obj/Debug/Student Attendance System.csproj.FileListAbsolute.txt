@@ -20,3 +20,4 @@ C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Stude
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS.mdf
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_log.ldf
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Student_Attendance.resources
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Menu.resources

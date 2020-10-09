@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnExitApplication = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnLecturer = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +52,18 @@
             this.toolTip1.SetToolTip(this.btnExitApplication, "Click to close the application");
             this.btnExitApplication.UseVisualStyleBackColor = false;
             this.btnExitApplication.Click += new System.EventHandler(this.btnExitApplication_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Purple;
+            this.label2.Location = new System.Drawing.Point(110, 192);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(562, 48);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Student Attendance System";
             // 
             // btnStudent
             // 
@@ -99,18 +111,6 @@
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoPictureBox.TabIndex = 12;
             this.logoPictureBox.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(110, 192);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(562, 48);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Student Attendance System";
             // 
             // User
             // 

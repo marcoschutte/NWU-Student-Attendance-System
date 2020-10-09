@@ -63,9 +63,9 @@
             this.lblClassDetails.Location = new System.Drawing.Point(301, 13);
             this.lblClassDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClassDetails.Name = "lblClassDetails";
-            this.lblClassDetails.Size = new System.Drawing.Size(596, 48);
+            this.lblClassDetails.Size = new System.Drawing.Size(375, 48);
             this.lblClassDetails.TabIndex = 41;
-            this.lblClassDetails.Text = "Class Attendance Information";
+            this.lblClassDetails.Text = "Class Attendance ";
             // 
             // btnSubmit
             // 
@@ -75,7 +75,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(311, 376);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(311, 57);
+            this.btnSubmit.Size = new System.Drawing.Size(220, 57);
             this.btnSubmit.TabIndex = 36;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@
             "Roelien Goede",
             "Janet Liebenberg",
             "Linda Redelinghuys"});
-            this.lecturerComboBox.Location = new System.Drawing.Point(520, 193);
+            this.lecturerComboBox.Location = new System.Drawing.Point(529, 193);
             this.lecturerComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.lecturerComboBox.Name = "lecturerComboBox";
             this.lecturerComboBox.Size = new System.Drawing.Size(232, 24);
@@ -118,7 +118,7 @@
             // 
             // txtModuleID
             // 
-            this.txtModuleID.Location = new System.Drawing.Point(520, 149);
+            this.txtModuleID.Location = new System.Drawing.Point(529, 149);
             this.txtModuleID.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(232, 22);
@@ -161,7 +161,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblDate.Location = new System.Drawing.Point(520, 242);
+            this.lblDate.Location = new System.Drawing.Point(525, 242);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(135, 20);
             this.lblDate.TabIndex = 46;
@@ -171,7 +171,7 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(520, 283);
+            this.lblTime.Location = new System.Drawing.Point(527, 283);
             this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(111, 20);
@@ -183,19 +183,20 @@
             this.btnExitApplication.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExitApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitApplication.ForeColor = System.Drawing.Color.Purple;
-            this.btnExitApplication.Location = new System.Drawing.Point(630, 376);
+            this.btnExitApplication.Location = new System.Drawing.Point(539, 377);
             this.btnExitApplication.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitApplication.Name = "btnExitApplication";
-            this.btnExitApplication.Size = new System.Drawing.Size(255, 57);
+            this.btnExitApplication.Size = new System.Drawing.Size(222, 57);
             this.btnExitApplication.TabIndex = 48;
             this.btnExitApplication.Text = "Exit Application";
             this.btnExitApplication.UseVisualStyleBackColor = false;
+            this.btnExitApplication.Click += new System.EventHandler(this.btnExitApplication_Click);
             // 
             // Student_Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 447);
+            this.ClientSize = new System.Drawing.Size(773, 447);
             this.Controls.Add(this.btnExitApplication);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);

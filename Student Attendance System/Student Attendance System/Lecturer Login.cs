@@ -16,5 +16,24 @@ namespace Student_Attendance_System
         {
             InitializeComponent();
         }
+
+        private void btnReturnToMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "";
+            txtFirstName.Text = "";
+            txtLecturerID.Text = "";
+            txtPassword.Text = "";
+        }
+
+        private void btnLecturerLogIn_Click(object sender, EventArgs e)
+        {
+            Lecturer_Menu lecturerMenu = new Lecturer_Menu();
+            lecturerMenu.Show();
+        }
     }
 }
