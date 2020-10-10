@@ -92,6 +92,7 @@
             this.btnAddModule.TabIndex = 57;
             this.btnAddModule.Text = "Add Module";
             this.btnAddModule.UseVisualStyleBackColor = false;
+            this.btnAddModule.Click += new System.EventHandler(this.btnAddModule_Click);
             // 
             // txtModuleID2
             // 
