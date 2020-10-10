@@ -26,17 +26,18 @@ namespace Student_Attendance_System
         }
 
         private void btnMaintainStudents_Click(object sender, EventArgs e)
-        {
+        {            
             Maintain_Students maintainStudents = new Maintain_Students();
             maintainStudents.Show();
-            this.Close();
+            //Keep lecturer menu open for later use rather than closing it?
+            this.Hide();
         }
 
         private void btnMaintainLecturers_Click(object sender, EventArgs e)
         {
             Maintain_Lecturers maintainLecturers = new Maintain_Lecturers();
             maintainLecturers.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnMaintainModules_Click(object sender, EventArgs e)
