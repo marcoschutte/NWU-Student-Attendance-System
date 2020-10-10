@@ -19,6 +19,8 @@ namespace Student_Attendance_System
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
         {
+            User userMenu = new User();
+            userMenu.Show();
             this.Close();
         }
 
@@ -34,6 +36,7 @@ namespace Student_Attendance_System
         {
             Lecturer_Menu lecturerMenu = new Lecturer_Menu();
             lecturerMenu.Show();
+            this.Hide();
         }
     }
 }

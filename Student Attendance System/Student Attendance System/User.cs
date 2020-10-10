@@ -29,6 +29,7 @@ namespace Student_Attendance_System
         {
             Lecturer_Login lecturerLogin = new Lecturer_Login();
             lecturerLogin.Show();
+            this.Hide();
         }
 
         private void btnStudent_Click(object sender, EventArgs e)

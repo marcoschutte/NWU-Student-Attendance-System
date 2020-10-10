@@ -29,18 +29,21 @@ namespace Student_Attendance_System
         {
             Maintain_Students maintainStudents = new Maintain_Students();
             maintainStudents.Show();
+            this.Close();
         }
 
         private void btnMaintainLecturers_Click(object sender, EventArgs e)
         {
             Maintain_Lecturers maintainLecturers = new Maintain_Lecturers();
             maintainLecturers.Show();
+            this.Close();
         }
 
         private void btnMaintainModules_Click(object sender, EventArgs e)
         {
             Maintain_Modules maintainModules = new Maintain_Modules();
             maintainModules.Show();
+            this.Hide();
         }
     }
 }

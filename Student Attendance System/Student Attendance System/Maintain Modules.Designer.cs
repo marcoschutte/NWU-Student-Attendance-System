@@ -54,6 +54,7 @@
             this.btnReturnToMenu.TabIndex = 61;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToMenu.Click += new System.EventHandler(this.btnReturnToMenu_Click);
             // 
             // label8
             // 
