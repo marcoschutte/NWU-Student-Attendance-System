@@ -23,6 +23,7 @@ namespace Student_Attendance_System
         public Student_Login()
         {
             InitializeComponent();
+            _redButtonClicked = true;
         }
 
         private void EmptyDataBase()
@@ -53,6 +54,8 @@ namespace Student_Attendance_System
         {
             _redButtonClicked = false;
             this.Close();
+            User us = new User();
+            us.ShowDialog();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -67,15 +70,15 @@ namespace Student_Attendance_System
         {
             //if login credentials are valid & exist within STUDENT table --> open student attendance form
 
-            string name = txtFirstName.Text;
-            string surname = txtLastName.Text;
-            string id = txtStudentID.Text;
-            string pass = txtPassword.Text;
+            string _name = txtFirstName.Text;
+            string _surname = txtLastName.Text;
+            string _id = txtStudentID.Text;
+            string _pass = txtPassword.Text;
 
             using (conn)
             {
                 conn.Open();
-                comm = new SqlCommand("SELECT * FROM STUDENTS WHERE Name,Last_Name,Student_ID,Password ='" + name + "','" + surname + "','" + id + "','" + pass + "'", conn);
+                comm = new SqlCommand("SELECT * FROM STUDENTS WHERE Name,Last_Name,Student_ID,Password ='" + _name + "','" + _surname + "','" + _id + "','" + _pass + "'", conn);
 
                 EmptyDataBase();
                 try
@@ -84,29 +87,30 @@ namespace Student_Attendance_System
 
                     while (datRead.Read())
                     {
-                        if ((datRead.GetValue(0).ToString() == name) && (datRead.GetValue(1).ToString() == surname) && (datRead.GetValue(2).ToString() == id) && (datRead.GetValue(3).ToString() == pass))
+                        if ((datRead.GetValue(0).ToString() == _name) && (datRead.GetValue(1).ToString() == _surname) && (datRead.GetValue(2).ToString() == _id) && (datRead.GetValue(3).ToString() == _pass))
                         {
                             Student_Attendance studentAttendance = new Student_Attendance();
                             studentAttendance.Show();
+                            this.Close();
                             break;
                         }
                         else
                         {
                             label5.Text = "Red textboxes indicate incorrect fields!";
                             label5.ForeColor = Color.Red;
-                            if (datRead.GetValue(0).ToString() != txtFirstName.Text)
+                            if (datRead.GetValue(0).ToString() != _name)
                             {
                                 txtFirstName.BackColor = Color.Red;
                             }
-                            if (datRead.GetValue(1).ToString() != txtLastName.Text)
+                            if (datRead.GetValue(1).ToString() != _surname)
                             {
                                 txtLastName.BackColor = Color.Red;
                             }
-                            if (datRead.GetValue(2).ToString() != txtStudentID.Text)
+                            if (datRead.GetValue(2).ToString() != _id)
                             {
                                 txtStudentID.BackColor = Color.Red;
                             }
-                            if (datRead.GetValue(3).ToString() != txtPassword.Text)
+                            if (datRead.GetValue(3).ToString() != _pass)
                             {
                                 txtPassword.BackColor = Color.Red;
                             }
@@ -128,6 +132,8 @@ namespace Student_Attendance_System
 
                 if (DialogResult.Yes == _closingForm)
                     Environment.Exit(0);
+                else
+                    e.Cancel = true;
             }
         }
     }
