@@ -60,23 +60,19 @@ namespace Student_Attendance_System
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtFirstName.Text = "";
-            txtLastName.Text = "";
             txtLecturerID.Text = "";
             txtPassword.Text = "";
         }
 
         private void btnLecturerLogIn_Click(object sender, EventArgs e)
         {
-            string _name = txtFirstName.Text;
-            string _surname = txtLastName.Text;
             string _id = txtLecturerID.Text;
             string _pass = txtPassword.Text;
 
             using (conn)
             {
                 conn.Open();
-                comm = new SqlCommand("SELECT * FROM LECTURERS WHERE Name,Last_Name,Lecturer_ID,Password ='" + _name + "','" + _surname + "','" + _id + "','" + _pass + "'", conn);
+                comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
 
                 EmptyDataBase();
                 try
@@ -85,7 +81,7 @@ namespace Student_Attendance_System
 
                     while (datRead.Read())
                     {
-                        if ((datRead.GetValue(0).ToString() == _name) && (datRead.GetValue(1).ToString() == _surname) && (datRead.GetValue(2).ToString() == _id) && (datRead.GetValue(3).ToString() == _pass))
+                        if ( (datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
                         {
                             Lecturer_Menu lecturerMenu = new Lecturer_Menu();
                             lecturerMenu.Show();
@@ -96,19 +92,11 @@ namespace Student_Attendance_System
                         {
                             label5.Text = "Red textboxes indicate incorrect fields!";
                             label5.ForeColor = Color.Red;
-                            if (datRead.GetValue(0).ToString() != _name)
-                            {
-                                txtFirstName.BackColor = Color.Red;
-                            }
-                            if (datRead.GetValue(1).ToString() != _name)
-                            {
-                                txtLastName.BackColor = Color.Red;
-                            }
-                            if (datRead.GetValue(2).ToString() != _name)
+                            if (datRead.GetValue(0).ToString() != _id)
                             {
                                 txtLecturerID.BackColor = Color.Red;
                             }
-                            if (datRead.GetValue(3).ToString() != _name)
+                            if (datRead.GetValue(1).ToString() != _pass)
                             {
                                 txtPassword.BackColor = Color.Red;
                             }
