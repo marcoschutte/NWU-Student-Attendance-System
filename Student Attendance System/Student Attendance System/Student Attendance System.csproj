@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lecturer Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer Attendance.Designer.cs">
+      <DependentUpon>Lecturer Attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     <Compile Include="Maintain Students.Designer.cs">
       <DependentUpon>Maintain Students.cs</DependentUpon>
     </Compile>
+    <Compile Include="Request Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Request Reports.Designer.cs">
+      <DependentUpon>Request Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student Attendance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lecturer Attendance.resx">
+      <DependentUpon>Lecturer Attendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>
     </EmbeddedResource>
