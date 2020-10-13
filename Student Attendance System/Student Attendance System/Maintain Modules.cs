@@ -16,5 +16,18 @@ namespace Student_Attendance_System
         {
             InitializeComponent();
         }
+
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReturnToMenu_Click(object sender, EventArgs e)
+        {
+            
+            Lecturer_Menu lecturerMenu = new Lecturer_Menu();
+            lecturerMenu.Show();
+            this.Close();
+        }
     }
 }

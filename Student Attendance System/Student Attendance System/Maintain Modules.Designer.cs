@@ -54,6 +54,7 @@
             this.btnReturnToMenu.TabIndex = 61;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToMenu.Click += new System.EventHandler(this.btnReturnToMenu_Click);
             // 
             // label8
             // 
@@ -92,6 +93,7 @@
             this.btnAddModule.TabIndex = 57;
             this.btnAddModule.Text = "Add Module";
             this.btnAddModule.UseVisualStyleBackColor = false;
+            this.btnAddModule.Click += new System.EventHandler(this.btnAddModule_Click);
             // 
             // txtModuleID2
             // 
