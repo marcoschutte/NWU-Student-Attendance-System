@@ -12,6 +12,8 @@ namespace Student_Attendance_System
 {
     public partial class User : Form
     {
+        bool _redButtonClicked = true;
+        bool _cameBack = false;
         public User()
         {
             InitializeComponent();
@@ -19,7 +21,10 @@ namespace Student_Attendance_System
 
         private void btnExitApplication_Click(object sender, EventArgs e)
         {
+            _redButtonClicked = false;
             DialogResult close = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+             
 
             if (DialogResult.Yes == close)
                 Application.Exit();
@@ -29,12 +34,29 @@ namespace Student_Attendance_System
         {
             Lecturer_Login lecturerLogin = new Lecturer_Login();
             lecturerLogin.Show();
+            _cameBack = true;
+            this.Hide();
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
             Student_Login studentLogin = new Student_Login();
             studentLogin.Show();
+            _cameBack = true;
+            this.Hide();
+        }
+
+        private void User_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_redButtonClicked == true && _cameBack == false)
+            {
+                DialogResult _closingForm = MessageBox.Show("Are you sure you want to close the Program", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (DialogResult.Yes == _closingForm)
+                    Environment.Exit(0);
+                else
+                    e.Cancel = true;
+            }
         }
     }
 }
