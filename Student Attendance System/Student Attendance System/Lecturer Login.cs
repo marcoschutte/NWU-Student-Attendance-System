@@ -14,7 +14,7 @@ namespace Student_Attendance_System
 {
     public partial class Lecturer_Login : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS.mdf;Integrated Security = True");
+        SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security = True");
         
         SqlCommand comm;
         SqlDataReader datRead;
@@ -72,9 +72,9 @@ namespace Student_Attendance_System
             using (conn)
             {
                 conn.Open();
-                comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
-
                 EmptyDataBase();
+
+                comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
                 try
                 {
                     datRead = comm.ExecuteReader();

@@ -76,7 +76,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 16);
+            this.label5.Size = new System.Drawing.Size(92, 16);
             this.label5.TabIndex = 59;
             this.label5.Text = "Lecturer ID:";
             // 
@@ -88,7 +88,7 @@
             this.btnDeleteLecturer.Location = new System.Drawing.Point(94, 297);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
             this.btnDeleteLecturer.Size = new System.Drawing.Size(165, 36);
-            this.btnDeleteLecturer.TabIndex = 58;
+            this.btnDeleteLecturer.TabIndex = 6;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = false;
             // 
@@ -100,16 +100,17 @@
             this.btnAddLecturer.Location = new System.Drawing.Point(95, 160);
             this.btnAddLecturer.Name = "btnAddLecturer";
             this.btnAddLecturer.Size = new System.Drawing.Size(165, 36);
-            this.btnAddLecturer.TabIndex = 57;
+            this.btnAddLecturer.TabIndex = 4;
             this.btnAddLecturer.Text = "Add Lecturer";
             this.btnAddLecturer.UseVisualStyleBackColor = false;
+            this.btnAddLecturer.Click += new System.EventHandler(this.btnAddLecturer_Click);
             // 
             // txtLecturerID2
             // 
             this.txtLecturerID2.Location = new System.Drawing.Point(94, 273);
             this.txtLecturerID2.Name = "txtLecturerID2";
             this.txtLecturerID2.Size = new System.Drawing.Size(168, 20);
-            this.txtLecturerID2.TabIndex = 56;
+            this.txtLecturerID2.TabIndex = 5;
             // 
             // label3
             // 
@@ -127,7 +128,7 @@
             this.txtEmail.Location = new System.Drawing.Point(94, 136);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(168, 20);
-            this.txtEmail.TabIndex = 54;
+            this.txtEmail.TabIndex = 3;
             // 
             // label1
             // 
@@ -135,7 +136,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 53;
             this.label1.Text = "Email:";
             // 
@@ -144,21 +145,21 @@
             this.txtLastName.Location = new System.Drawing.Point(94, 84);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(168, 20);
-            this.txtLastName.TabIndex = 48;
+            this.txtLastName.TabIndex = 1;
             // 
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(94, 59);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(168, 20);
-            this.txtFirstName.TabIndex = 47;
+            this.txtFirstName.TabIndex = 0;
             // 
             // txtLecturerID
             // 
             this.txtLecturerID.Location = new System.Drawing.Point(94, 110);
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.Size = new System.Drawing.Size(168, 20);
-            this.txtLecturerID.TabIndex = 46;
+            this.txtLecturerID.TabIndex = 2;
             // 
             // label7
             // 
@@ -166,7 +167,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 273);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 16);
+            this.label7.Size = new System.Drawing.Size(92, 16);
             this.label7.TabIndex = 52;
             this.label7.Text = "Lecturer ID:";
             // 
@@ -176,7 +177,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(7, 59);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 16);
+            this.label6.Size = new System.Drawing.Size(91, 16);
             this.label6.TabIndex = 51;
             this.label6.Text = "First Name:";
             // 
@@ -186,7 +187,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 16);
+            this.label4.Size = new System.Drawing.Size(90, 16);
             this.label4.TabIndex = 50;
             this.label4.Text = "Last Name:";
             // 
@@ -222,7 +223,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Maintain_Lecturers";
             this.Text = "Maintain_Lecturers";
             this.ResumeLayout(false);
