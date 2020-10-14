@@ -81,3 +81,6 @@ C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Stude
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.CoreCompileInputs.cache
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.exe
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.pdb
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB.mdf
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB_log.ldf
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Attendance.resources

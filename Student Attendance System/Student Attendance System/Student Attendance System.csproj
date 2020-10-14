@@ -198,8 +198,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SAS_log.ldf">
-      <DependentUpon>SAS.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SAS.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
