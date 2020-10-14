@@ -13,6 +13,9 @@ namespace Student_Attendance_System
         public static string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security=True";
         SqlConnection conn = null;
 
+        public string ConnectionString   
+        { get; set; }
+
         private void Connect()
         {
             if(conn == null)
@@ -40,8 +43,10 @@ namespace Student_Attendance_System
             return int.TryParse(id,out i);
         }
 
-        public void Insert(char type, string id, string fname, string lname, string email, string password)
+        public bool Insert(char type, string id, string fname, string lname, string email, string password)
         {
+            int result = 0;
+
             Connect();
 
             string table = "", fields = "";
@@ -53,7 +58,7 @@ namespace Student_Attendance_System
             }
             else if (type == 'L')
             {
-                table = "LECTURER ";
+                table = "LECTURERS ";
                 fields = "(Lecturer_ID, Name, Last_Name, Email, Password)";
             }
             else
@@ -71,9 +76,15 @@ namespace Student_Attendance_System
                 comm.Parameters.AddWithValue("@password", password);
 
                 conn.Open();
-                comm.ExecuteNonQuery();
+                result = comm.ExecuteNonQuery();
                 conn.Close();
             }
+
+            if (result < 0)
+                return false;
+            else
+                return true;
+
         }
 
         public void Insert(string modID, string modDes)
@@ -142,12 +153,46 @@ namespace Student_Attendance_System
 
         public void Delete(char type, string id)
         {
+            string table = "", field = "";
 
+            if (type == 'S')
+            {
+                table = "STUDENTS ";
+                field = "Student_ID";
+            }
+            else if (type == 'L')
+            {
+                table = "LECTURER ";
+                field = "Lecturer_ID";
+            }
+            else
+                table = null;
+
+            if (table != null)
+            {
+                string sql = "DELETE FROM " + table +  "WHERE " + field + " = '@id'";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+
+                Connect();
+                conn.Open();
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
         }
 
         public void Delete(string id)
         {
+            string sql = "DELETE FROM MODULES WHERE Module_ID = '@id'";
 
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@id", id);
+
+            Connect();
+            conn.Open();
+            comm.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

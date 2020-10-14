@@ -44,6 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnReturnToMenu
@@ -51,10 +53,9 @@
             this.btnReturnToMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnReturnToMenu.ForeColor = System.Drawing.Color.Purple;
-            this.btnReturnToMenu.Location = new System.Drawing.Point(827, 441);
-            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturnToMenu.Location = new System.Drawing.Point(620, 358);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
-            this.btnReturnToMenu.Size = new System.Drawing.Size(215, 44);
+            this.btnReturnToMenu.Size = new System.Drawing.Size(161, 36);
             this.btnReturnToMenu.TabIndex = 61;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
@@ -65,10 +66,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Purple;
-            this.label8.Location = new System.Drawing.Point(484, 9);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(363, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(481, 48);
+            this.label8.Size = new System.Drawing.Size(383, 38);
             this.label8.TabIndex = 60;
             this.label8.Text = "Update Lecturer Details";
             // 
@@ -76,10 +76,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 135);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(7, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 20);
+            this.label5.Size = new System.Drawing.Size(87, 16);
             this.label5.TabIndex = 59;
             this.label5.Text = "Lecturer ID:";
             // 
@@ -88,100 +87,89 @@
             this.btnDeleteLecturer.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDeleteLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnDeleteLecturer.ForeColor = System.Drawing.Color.Purple;
-            this.btnDeleteLecturer.Location = new System.Drawing.Point(125, 366);
-            this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteLecturer.Location = new System.Drawing.Point(90, 310);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
-            this.btnDeleteLecturer.Size = new System.Drawing.Size(220, 44);
-            this.btnDeleteLecturer.TabIndex = 6;
+            this.btnDeleteLecturer.Size = new System.Drawing.Size(168, 36);
+            this.btnDeleteLecturer.TabIndex = 7;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = false;
-            this.btnDeleteLecturer.Click += new System.EventHandler(this.btnDeleteLecturer_Click);
             // 
             // btnAddLecturer
             // 
             this.btnAddLecturer.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddLecturer.ForeColor = System.Drawing.Color.Purple;
-            this.btnAddLecturer.Location = new System.Drawing.Point(127, 197);
-            this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddLecturer.Location = new System.Drawing.Point(94, 188);
             this.btnAddLecturer.Name = "btnAddLecturer";
-            this.btnAddLecturer.Size = new System.Drawing.Size(220, 44);
-            this.btnAddLecturer.TabIndex = 4;
+            this.btnAddLecturer.Size = new System.Drawing.Size(168, 36);
+            this.btnAddLecturer.TabIndex = 5;
             this.btnAddLecturer.Text = "Add Lecturer";
             this.btnAddLecturer.UseVisualStyleBackColor = false;
             this.btnAddLecturer.Click += new System.EventHandler(this.btnAddLecturer_Click);
             // 
             // txtLecturerID2
             // 
-            this.txtLecturerID2.Location = new System.Drawing.Point(125, 336);
-            this.txtLecturerID2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecturerID2.Location = new System.Drawing.Point(90, 286);
             this.txtLecturerID2.Name = "txtLecturerID2";
-            this.txtLecturerID2.Size = new System.Drawing.Size(223, 22);
-            this.txtLecturerID2.TabIndex = 5;
+            this.txtLecturerID2.Size = new System.Drawing.Size(168, 20);
+            this.txtLecturerID2.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(21, 271);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 233);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 48);
+            this.label3.Size = new System.Drawing.Size(255, 38);
             this.label3.TabIndex = 55;
             this.label3.Text = "Delete Lecturer";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(125, 167);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(94, 136);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(223, 22);
+            this.txtEmail.Size = new System.Drawing.Size(168, 20);
             this.txtEmail.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 167);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 53;
             this.label1.Text = "Email:";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(125, 103);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Location = new System.Drawing.Point(94, 84);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(223, 22);
+            this.txtLastName.Size = new System.Drawing.Size(168, 20);
             this.txtLastName.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(125, 73);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Location = new System.Drawing.Point(94, 59);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(223, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(168, 20);
             this.txtFirstName.TabIndex = 0;
             // 
             // txtLecturerID
             // 
-            this.txtLecturerID.Location = new System.Drawing.Point(125, 135);
-            this.txtLecturerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecturerID.Location = new System.Drawing.Point(94, 110);
             this.txtLecturerID.Name = "txtLecturerID";
-            this.txtLecturerID.Size = new System.Drawing.Size(223, 22);
+            this.txtLecturerID.Size = new System.Drawing.Size(168, 20);
             this.txtLecturerID.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 336);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 286);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 20);
+            this.label7.Size = new System.Drawing.Size(87, 16);
             this.label7.TabIndex = 52;
             this.label7.Text = "Lecturer ID:";
             // 
@@ -189,10 +177,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 73);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(7, 59);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 20);
+            this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 51;
             this.label6.Text = "First Name:";
             // 
@@ -200,10 +187,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 103);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 20);
+            this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 50;
             this.label4.Text = "Last Name:";
             // 
@@ -212,18 +198,37 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(43, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(32, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 48);
+            this.label2.Size = new System.Drawing.Size(216, 38);
             this.label2.TabIndex = 49;
             this.label2.Text = "Add Lecturer";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(94, 162);
+            this.txtPassword.MaxLength = 25;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(168, 20);
+            this.txtPassword.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 162);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 63;
+            this.label9.Text = "Password: ";
+            // 
             // Maintain_Lecturers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 494);
+            this.ClientSize = new System.Drawing.Size(788, 401);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnReturnToMenu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -240,7 +245,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Maintain_Lecturers";
             this.Text = "Maintain_Lecturers";
             this.ResumeLayout(false);
@@ -266,5 +271,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label9;
     }
 }
