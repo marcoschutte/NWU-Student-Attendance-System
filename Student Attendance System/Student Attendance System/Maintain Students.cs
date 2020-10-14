@@ -29,9 +29,15 @@ namespace Student_Attendance_System
             string id = txtStudentID.Text;
             string fname = txtFirstName.Text;
             string lname = txtLastName.Text;
+            string email = txtEmail.Text;
             string password = txtPassword.Text;
 
-            //Checks
+
+
+            if(maintainhelper.CheckEmail(email)&&maintainhelper.CheckID(id))
+            {
+                maintainhelper.Insert('S',id, fname, lname, email, password);
+            }
 
             //maintainhelper.Insert('S', );
         }

@@ -47,7 +47,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 16);
+            this.label6.Size = new System.Drawing.Size(82, 16);
             this.label6.TabIndex = 41;
             this.label6.Text = "Password:";
             // 
@@ -56,7 +56,7 @@
             this.txtPassword.Location = new System.Drawing.Point(99, 135);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(175, 20);
-            this.txtPassword.TabIndex = 40;
+            this.txtPassword.TabIndex = 1;
             // 
             // btnClear
             // 
@@ -66,7 +66,7 @@
             this.btnClear.Location = new System.Drawing.Point(280, 86);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(62, 91);
-            this.btnClear.TabIndex = 33;
+            this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -79,7 +79,7 @@
             this.btnReturnToMenu.Location = new System.Drawing.Point(9, 183);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
             this.btnReturnToMenu.Size = new System.Drawing.Size(161, 36);
-            this.btnReturnToMenu.TabIndex = 34;
+            this.btnReturnToMenu.TabIndex = 3;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
             this.btnReturnToMenu.Click += new System.EventHandler(this.btnReturnToMenu_Click);
@@ -90,7 +90,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(230, 16);
+            this.label5.Size = new System.Drawing.Size(236, 16);
             this.label5.TabIndex = 39;
             this.label5.Text = "Please enter your details below:";
             // 
@@ -99,7 +99,7 @@
             this.txtLecturerID.Location = new System.Drawing.Point(99, 111);
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.Size = new System.Drawing.Size(175, 20);
-            this.txtLecturerID.TabIndex = 31;
+            this.txtLecturerID.TabIndex = 0;
             // 
             // btnLecturerLogIn
             // 
@@ -109,7 +109,7 @@
             this.btnLecturerLogIn.Location = new System.Drawing.Point(177, 183);
             this.btnLecturerLogIn.Name = "btnLecturerLogIn";
             this.btnLecturerLogIn.Size = new System.Drawing.Size(165, 36);
-            this.btnLecturerLogIn.TabIndex = 32;
+            this.btnLecturerLogIn.TabIndex = 2;
             this.btnLecturerLogIn.Text = "Log In";
             this.btnLecturerLogIn.UseVisualStyleBackColor = false;
             this.btnLecturerLogIn.Click += new System.EventHandler(this.btnLecturerLogIn_Click);
@@ -120,7 +120,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 16);
+            this.label4.Size = new System.Drawing.Size(92, 16);
             this.label4.TabIndex = 38;
             this.label4.Text = "Lecturer ID:";
             // 

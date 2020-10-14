@@ -21,5 +21,10 @@ namespace Student_Attendance_System
         {
             this.Close();
         }
+
+        private void btnAddLecturer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
