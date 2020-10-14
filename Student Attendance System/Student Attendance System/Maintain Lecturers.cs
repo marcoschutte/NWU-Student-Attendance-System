@@ -26,5 +26,10 @@ namespace Student_Attendance_System
         {
 
         }
+
+        private void btnDeleteLecturer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

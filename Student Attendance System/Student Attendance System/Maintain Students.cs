@@ -41,5 +41,10 @@ namespace Student_Attendance_System
 
             //maintainhelper.Insert('S', );
         }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
