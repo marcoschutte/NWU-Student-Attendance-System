@@ -15,6 +15,7 @@ namespace Student_Attendance_System
     public partial class Student_Login : Form
     {
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security=True");
+
         SqlCommand comm;
         SqlDataReader datRead;
 
@@ -74,9 +75,9 @@ namespace Student_Attendance_System
             using (conn)
             {
                 conn.Open();
-                comm = new SqlCommand("SELECT Student_ID,Password FROM STUDENTS", conn);
-
                 EmptyDataBase();
+
+                comm = new SqlCommand("SELECT Student_ID,Password FROM STUDENTS", conn);
                 try
                 {
                     datRead = comm.ExecuteReader();
@@ -97,10 +98,13 @@ namespace Student_Attendance_System
                             label5.ForeColor = Color.Red;
 
                             if (datRead.GetValue(0).ToString() != _id)
+                            {
                                 txtStudentID.BackColor = Color.Red;
-
+                            }
                             if (datRead.GetValue(1).ToString() != _pass)
+                            {
                                 txtPassword.BackColor = Color.Red;
+                            }
                         }
                     }
                 }

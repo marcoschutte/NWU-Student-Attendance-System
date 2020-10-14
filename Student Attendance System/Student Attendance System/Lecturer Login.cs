@@ -20,6 +20,7 @@ namespace Student_Attendance_System
         SqlDataReader datRead;
 
         bool _redButtonClicked = true;
+
         public Lecturer_Login()
         {
             InitializeComponent();
@@ -81,10 +82,11 @@ namespace Student_Attendance_System
 
                     while (datRead.Read())
                     {
-                        if ( (datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
+                        if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
                         {
                             Lecturer_Menu lecturerMenu = new Lecturer_Menu();
                             lecturerMenu.Show();
+                            _redButtonClicked = false;
                             this.Close();
                             break;
                         }
@@ -92,6 +94,7 @@ namespace Student_Attendance_System
                         {
                             label5.Text = "Red textboxes indicate incorrect fields!";
                             label5.ForeColor = Color.Red;
+
                             if (datRead.GetValue(0).ToString() != _id)
                             {
                                 txtLecturerID.BackColor = Color.Red;
