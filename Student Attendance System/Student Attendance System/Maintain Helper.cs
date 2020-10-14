@@ -13,6 +13,9 @@ namespace Student_Attendance_System
         public static string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security=True";
         SqlConnection conn = null;
 
+        public string ConnectionString   
+        { get; set; }
+
         private void Connect()
         {
             if(conn == null)
@@ -150,12 +153,46 @@ namespace Student_Attendance_System
 
         public void Delete(char type, string id)
         {
+            string table = "", field = "";
 
+            if (type == 'S')
+            {
+                table = "STUDENTS ";
+                field = "Student_ID";
+            }
+            else if (type == 'L')
+            {
+                table = "LECTURER ";
+                field = "Lecturer_ID";
+            }
+            else
+                table = null;
+
+            if (table != null)
+            {
+                string sql = "DELETE FROM " + table +  "WHERE " + field + " = '@id'";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+
+                Connect();
+                conn.Open();
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
         }
 
         public void Delete(string id)
         {
+            string sql = "DELETE FROM MODULES WHERE Module_ID = '@id'";
 
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@id", id);
+
+            Connect();
+            conn.Open();
+            comm.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }
