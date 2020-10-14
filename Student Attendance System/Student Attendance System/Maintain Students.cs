@@ -32,14 +32,20 @@ namespace Student_Attendance_System
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 
-
-
-            if(maintainhelper.CheckEmail(email)&&maintainhelper.CheckID(id))
-            {
-                maintainhelper.Insert('S',id, fname, lname, email, password);
+            if(maintainhelper.CheckEmail(email))
+            {   
+                if(maintainhelper.CheckID(id))
+                {
+                    if (maintainhelper.Insert('S', id, fname, lname, email, password))
+                        MessageBox.Show("Record has been succesfully inserted.");
+                    else
+                        MessageBox.Show("There was a problem inserting the record.");
+                }
+                else
+                    MessageBox.Show("Incorrect id");
             }
-
-            //maintainhelper.Insert('S', );
+            else
+                MessageBox.Show("Incorrect email.");
         }
     }
 }

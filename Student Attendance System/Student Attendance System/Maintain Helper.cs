@@ -40,8 +40,10 @@ namespace Student_Attendance_System
             return int.TryParse(id,out i);
         }
 
-        public void Insert(char type, string id, string fname, string lname, string email, string password)
+        public bool Insert(char type, string id, string fname, string lname, string email, string password)
         {
+            int result = 0;
+
             Connect();
 
             string table = "", fields = "";
@@ -53,7 +55,7 @@ namespace Student_Attendance_System
             }
             else if (type == 'L')
             {
-                table = "LECTURER ";
+                table = "LECTURERS ";
                 fields = "(Lecturer_ID, Name, Last_Name, Email, Password)";
             }
             else
@@ -71,9 +73,15 @@ namespace Student_Attendance_System
                 comm.Parameters.AddWithValue("@password", password);
 
                 conn.Open();
-                comm.ExecuteNonQuery();
+                result = comm.ExecuteNonQuery();
                 conn.Close();
             }
+
+            if (result < 0)
+                return false;
+            else
+                return true;
+
         }
 
         public void Insert(string modID, string modDes)
