@@ -24,6 +24,7 @@ namespace Student_Attendance_System
         public Lecturer_Login()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
             _redButtonClicked = true;
         }
 
