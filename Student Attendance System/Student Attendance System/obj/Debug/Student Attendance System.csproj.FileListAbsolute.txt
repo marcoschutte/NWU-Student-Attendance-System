@@ -84,3 +84,6 @@ C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Stude
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB.mdf
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB_log.ldf
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Attendance.resources
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB.mdf
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB_log.ldf
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Attendance.resources
