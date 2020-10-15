@@ -30,6 +30,8 @@ namespace Student_Attendance_System
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
         {
+            Lecturer_Menu menu = new Lecturer_Menu();
+            menu.Show();
             this.Close();
         }
 
@@ -42,13 +44,16 @@ namespace Student_Attendance_System
             string password = txtPassword.Text;
 
             if(maintainhelper.CheckEmail(email))
-            {   
-                if(maintainhelper.CheckID(id))
+            {
+                if (maintainhelper.CheckID(id))
                 {
                     if (maintainhelper.Insert('S', id, fname, lname, email, password))
+                    { 
                         MessageBox.Show("Record has been succesfully inserted.");
-                    else
-                        MessageBox.Show("There was a problem inserting the record.");
+                        Reset();
+                    }   
+                else
+                    MessageBox.Show("There was a problem inserting the record.");
                 }
                 else
                     MessageBox.Show("Incorrect id");
@@ -59,19 +64,22 @@ namespace Student_Attendance_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-            maintainhelper.Update('S', txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text);
-
-            btnUpdate.Enabled = false;
-            btnDeleteStudent.Enabled = false;
+            if (maintainhelper.Update('S', txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text))
+                MessageBox.Show("Record has been succesfully updated.");
+            else
+                MessageBox.Show("There was a problem updating the record.");
+            
+            Reset();
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-            maintainhelper.Delete('S', txtStudentID.Text);
+            if (maintainhelper.Delete('S', txtStudentID.Text))
+                MessageBox.Show("Record has been succesfully deleted.");
+            else
+                MessageBox.Show("There was a problem deleting the record.");
 
-            btnUpdate.Enabled = false;
-            btnDeleteStudent.Enabled = false;
+            Reset();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -125,15 +133,22 @@ namespace Student_Attendance_System
             Connect();
             conn.Open();
 
-            comm = new SqlCommand(sql, conn);
-            adap = new SqlDataAdapter();
-            ds = new DataSet();
+            try
+            {
+                comm = new SqlCommand(sql, conn);
+                adap = new SqlDataAdapter();
+                ds = new DataSet();
 
-            adap.SelectCommand = comm;
-            adap.Fill(ds, "STUDENTS");
+                adap.SelectCommand = comm;
+                adap.Fill(ds, "STUDENTS");
 
-            dgvStudents.DataSource = ds;
-            dgvStudents.DataMember = "STUDENTS";
+                dgvStudents.DataSource = ds;
+                dgvStudents.DataMember = "STUDENTS";
+            }
+            catch(SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
 
             dgvStudents.Columns[0].Width = 150;
             dgvStudents.Columns[1].Width = 150;
@@ -143,7 +158,7 @@ namespace Student_Attendance_System
             conn.Close();
         }
 
-        private void ClearTextBox(char caller)
+        private void ClearSTextBox(char caller)
         {
             if (caller != 'I')
                 txtSID.Clear();
@@ -158,27 +173,42 @@ namespace Student_Attendance_System
                 txtSEmail.Clear();
         }
 
+        private void Reset()
+        {
+            ClearSTextBox(' ');
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtPassword.Clear();
+            txtStudentID.Clear();
+            txtEmail.Clear();
+
+            btnUpdate.Enabled = false;
+            btnDeleteStudent.Enabled = false;
+
+            DisplayAll();  
+        }
+
         private void txtSID_TextChanged(object sender, EventArgs e)
         {
-            ClearTextBox('I');
+            ClearSTextBox('I');
             StudentSearch("Student_ID", txtSID.Text);
         }
 
         private void txtSName_TextChanged(object sender, EventArgs e)
         {
-            ClearTextBox('N');
+            ClearSTextBox('N');
             StudentSearch("Name", txtSName.Text);
         }
 
         private void txtSLName_TextChanged(object sender, EventArgs e)
         {
-            ClearTextBox('L');
+            ClearSTextBox('L');
             StudentSearch("Last_Name", txtSLName.Text);
         }
 
         private void txtSEmail_TextChanged(object sender, EventArgs e)
         {
-            ClearTextBox('E');
+            ClearSTextBox('E');
             StudentSearch("Email", txtSEmail.Text);
         }
 
