@@ -49,6 +49,7 @@
             this.txtSLName = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtSEmail = new System.Windows.Forms.TextBox();
+            this.btnSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,6 +142,7 @@
             // btnDeleteStudent
             // 
             this.btnDeleteStudent.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDeleteStudent.Enabled = false;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnDeleteStudent.ForeColor = System.Drawing.Color.Purple;
             this.btnDeleteStudent.Location = new System.Drawing.Point(99, 304);
@@ -177,7 +179,7 @@
             this.btnReturnToMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnReturnToMenu.ForeColor = System.Drawing.Color.Purple;
-            this.btnReturnToMenu.Location = new System.Drawing.Point(932, 304);
+            this.btnReturnToMenu.Location = new System.Drawing.Point(828, 304);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
             this.btnReturnToMenu.Size = new System.Drawing.Size(161, 36);
             this.btnReturnToMenu.TabIndex = 45;
@@ -208,39 +210,40 @@
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Location = new System.Drawing.Point(337, 91);
             this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.Size = new System.Drawing.Size(756, 207);
+            this.dgvStudents.Size = new System.Drawing.Size(652, 207);
             this.dgvStudents.TabIndex = 47;
             // 
             // txtSID
             // 
-            this.txtSID.Location = new System.Drawing.Point(337, 65);
+            this.txtSID.Location = new System.Drawing.Point(378, 65);
             this.txtSID.MaxLength = 25;
             this.txtSID.Name = "txtSID";
-            this.txtSID.Size = new System.Drawing.Size(168, 20);
+            this.txtSID.Size = new System.Drawing.Size(152, 20);
             this.txtSID.TabIndex = 48;
             this.txtSID.TextChanged += new System.EventHandler(this.txtSID_TextChanged);
             // 
             // txtSName
             // 
-            this.txtSName.Location = new System.Drawing.Point(511, 65);
+            this.txtSName.Location = new System.Drawing.Point(684, 65);
             this.txtSName.MaxLength = 25;
             this.txtSName.Name = "txtSName";
-            this.txtSName.Size = new System.Drawing.Size(168, 20);
+            this.txtSName.Size = new System.Drawing.Size(152, 20);
             this.txtSName.TabIndex = 49;
             this.txtSName.TextChanged += new System.EventHandler(this.txtSName_TextChanged);
             // 
             // txtSLName
             // 
-            this.txtSLName.Location = new System.Drawing.Point(685, 65);
+            this.txtSLName.Location = new System.Drawing.Point(531, 65);
             this.txtSLName.MaxLength = 25;
             this.txtSLName.Name = "txtSLName";
-            this.txtSLName.Size = new System.Drawing.Size(168, 20);
+            this.txtSLName.Size = new System.Drawing.Size(152, 20);
             this.txtSLName.TabIndex = 50;
             this.txtSLName.TextChanged += new System.EventHandler(this.txtSLName_TextChanged);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
             this.btnUpdate.Location = new System.Drawing.Point(99, 262);
@@ -253,18 +256,32 @@
             // 
             // txtSEmail
             // 
-            this.txtSEmail.Location = new System.Drawing.Point(859, 65);
+            this.txtSEmail.Location = new System.Drawing.Point(837, 65);
             this.txtSEmail.MaxLength = 25;
             this.txtSEmail.Name = "txtSEmail";
-            this.txtSEmail.Size = new System.Drawing.Size(168, 20);
+            this.txtSEmail.Size = new System.Drawing.Size(152, 20);
             this.txtSEmail.TabIndex = 52;
             this.txtSEmail.TextChanged += new System.EventHandler(this.txtSEmail_TextChanged);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSelect.ForeColor = System.Drawing.Color.Purple;
+            this.btnSelect.Location = new System.Drawing.Point(337, 304);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(171, 36);
+            this.btnSelect.TabIndex = 53;
+            this.btnSelect.Text = "Select Student";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // Maintain_Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 355);
+            this.ClientSize = new System.Drawing.Size(998, 355);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.txtSEmail);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtSLName);
@@ -289,6 +306,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Maintain_Students";
             this.Text = "Maintain_Students";
+            this.Load += new System.EventHandler(this.Maintain_Students_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,5 +336,6 @@
         private System.Windows.Forms.TextBox txtSLName;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtSEmail;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

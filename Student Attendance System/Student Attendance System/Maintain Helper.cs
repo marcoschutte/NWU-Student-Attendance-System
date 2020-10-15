@@ -14,12 +14,15 @@ namespace Student_Attendance_System
         SqlConnection conn = null;
 
         public string ConnectionString   
-        { get; set; }
+        {
+            get { return connstr; }
+            set { connstr = value; } 
+        }
 
         private void Connect()
         {
             if(conn == null)
-                conn = new SqlConnection(connstr);
+                conn = new SqlConnection(ConnectionString);
         }
 
         public bool CheckEmail(string email)
@@ -113,7 +116,7 @@ namespace Student_Attendance_System
             }
             else if (type == 'L')
             {
-                table = "LECTURER ";
+                table = "LECTURERS ";
                 field = "Lecturer_ID";
             }
             else
@@ -121,17 +124,24 @@ namespace Student_Attendance_System
 
             if (table != null)
             {
-                string sql = "UPDATE " + table + " SET (Name = '@fname', Last_Name = '@lname', Email = '@email', Password = '@password') WHERE " + field + " = '@id'";
+                string pw = "";
+
+                if (password != "")
+                    pw = ", Password = '@password'";
+
+                string sql = "UPDATE " + table + " SET Name = '@fname', Last_Name = '@lname', Email = '@email'" + pw + " WHERE " + field + " = '@id'";
+
+                Connect();
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@id", id);
                 comm.Parameters.AddWithValue("@fname", fname);
                 comm.Parameters.AddWithValue("@lname", lname);
                 comm.Parameters.AddWithValue("@email", email);
-                comm.Parameters.AddWithValue("@password", password);
 
+                if(password != "")
+                    comm.Parameters.AddWithValue("@password", password);
 
-                Connect();
                 conn.Open();
                 comm.ExecuteNonQuery();
                 conn.Close();
@@ -140,12 +150,13 @@ namespace Student_Attendance_System
 
         public void Update(string modID, string modDes)
         {
-            string sql = "UPDATE MODULES SET (Description = '@modDes') WHERE Module_ID = '@id'";
+            string sql = "UPDATE MODULES SET Description = '@modDes' WHERE Module_ID = '@id'";
+
+            Connect();
 
             SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.AddWithValue("@modDes", modDes);
 
-            Connect();
             conn.Open();
             comm.ExecuteNonQuery();
             conn.Close();
@@ -172,10 +183,11 @@ namespace Student_Attendance_System
             {
                 string sql = "DELETE FROM " + table +  "WHERE " + field + " = '@id'";
 
+                Connect();
+
                 SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@id", id);
-
-                Connect();
+                
                 conn.Open();
                 comm.ExecuteNonQuery();
                 conn.Close();
@@ -186,10 +198,11 @@ namespace Student_Attendance_System
         {
             string sql = "DELETE FROM MODULES WHERE Module_ID = '@id'";
 
+            Connect();
+
             SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.AddWithValue("@id", id);
 
-            Connect();
             conn.Open();
             comm.ExecuteNonQuery();
             conn.Close();

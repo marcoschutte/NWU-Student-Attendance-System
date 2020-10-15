@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,11 +60,44 @@ namespace Student_Attendance_System
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
+            maintainhelper.Update('S', txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text);
+
+            btnUpdate.Enabled = false;
+            btnDeleteStudent.Enabled = false;
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
+            maintainhelper.Delete('S', txtStudentID.Text);
 
+            btnUpdate.Enabled = false;
+            btnDeleteStudent.Enabled = false;
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            string id = dgvStudents.CurrentRow.Cells[0].Value.ToString();
+
+            sql = "SELECT Student_ID, Last_Name, Name, Email FROM STUDENTS WHERE Student_ID = " + id;
+
+            Connect();
+            conn.Open();
+
+            comm = new SqlCommand(sql, conn);
+            dreader = comm.ExecuteReader();
+
+            while(dreader.Read())
+            {
+                txtStudentID.Text = dreader.GetString(0);
+                txtLastName.Text = dreader.GetString(1);
+                txtFirstName.Text = dreader.GetString(2);
+                txtEmail.Text = dreader.GetString(3);
+            }
+
+            conn.Close();
+
+            btnUpdate.Enabled = true;
+            btnDeleteStudent.Enabled = true;
         }
 
         private void Connect()
@@ -72,19 +106,21 @@ namespace Student_Attendance_System
                 conn = new SqlConnection(maintainhelper.ConnectionString);
         }
 
-        public void StudentSearch(string caller)
+        public void StudentSearch(string caller, string criteria)
         {
-            sql = "SELECT ";// FIELDS TO DISPLAY
+            sql = "SELECT Student_ID, Last_Name, Name, Email FROM STUDENTS WHERE " + caller + " LIKE  '%" + criteria + "%'" ;// FIELDS TO DISPLAY
 
-            SQLSubmit("");
+            SQLSubmit();
         }
 
         private void DisplayAll()
         {
-            sql = "SELECT ";//DISPLAY ALL FIELDS
+            sql = "SELECT Student_ID, Last_Name, Name, Email FROM STUDENTS";//DISPLAY ALL FIELDS
+
+            SQLSubmit();
         }
 
-        private void SQLSubmit(string caller)
+        private void SQLSubmit()
         {
             Connect();
             conn.Open();
@@ -98,26 +134,57 @@ namespace Student_Attendance_System
 
             dgvStudents.DataSource = ds;
             dgvStudents.DataMember = "STUDENTS";
+
+            dgvStudents.Columns[0].Width = 150;
+            dgvStudents.Columns[1].Width = 150;
+            dgvStudents.Columns[2].Width = 150;
+            dgvStudents.Columns[3].Width = 150;
+
+            conn.Close();
+        }
+
+        private void ClearTextBox(char caller)
+        {
+            if (caller != 'I')
+                txtSID.Clear();
+
+            if (caller != 'L')
+                txtSLName.Clear();
+
+            if (caller != 'N')
+                txtSName.Clear();
+
+            if (caller != 'E')
+                txtSEmail.Clear();
         }
 
         private void txtSID_TextChanged(object sender, EventArgs e)
         {
-
+            ClearTextBox('I');
+            StudentSearch("Student_ID", txtSID.Text);
         }
 
         private void txtSName_TextChanged(object sender, EventArgs e)
         {
-
+            ClearTextBox('N');
+            StudentSearch("Name", txtSName.Text);
         }
 
         private void txtSLName_TextChanged(object sender, EventArgs e)
         {
-
+            ClearTextBox('L');
+            StudentSearch("Last_Name", txtSLName.Text);
         }
 
         private void txtSEmail_TextChanged(object sender, EventArgs e)
         {
+            ClearTextBox('E');
+            StudentSearch("Email", txtSEmail.Text);
+        }
 
-        }  
+        private void Maintain_Students_Load(object sender, EventArgs e)
+        {
+            DisplayAll();
+        }
     }
 }
