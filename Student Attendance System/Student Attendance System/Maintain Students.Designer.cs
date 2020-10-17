@@ -58,7 +58,7 @@
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(136, 143);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.MaxLength = 25;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(223, 22);
@@ -67,7 +67,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(136, 112);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.MaxLength = 25;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(223, 22);
@@ -76,7 +76,7 @@
             // txtStudentID
             // 
             this.txtStudentID.Location = new System.Drawing.Point(136, 175);
-            this.txtStudentID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStudentID.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(223, 22);
@@ -130,7 +130,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(136, 207);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.MaxLength = 35;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(223, 22);
@@ -142,7 +142,7 @@
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddStudent.ForeColor = System.Drawing.Color.Purple;
             this.btnAddStudent.Location = new System.Drawing.Point(136, 271);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(224, 44);
             this.btnAddStudent.TabIndex = 5;
@@ -157,7 +157,7 @@
             this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnDeleteStudent.ForeColor = System.Drawing.Color.Purple;
             this.btnDeleteStudent.Location = new System.Drawing.Point(136, 374);
-            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(224, 44);
             this.btnDeleteStudent.TabIndex = 8;
@@ -194,7 +194,7 @@
             this.btnReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnReturnToMenu.ForeColor = System.Drawing.Color.Purple;
             this.btnReturnToMenu.Location = new System.Drawing.Point(1102, 374);
-            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
             this.btnReturnToMenu.Size = new System.Drawing.Size(215, 44);
             this.btnReturnToMenu.TabIndex = 45;
@@ -205,7 +205,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(136, 239);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MaxLength = 25;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(223, 22);
@@ -226,7 +226,7 @@
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Location = new System.Drawing.Point(449, 126);
-            this.dgvStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvStudents.Margin = new System.Windows.Forms.Padding(4);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.Size = new System.Drawing.Size(869, 240);
             this.dgvStudents.TabIndex = 47;
@@ -234,7 +234,7 @@
             // txtSID
             // 
             this.txtSID.Location = new System.Drawing.Point(504, 94);
-            this.txtSID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSID.Margin = new System.Windows.Forms.Padding(4);
             this.txtSID.MaxLength = 25;
             this.txtSID.Name = "txtSID";
             this.txtSID.Size = new System.Drawing.Size(201, 22);
@@ -244,7 +244,7 @@
             // txtSName
             // 
             this.txtSName.Location = new System.Drawing.Point(912, 94);
-            this.txtSName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSName.MaxLength = 25;
             this.txtSName.Name = "txtSName";
             this.txtSName.Size = new System.Drawing.Size(201, 22);
@@ -254,7 +254,7 @@
             // txtSLName
             // 
             this.txtSLName.Location = new System.Drawing.Point(708, 94);
-            this.txtSLName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSLName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSLName.MaxLength = 25;
             this.txtSLName.Name = "txtSLName";
             this.txtSLName.Size = new System.Drawing.Size(201, 22);
@@ -268,7 +268,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
             this.btnUpdate.Location = new System.Drawing.Point(136, 322);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(224, 44);
             this.btnUpdate.TabIndex = 51;
@@ -279,7 +279,7 @@
             // txtSEmail
             // 
             this.txtSEmail.Location = new System.Drawing.Point(1116, 94);
-            this.txtSEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtSEmail.MaxLength = 25;
             this.txtSEmail.Name = "txtSEmail";
             this.txtSEmail.Size = new System.Drawing.Size(201, 22);
@@ -292,10 +292,10 @@
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSelect.ForeColor = System.Drawing.Color.Purple;
             this.btnSelect.Location = new System.Drawing.Point(449, 374);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(228, 44);
-            this.btnSelect.TabIndex = 53;
+            this.btnSelect.TabIndex = 6;
             this.btnSelect.Text = "Select Student";
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);

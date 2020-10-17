@@ -41,9 +41,9 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.btnExitApplication = new System.Windows.Forms.Button();
             this.lblEnterStudentNumber = new System.Windows.Forms.Label();
-            this.txtStudent_ID = new System.Windows.Forms.TextBox();
             this.txtLecturer_ID = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.lblStudentID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loverslanePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,10 +76,10 @@
             this.btnSubmitAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSubmitAttendance.ForeColor = System.Drawing.Color.Purple;
             this.btnSubmitAttendance.Location = new System.Drawing.Point(427, 281);
-            this.btnSubmitAttendance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmitAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmitAttendance.Name = "btnSubmitAttendance";
             this.btnSubmitAttendance.Size = new System.Drawing.Size(220, 57);
-            this.btnSubmitAttendance.TabIndex = 36;
+            this.btnSubmitAttendance.TabIndex = 2;
             this.btnSubmitAttendance.Text = "Submit Attendance";
             this.btnSubmitAttendance.UseVisualStyleBackColor = false;
             this.btnSubmitAttendance.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -109,16 +109,16 @@
             // txtModuleID
             // 
             this.txtModuleID.Location = new System.Drawing.Point(432, 174);
-            this.txtModuleID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleID.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(215, 22);
-            this.txtModuleID.TabIndex = 43;
+            this.txtModuleID.TabIndex = 1;
             // 
             // loverslanePictureBox
             // 
             this.loverslanePictureBox.Image = global::Student_Attendance_System.Properties.Resources.LoversLane;
             this.loverslanePictureBox.Location = new System.Drawing.Point(13, 14);
-            this.loverslanePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loverslanePictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.loverslanePictureBox.Name = "loverslanePictureBox";
             this.loverslanePictureBox.Size = new System.Drawing.Size(287, 420);
             this.loverslanePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,10 +174,10 @@
             this.btnExitApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitApplication.ForeColor = System.Drawing.Color.Purple;
             this.btnExitApplication.Location = new System.Drawing.Point(523, 374);
-            this.btnExitApplication.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExitApplication.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(153, 57);
-            this.btnExitApplication.TabIndex = 48;
+            this.btnExitApplication.TabIndex = 4;
             this.btnExitApplication.Text = "Exit Application";
             this.btnExitApplication.UseVisualStyleBackColor = false;
             this.btnExitApplication.Click += new System.EventHandler(this.btnExitApplication_Click);
@@ -193,21 +193,13 @@
             this.lblEnterStudentNumber.TabIndex = 49;
             this.lblEnterStudentNumber.Text = "Student ID:";
             // 
-            // txtStudent_ID
-            // 
-            this.txtStudent_ID.Location = new System.Drawing.Point(432, 114);
-            this.txtStudent_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtStudent_ID.Name = "txtStudent_ID";
-            this.txtStudent_ID.Size = new System.Drawing.Size(215, 22);
-            this.txtStudent_ID.TabIndex = 50;
-            // 
             // txtLecturer_ID
             // 
             this.txtLecturer_ID.Location = new System.Drawing.Point(432, 144);
-            this.txtLecturer_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLecturer_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecturer_ID.Name = "txtLecturer_ID";
             this.txtLecturer_ID.Size = new System.Drawing.Size(215, 22);
-            this.txtLecturer_ID.TabIndex = 51;
+            this.txtLecturer_ID.TabIndex = 0;
             // 
             // btnClear
             // 
@@ -218,19 +210,30 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(94, 69);
-            this.btnClear.TabIndex = 52;
+            this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // lblStudentID
+            // 
+            this.lblStudentID.AutoSize = true;
+            this.lblStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentID.Location = new System.Drawing.Point(429, 114);
+            this.lblStudentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStudentID.Name = "lblStudentID";
+            this.lblStudentID.Size = new System.Drawing.Size(110, 20);
+            this.lblStudentID.TabIndex = 53;
+            this.lblStudentID.Text = "[Student ID]";
             // 
             // Student_Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 444);
+            this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtLecturer_ID);
-            this.Controls.Add(this.txtStudent_ID);
             this.Controls.Add(this.lblEnterStudentNumber);
             this.Controls.Add(this.btnExitApplication);
             this.Controls.Add(this.lblTime);
@@ -269,8 +272,8 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnExitApplication;
         private System.Windows.Forms.Label lblEnterStudentNumber;
-        private System.Windows.Forms.TextBox txtStudent_ID;
         private System.Windows.Forms.TextBox txtLecturer_ID;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblStudentID;
     }
 }

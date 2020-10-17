@@ -61,7 +61,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 87);
-            this.btnClear.TabIndex = 112;
+            this.btnClear.TabIndex = 2;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -75,7 +75,7 @@
             this.btnDeleteRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteRecord.Name = "btnDeleteRecord";
             this.btnDeleteRecord.Size = new System.Drawing.Size(232, 57);
-            this.btnDeleteRecord.TabIndex = 105;
+            this.btnDeleteRecord.TabIndex = 1;
             this.btnDeleteRecord.Text = "Delete Record";
             this.btnDeleteRecord.UseVisualStyleBackColor = false;
             this.btnDeleteRecord.Click += new System.EventHandler(this.btnDeleteRecord_Click);
@@ -100,7 +100,7 @@
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(160, 40);
-            this.btnRefresh.TabIndex = 106;
+            this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh Table";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -112,7 +112,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(851, 190);
-            this.dataGridView1.TabIndex = 110;
+            this.dataGridView1.TabIndex = 5;
             // 
             // txtAttendanceID
             // 
@@ -120,7 +120,7 @@
             this.txtAttendanceID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAttendanceID.Name = "txtAttendanceID";
             this.txtAttendanceID.Size = new System.Drawing.Size(232, 22);
-            this.txtAttendanceID.TabIndex = 104;
+            this.txtAttendanceID.TabIndex = 0;
             // 
             // label9
             // 
@@ -164,7 +164,7 @@
             this.btnReturnToAttendanceMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToAttendanceMenu.Name = "btnReturnToAttendanceMenu";
             this.btnReturnToAttendanceMenu.Size = new System.Drawing.Size(286, 57);
-            this.btnReturnToAttendanceMenu.TabIndex = 121;
+            this.btnReturnToAttendanceMenu.TabIndex = 3;
             this.btnReturnToAttendanceMenu.Text = "Return to Attendance Menu";
             this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
             this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToAttendanceMenu_Click);

@@ -13,15 +13,16 @@ namespace Student_Attendance_System
 {
     public partial class Student_Attendance : Form
     {
+        
         public Student_Attendance()
         {
             InitializeComponent();
         }
 
         // Global variables.
-        public string  studentNumber;
-        public string  module_Code;
-        public string  Lecturer;
+        public string studentNumber;
+        public string module_Code;
+        public string Lecturer;
         public string date;
         public string time;
 
@@ -53,7 +54,7 @@ namespace Student_Attendance_System
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            studentNumber = txtStudent_ID.Text;
+            studentNumber = lblStudentID.Text;
             module_Code = txtModuleID.Text;
             Lecturer = txtLecturer_ID.Text;
             date = currentDate.ToString();
@@ -100,7 +101,6 @@ namespace Student_Attendance_System
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtStudent_ID.Text = "";
             txtLecturer_ID.Text = "";
             txtModuleID.Text = "";
         }

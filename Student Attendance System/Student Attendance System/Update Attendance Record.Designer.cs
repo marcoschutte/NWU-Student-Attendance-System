@@ -95,7 +95,7 @@
             this.btnUpdateRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateRecord.Name = "btnUpdateRecord";
             this.btnUpdateRecord.Size = new System.Drawing.Size(232, 57);
-            this.btnUpdateRecord.TabIndex = 136;
+            this.btnUpdateRecord.TabIndex = 5;
             this.btnUpdateRecord.Text = "Update Record";
             this.btnUpdateRecord.UseVisualStyleBackColor = false;
             this.btnUpdateRecord.Click += new System.EventHandler(this.btnUpdateRecord_Click);
@@ -151,7 +151,7 @@
             this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(232, 22);
-            this.txtStudentID.TabIndex = 133;
+            this.txtStudentID.TabIndex = 2;
             // 
             // lbl2
             // 
@@ -182,7 +182,7 @@
             this.txtModuleID.MaxLength = 7;
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(232, 22);
-            this.txtModuleID.TabIndex = 135;
+            this.txtModuleID.TabIndex = 4;
             // 
             // label5
             // 
@@ -201,7 +201,7 @@
             this.txtLecturerID.MaxLength = 8;
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.Size = new System.Drawing.Size(232, 22);
-            this.txtLecturerID.TabIndex = 134;
+            this.txtLecturerID.TabIndex = 3;
             // 
             // lbl3
             // 
@@ -234,7 +234,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 87);
-            this.btnClear.TabIndex = 131;
+            this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -248,7 +248,7 @@
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(232, 57);
-            this.btnSearch.TabIndex = 128;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -270,7 +270,7 @@
             this.txtAttendanceID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAttendanceID.Name = "txtAttendanceID";
             this.txtAttendanceID.Size = new System.Drawing.Size(232, 22);
-            this.txtAttendanceID.TabIndex = 127;
+            this.txtAttendanceID.TabIndex = 0;
             // 
             // label9
             // 
@@ -290,7 +290,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(850, 190);
-            this.dataGridView3.TabIndex = 126;
+            this.dataGridView3.TabIndex = 8;
             // 
             // label1
             // 
@@ -313,7 +313,7 @@
             this.btnReturnToAttendanceMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToAttendanceMenu.Name = "btnReturnToAttendanceMenu";
             this.btnReturnToAttendanceMenu.Size = new System.Drawing.Size(286, 57);
-            this.btnReturnToAttendanceMenu.TabIndex = 148;
+            this.btnReturnToAttendanceMenu.TabIndex = 7;
             this.btnReturnToAttendanceMenu.Text = "Return to Attendance Menu";
             this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
             this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToAttendanceMenu_Click);

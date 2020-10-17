@@ -68,7 +68,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 81);
-            this.btnClear.TabIndex = 118;
+            this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -82,7 +82,7 @@
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(160, 40);
-            this.btnRefresh.TabIndex = 117;
+            this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "Refresh Table";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -94,7 +94,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(885, 190);
-            this.dataGridView2.TabIndex = 116;
+            this.dataGridView2.TabIndex = 7;
             // 
             // btnAddRecord
             // 
@@ -105,7 +105,7 @@
             this.btnAddRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRecord.Name = "btnAddRecord";
             this.btnAddRecord.Size = new System.Drawing.Size(232, 57);
-            this.btnAddRecord.TabIndex = 106;
+            this.btnAddRecord.TabIndex = 3;
             this.btnAddRecord.Text = "Add Record";
             this.btnAddRecord.UseVisualStyleBackColor = false;
             this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
@@ -161,7 +161,7 @@
             this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(232, 22);
-            this.txtStudentID.TabIndex = 103;
+            this.txtStudentID.TabIndex = 0;
             // 
             // label3
             // 
@@ -192,7 +192,7 @@
             this.txtModuleID.MaxLength = 7;
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(232, 22);
-            this.txtModuleID.TabIndex = 105;
+            this.txtModuleID.TabIndex = 2;
             // 
             // label5
             // 
@@ -211,7 +211,7 @@
             this.txtLecturerID.MaxLength = 8;
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.Size = new System.Drawing.Size(232, 22);
-            this.txtLecturerID.TabIndex = 104;
+            this.txtLecturerID.TabIndex = 1;
             // 
             // label4
             // 
@@ -245,7 +245,7 @@
             this.btnReturnToAttendanceMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToAttendanceMenu.Name = "btnReturnToAttendanceMenu";
             this.btnReturnToAttendanceMenu.Size = new System.Drawing.Size(286, 57);
-            this.btnReturnToAttendanceMenu.TabIndex = 120;
+            this.btnReturnToAttendanceMenu.TabIndex = 5;
             this.btnReturnToAttendanceMenu.Text = "Return to Attendance Menu";
             this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
             this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);

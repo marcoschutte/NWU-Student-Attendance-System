@@ -71,7 +71,7 @@
             this.btnMaintainStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaintainStudents.Name = "btnMaintainStudents";
             this.btnMaintainStudents.Size = new System.Drawing.Size(220, 50);
-            this.btnMaintainStudents.TabIndex = 44;
+            this.btnMaintainStudents.TabIndex = 0;
             this.btnMaintainStudents.Text = "Maintain Students";
             this.btnMaintainStudents.UseVisualStyleBackColor = false;
             this.btnMaintainStudents.Click += new System.EventHandler(this.btnMaintainStudents_Click);
@@ -85,7 +85,7 @@
             this.btnMaintainLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaintainLecturers.Name = "btnMaintainLecturers";
             this.btnMaintainLecturers.Size = new System.Drawing.Size(220, 50);
-            this.btnMaintainLecturers.TabIndex = 45;
+            this.btnMaintainLecturers.TabIndex = 1;
             this.btnMaintainLecturers.Text = "Maintain Lecturers";
             this.btnMaintainLecturers.UseVisualStyleBackColor = false;
             this.btnMaintainLecturers.Click += new System.EventHandler(this.btnMaintainLecturers_Click);
@@ -99,7 +99,7 @@
             this.btnMaintainModules.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaintainModules.Name = "btnMaintainModules";
             this.btnMaintainModules.Size = new System.Drawing.Size(220, 50);
-            this.btnMaintainModules.TabIndex = 46;
+            this.btnMaintainModules.TabIndex = 2;
             this.btnMaintainModules.Text = "Maintain Modules";
             this.btnMaintainModules.UseVisualStyleBackColor = false;
             this.btnMaintainModules.Click += new System.EventHandler(this.btnMaintainModules_Click);
@@ -113,7 +113,7 @@
             this.btnMaintainStudentAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaintainStudentAttendance.Name = "btnMaintainStudentAttendance";
             this.btnMaintainStudentAttendance.Size = new System.Drawing.Size(220, 57);
-            this.btnMaintainStudentAttendance.TabIndex = 47;
+            this.btnMaintainStudentAttendance.TabIndex = 3;
             this.btnMaintainStudentAttendance.Text = "Maintain Student Attendance";
             this.btnMaintainStudentAttendance.UseVisualStyleBackColor = false;
             this.btnMaintainStudentAttendance.Click += new System.EventHandler(this.btnMaintainStudentAttendance_Click);
@@ -127,7 +127,7 @@
             this.btnRequestReports.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequestReports.Name = "btnRequestReports";
             this.btnRequestReports.Size = new System.Drawing.Size(220, 50);
-            this.btnRequestReports.TabIndex = 48;
+            this.btnRequestReports.TabIndex = 4;
             this.btnRequestReports.Text = "Request Reports";
             this.btnRequestReports.UseVisualStyleBackColor = false;
             // 
@@ -140,7 +140,7 @@
             this.btnExitApplication.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(222, 50);
-            this.btnExitApplication.TabIndex = 49;
+            this.btnExitApplication.TabIndex = 5;
             this.btnExitApplication.Text = "Exit Application";
             this.btnExitApplication.UseVisualStyleBackColor = false;
             this.btnExitApplication.Click += new System.EventHandler(this.btnExitApplication_Click);

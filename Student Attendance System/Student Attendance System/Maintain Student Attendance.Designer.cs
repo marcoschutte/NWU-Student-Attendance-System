@@ -69,7 +69,7 @@
             this.btnAddAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAttendance.Name = "btnAddAttendance";
             this.btnAddAttendance.Size = new System.Drawing.Size(286, 57);
-            this.btnAddAttendance.TabIndex = 46;
+            this.btnAddAttendance.TabIndex = 0;
             this.btnAddAttendance.Text = "Add Attendance";
             this.btnAddAttendance.UseVisualStyleBackColor = false;
             this.btnAddAttendance.Click += new System.EventHandler(this.btnAddAttendance_Click);
@@ -83,7 +83,7 @@
             this.btnDeleteAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteAttendance.Name = "btnDeleteAttendance";
             this.btnDeleteAttendance.Size = new System.Drawing.Size(286, 57);
-            this.btnDeleteAttendance.TabIndex = 47;
+            this.btnDeleteAttendance.TabIndex = 1;
             this.btnDeleteAttendance.Text = "Delete Attendance";
             this.btnDeleteAttendance.UseVisualStyleBackColor = false;
             this.btnDeleteAttendance.Click += new System.EventHandler(this.btnDeleteAttendance_Click);
@@ -97,7 +97,7 @@
             this.btnUpdateAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateAttendance.Name = "btnUpdateAttendance";
             this.btnUpdateAttendance.Size = new System.Drawing.Size(286, 57);
-            this.btnUpdateAttendance.TabIndex = 48;
+            this.btnUpdateAttendance.TabIndex = 2;
             this.btnUpdateAttendance.Text = "Update Attendance";
             this.btnUpdateAttendance.UseVisualStyleBackColor = false;
             this.btnUpdateAttendance.Click += new System.EventHandler(this.btnUpdateAttendance_Click);
@@ -111,7 +111,7 @@
             this.btnReturnToMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
             this.btnReturnToMainMenu.Size = new System.Drawing.Size(286, 57);
-            this.btnReturnToMainMenu.TabIndex = 49;
+            this.btnReturnToMainMenu.TabIndex = 3;
             this.btnReturnToMainMenu.Text = "Return to Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = false;
             this.btnReturnToMainMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);

@@ -69,7 +69,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(83, 53);
-            this.btnClear.TabIndex = 4;
+            this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -83,7 +83,7 @@
             this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
             this.btnReturnToMenu.Size = new System.Drawing.Size(215, 44);
-            this.btnReturnToMenu.TabIndex = 3;
+            this.btnReturnToMenu.TabIndex = 4;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
             this.btnReturnToMenu.Click += new System.EventHandler(this.btnReturnToMenu_Click);
