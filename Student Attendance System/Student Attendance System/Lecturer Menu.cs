@@ -46,5 +46,12 @@ namespace Student_Attendance_System
             maintainModules.Show();
             this.Hide();
         }
+
+        private void btnMaintainStudentAttendance_Click(object sender, EventArgs e)
+        {
+            Maintain_Student_Attendance maintainAttendance = new Maintain_Student_Attendance();
+            maintainAttendance.Show();
+            this.Hide();
+        }
     }
 }

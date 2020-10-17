@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Student_Attendance_System
 {
-    public partial class Lecturer_Attendance : Form
+    public partial class Maintain_Student_Attendance : Form
     {
-        public Lecturer_Attendance()
+        public Maintain_Student_Attendance()
         {
             InitializeComponent();
+        }
+
+        private void btnAddAttendance_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

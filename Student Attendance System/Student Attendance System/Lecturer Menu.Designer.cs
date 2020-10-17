@@ -33,7 +33,7 @@
             this.btnMaintainStudents = new System.Windows.Forms.Button();
             this.btnMaintainLecturers = new System.Windows.Forms.Button();
             this.btnMaintainModules = new System.Windows.Forms.Button();
-            this.btnStudentAttendance = new System.Windows.Forms.Button();
+            this.btnMaintainStudentAttendance = new System.Windows.Forms.Button();
             this.btnRequestReports = new System.Windows.Forms.Button();
             this.btnExitApplication = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loverslanePictureBox)).BeginInit();
@@ -104,18 +104,19 @@
             this.btnMaintainModules.UseVisualStyleBackColor = false;
             this.btnMaintainModules.Click += new System.EventHandler(this.btnMaintainModules_Click);
             // 
-            // btnStudentAttendance
+            // btnMaintainStudentAttendance
             // 
-            this.btnStudentAttendance.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStudentAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnStudentAttendance.ForeColor = System.Drawing.Color.Purple;
-            this.btnStudentAttendance.Location = new System.Drawing.Point(323, 266);
-            this.btnStudentAttendance.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStudentAttendance.Name = "btnStudentAttendance";
-            this.btnStudentAttendance.Size = new System.Drawing.Size(220, 50);
-            this.btnStudentAttendance.TabIndex = 47;
-            this.btnStudentAttendance.Text = "Student Attendance";
-            this.btnStudentAttendance.UseVisualStyleBackColor = false;
+            this.btnMaintainStudentAttendance.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMaintainStudentAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnMaintainStudentAttendance.ForeColor = System.Drawing.Color.Purple;
+            this.btnMaintainStudentAttendance.Location = new System.Drawing.Point(323, 266);
+            this.btnMaintainStudentAttendance.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaintainStudentAttendance.Name = "btnMaintainStudentAttendance";
+            this.btnMaintainStudentAttendance.Size = new System.Drawing.Size(220, 50);
+            this.btnMaintainStudentAttendance.TabIndex = 47;
+            this.btnMaintainStudentAttendance.Text = "Maintain Student Attendance";
+            this.btnMaintainStudentAttendance.UseVisualStyleBackColor = false;
+            this.btnMaintainStudentAttendance.Click += new System.EventHandler(this.btnMaintainStudentAttendance_Click);
             // 
             // btnRequestReports
             // 
@@ -151,7 +152,7 @@
             this.ClientSize = new System.Drawing.Size(553, 477);
             this.Controls.Add(this.btnExitApplication);
             this.Controls.Add(this.btnRequestReports);
-            this.Controls.Add(this.btnStudentAttendance);
+            this.Controls.Add(this.btnMaintainStudentAttendance);
             this.Controls.Add(this.btnMaintainModules);
             this.Controls.Add(this.btnMaintainLecturers);
             this.Controls.Add(this.btnMaintainStudents);
@@ -172,7 +173,7 @@
         private System.Windows.Forms.Button btnMaintainStudents;
         private System.Windows.Forms.Button btnMaintainLecturers;
         private System.Windows.Forms.Button btnMaintainModules;
-        private System.Windows.Forms.Button btnStudentAttendance;
+        private System.Windows.Forms.Button btnMaintainStudentAttendance;
         private System.Windows.Forms.Button btnRequestReports;
         private System.Windows.Forms.Button btnExitApplication;
     }
