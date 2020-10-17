@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lecturer Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer Attendance.Designer.cs">
+      <DependentUpon>Lecturer Attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,12 +93,6 @@
     </Compile>
     <Compile Include="Maintain Modules.Designer.cs">
       <DependentUpon>Maintain Modules.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Maintain Student Attendance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maintain Student Attendance.Designer.cs">
-      <DependentUpon>Maintain Student Attendance.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintain Students.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lecturer Attendance.resx">
+      <DependentUpon>Lecturer Attendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,11 +141,11 @@
     <EmbeddedResource Include="Maintain Modules.resx">
       <DependentUpon>Maintain Modules.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maintain Student Attendance.resx">
-      <DependentUpon>Maintain Student Attendance.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Maintain Students.resx">
       <DependentUpon>Maintain Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Request Reports.resx">
+      <DependentUpon>Request Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student Attendance.resx">
       <DependentUpon>Student Attendance.cs</DependentUpon>
@@ -177,12 +180,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AttendanceDB.mdf">
+    <Content Include="Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="AttendanceDB_log.ldf">
+    <Content Include="Database1_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>AttendanceDB.mdf</DependentUpon>
+      <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Resources\Building.png" />
     <Content Include="Resources\building2.png" />
