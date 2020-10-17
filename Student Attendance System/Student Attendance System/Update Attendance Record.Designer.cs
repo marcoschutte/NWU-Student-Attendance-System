@@ -51,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReturnToAttendanceMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -303,11 +304,26 @@
             this.label1.TabIndex = 125;
             this.label1.Text = "Update an attendance record";
             // 
+            // btnReturnToAttendanceMenu
+            // 
+            this.btnReturnToAttendanceMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnReturnToAttendanceMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReturnToAttendanceMenu.ForeColor = System.Drawing.Color.Purple;
+            this.btnReturnToAttendanceMenu.Location = new System.Drawing.Point(585, 607);
+            this.btnReturnToAttendanceMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReturnToAttendanceMenu.Name = "btnReturnToAttendanceMenu";
+            this.btnReturnToAttendanceMenu.Size = new System.Drawing.Size(286, 57);
+            this.btnReturnToAttendanceMenu.TabIndex = 148;
+            this.btnReturnToAttendanceMenu.Text = "Return to Attendance Menu";
+            this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToAttendanceMenu_Click);
+            // 
             // Update_Attendance_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 672);
+            this.Controls.Add(this.btnReturnToAttendanceMenu);
             this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.lblAttendanceID);
             this.Controls.Add(this.lbl1);
@@ -365,5 +381,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReturnToAttendanceMenu;
     }
 }

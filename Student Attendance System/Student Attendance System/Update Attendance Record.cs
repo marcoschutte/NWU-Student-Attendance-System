@@ -27,7 +27,7 @@ namespace Student_Attendance_System
         DateTime currentDate = DateTime.Now;
         DateTime currentTime = DateTime.Now;
 
-        public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\marco\Desktop\Test\Test\Database1.mdf; Integrated Security = True";
+        public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security = True";
         public string attendanceID;
         public string studentID;
         public string lecturerID;
@@ -202,6 +202,13 @@ namespace Student_Attendance_System
 
             lblDate.Text = currentDate.ToString("MM/dd/yyyy");
             lblTime.Text = currentTime.ToString("hh:mm tt");
+        }
+
+        private void btnReturnToAttendanceMenu_Click(object sender, EventArgs e)
+        {
+            Maintain_Student_Attendance menu = new Maintain_Student_Attendance();
+            menu.Show();
+            this.Close();
         }
     }
 }

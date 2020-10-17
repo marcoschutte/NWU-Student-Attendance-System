@@ -38,6 +38,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReturnToAttendanceMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,26 @@
             this.label1.TabIndex = 107;
             this.label1.Text = "Delete an attendance record";
             // 
+            // btnReturnToAttendanceMenu
+            // 
+            this.btnReturnToAttendanceMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnReturnToAttendanceMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReturnToAttendanceMenu.ForeColor = System.Drawing.Color.Purple;
+            this.btnReturnToAttendanceMenu.Location = new System.Drawing.Point(586, 382);
+            this.btnReturnToAttendanceMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReturnToAttendanceMenu.Name = "btnReturnToAttendanceMenu";
+            this.btnReturnToAttendanceMenu.Size = new System.Drawing.Size(286, 57);
+            this.btnReturnToAttendanceMenu.TabIndex = 121;
+            this.btnReturnToAttendanceMenu.Text = "Return to Attendance Menu";
+            this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToAttendanceMenu_Click);
+            // 
             // Delete_Attendance_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 388);
+            this.ClientSize = new System.Drawing.Size(883, 449);
+            this.Controls.Add(this.btnReturnToAttendanceMenu);
             this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDeleteRecord);
@@ -190,5 +206,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReturnToAttendanceMenu;
     }
 }

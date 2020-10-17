@@ -112,7 +112,7 @@
             this.btnMaintainStudentAttendance.Location = new System.Drawing.Point(323, 266);
             this.btnMaintainStudentAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaintainStudentAttendance.Name = "btnMaintainStudentAttendance";
-            this.btnMaintainStudentAttendance.Size = new System.Drawing.Size(220, 50);
+            this.btnMaintainStudentAttendance.Size = new System.Drawing.Size(220, 57);
             this.btnMaintainStudentAttendance.TabIndex = 47;
             this.btnMaintainStudentAttendance.Text = "Maintain Student Attendance";
             this.btnMaintainStudentAttendance.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             this.btnRequestReports.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRequestReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnRequestReports.ForeColor = System.Drawing.Color.Purple;
-            this.btnRequestReports.Location = new System.Drawing.Point(323, 324);
+            this.btnRequestReports.Location = new System.Drawing.Point(323, 331);
             this.btnRequestReports.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequestReports.Name = "btnRequestReports";
             this.btnRequestReports.Size = new System.Drawing.Size(220, 50);

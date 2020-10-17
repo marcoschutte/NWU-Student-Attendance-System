@@ -45,6 +45,7 @@
             this.txtLecturerID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnReturnToAttendanceMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,11 +236,26 @@
             this.label2.TabIndex = 107;
             this.label2.Text = "Add an attendance record";
             // 
+            // btnReturnToAttendanceMenu
+            // 
+            this.btnReturnToAttendanceMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnReturnToAttendanceMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReturnToAttendanceMenu.ForeColor = System.Drawing.Color.Purple;
+            this.btnReturnToAttendanceMenu.Location = new System.Drawing.Point(621, 416);
+            this.btnReturnToAttendanceMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReturnToAttendanceMenu.Name = "btnReturnToAttendanceMenu";
+            this.btnReturnToAttendanceMenu.Size = new System.Drawing.Size(286, 57);
+            this.btnReturnToAttendanceMenu.TabIndex = 120;
+            this.btnReturnToAttendanceMenu.Text = "Return to Attendance Menu";
+            this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
+            // 
             // Add_Attendance_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 481);
+            this.Controls.Add(this.btnReturnToAttendanceMenu);
             this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRefresh);
@@ -285,5 +301,6 @@
         private System.Windows.Forms.TextBox txtLecturerID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnReturnToAttendanceMenu;
     }
 }

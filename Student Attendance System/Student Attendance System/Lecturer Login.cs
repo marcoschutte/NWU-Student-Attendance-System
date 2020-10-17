@@ -93,7 +93,7 @@ namespace Student_Attendance_System
                     }
                     else
                     {
-                        label5.Text = "Incorrect fields! Please enter your login credentials below:!";
+                        label5.Text = "Incorrect fields! Please enter your login credentials below:";
                         label5.ForeColor = Color.Red;
 
                         if (datRead.GetValue(0).ToString() != _id)

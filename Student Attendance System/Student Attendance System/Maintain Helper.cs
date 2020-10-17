@@ -59,7 +59,7 @@ namespace Student_Attendance_System
             if (type == 'S')
             {
                 table = "STUDENTS ";
-                fields = "(Student_ID, Name, Last_Name, Email, Password) ";
+                fields = "(Student_ID, Name, Last_Name, Email, Password)";
             }
             else if (type == 'L')
             {
