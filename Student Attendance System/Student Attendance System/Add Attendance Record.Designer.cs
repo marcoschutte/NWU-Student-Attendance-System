@@ -52,7 +52,7 @@
             // lblErrorMessage
             // 
             this.lblErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorMessage.Location = new System.Drawing.Point(381, 416);
+            this.lblErrorMessage.Location = new System.Drawing.Point(377, 352);
             this.lblErrorMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(506, 57);
