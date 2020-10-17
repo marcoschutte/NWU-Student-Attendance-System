@@ -67,5 +67,10 @@ namespace Student_Attendance_System
             maintainAttendance.Show(this);
             this.Hide();
         }
+
+        private void btnRequestReports_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

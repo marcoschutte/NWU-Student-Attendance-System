@@ -24,9 +24,7 @@ namespace Student_Attendance_System
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
         {
-            
-            Lecturer_Menu lecturerMenu = new Lecturer_Menu();
-            lecturerMenu.Show();
+            Owner.Show();
             this.Close();
         }
     }
