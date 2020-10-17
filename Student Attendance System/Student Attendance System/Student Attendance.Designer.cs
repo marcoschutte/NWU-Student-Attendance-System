@@ -33,7 +33,6 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblSelectLecturer = new System.Windows.Forms.Label();
             this.lblSelectModule = new System.Windows.Forms.Label();
-            this.lecturerComboBox = new System.Windows.Forms.ComboBox();
             this.txtModuleID = new System.Windows.Forms.TextBox();
             this.loverslanePictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.btnExitApplication = new System.Windows.Forms.Button();
             this.lblEnterStudentNumber = new System.Windows.Forms.Label();
             this.txtStudent_ID = new System.Windows.Forms.TextBox();
+            this.txtLecturer_ID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.loverslanePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,19 +100,6 @@
             this.lblSelectModule.TabIndex = 38;
             this.lblSelectModule.Text = "Enter the module code:";
             // 
-            // lecturerComboBox
-            // 
-            this.lecturerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lecturerComboBox.FormattingEnabled = true;
-            this.lecturerComboBox.Items.AddRange(new object[] {
-            "Roelien Goede",
-            "Janet Liebenberg",
-            "Linda Redelinghuys"});
-            this.lecturerComboBox.Location = new System.Drawing.Point(397, 176);
-            this.lecturerComboBox.Name = "lecturerComboBox";
-            this.lecturerComboBox.Size = new System.Drawing.Size(175, 21);
-            this.lecturerComboBox.TabIndex = 35;
-            // 
             // txtModuleID
             // 
             this.txtModuleID.Location = new System.Drawing.Point(403, 141);
@@ -157,9 +144,9 @@
             this.lblDate.Location = new System.Drawing.Point(401, 212);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(114, 16);
+            this.lblDate.Size = new System.Drawing.Size(102, 16);
             this.lblDate.TabIndex = 46;
-            this.lblDate.Text = "[MM/DD/YYYY]";
+            this.lblDate.Text = "[mm/dd/yyyy]";
             // 
             // lblTime
             // 
@@ -167,9 +154,9 @@
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.Location = new System.Drawing.Point(401, 241);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(86, 16);
+            this.lblTime.Size = new System.Drawing.Size(74, 16);
             this.lblTime.TabIndex = 47;
-            this.lblTime.Text = "[h:mm:ss tt]";
+            this.lblTime.Text = "[hh:mm tt]";
             // 
             // btnExitApplication
             // 
@@ -201,11 +188,19 @@
             this.txtStudent_ID.Size = new System.Drawing.Size(175, 20);
             this.txtStudent_ID.TabIndex = 50;
             // 
+            // txtLecturer_ID
+            // 
+            this.txtLecturer_ID.Location = new System.Drawing.Point(404, 176);
+            this.txtLecturer_ID.Name = "txtLecturer_ID";
+            this.txtLecturer_ID.Size = new System.Drawing.Size(100, 20);
+            this.txtLecturer_ID.TabIndex = 51;
+            // 
             // Student_Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 366);
+            this.Controls.Add(this.txtLecturer_ID);
             this.Controls.Add(this.txtStudent_ID);
             this.Controls.Add(this.lblEnterStudentNumber);
             this.Controls.Add(this.btnExitApplication);
@@ -219,9 +214,8 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblSelectLecturer);
             this.Controls.Add(this.lblSelectModule);
-            this.Controls.Add(this.lecturerComboBox);
             this.Controls.Add(this.loverslanePictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Student_Attendance";
             this.Text = "Student_Attendance";
             this.Load += new System.EventHandler(this.Student_Attendance_Load);
@@ -238,7 +232,6 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblSelectLecturer;
         private System.Windows.Forms.Label lblSelectModule;
-        private System.Windows.Forms.ComboBox lecturerComboBox;
         private System.Windows.Forms.PictureBox loverslanePictureBox;
         private System.Windows.Forms.TextBox txtModuleID;
         private System.Windows.Forms.Label label1;
@@ -248,5 +241,6 @@
         private System.Windows.Forms.Button btnExitApplication;
         private System.Windows.Forms.Label lblEnterStudentNumber;
         private System.Windows.Forms.TextBox txtStudent_ID;
+        private System.Windows.Forms.TextBox txtLecturer_ID;
     }
 }

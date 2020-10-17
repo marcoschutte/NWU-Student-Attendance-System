@@ -19,9 +19,10 @@ namespace Student_Attendance_System
         }
 
         // Global variables.
-        public String studentNumber;
-        public String module_Code;
-        public String Lecturer;
+        public string  studentNumber;
+        public string  module_Code;
+        public string  Lecturer;
+        
 
         //declare and initialize the connection string
         public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\Database1.mdf;Integrated Security=True";
@@ -34,8 +35,8 @@ namespace Student_Attendance_System
 
         private void Student_Attendance_Load(object sender, EventArgs e)
         {
-            lblDate.Text = DateTime.Now.ToString();
-            lblTime.Text = DateTime.Now.ToString("HH:mm:ss tt");
+            lblDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            lblTime.Text = DateTime.Now.ToString("hh:mm tt");
         }
 
         private void btnExitApplication_Click(object sender, EventArgs e)
@@ -50,12 +51,12 @@ namespace Student_Attendance_System
         {
             studentNumber = txtStudent_ID.Text;
             module_Code = txtModuleID.Text;
-            Lecturer = lecturerComboBox.Text;
+            Lecturer = txtLecturer_ID.Text;
 
             try
             {
                 //query statement
-                string insertQuery = "INSERT INTO ATTENDANCE_Table VALUES(@Student_ID,@Lecturer_ID,@Module_ID,@Attendance_Date,@Attendance_Time)";
+                string insertQuery = "INSERT INTO ATTENDANCE VALUES(@Student_ID,@Lecturer_ID,@Module_ID,@Attendance_Date,@Attendance_Time)";
 
                 connection = new SqlConnection(connectionString);
 
