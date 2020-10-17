@@ -27,18 +27,17 @@ namespace Student_Attendance_System
         public SqlDataAdapter adapter;
         public DataSet dataset;
 
-
-        private void Request_Reports_Load(object sender, EventArgs e)
+        private void DisplayTable()
         {
             //query statement
-            string selectAllQuery = "SELECT * ATTENDANCE";
+            string selectAll = "SELECT * FROM ATTENDANCE";
 
             connection = new SqlConnection(connectionString);
 
             //open the connection
             connection.Open();
 
-            command = new SqlCommand(selectAllQuery, connection);
+            command = new SqlCommand(selectAll, connection);
 
             dataset = new DataSet();
             adapter = new SqlDataAdapter();
@@ -51,11 +50,44 @@ namespace Student_Attendance_System
 
             //close the connection
             connection.Close();
+
+            txtStudentNumber.Focus();
+        }
+
+
+        private void Request_Reports_Load(object sender, EventArgs e)
+        {
+            DisplayTable();
         }
 
         private void btnShowAttendance_Click(object sender, EventArgs e)
         {
+            //query statement
+            string searchQuery = "SELECT * FROM ATTENDANCE WHERE Student_ID LIKE '" + txtStudentNumber.Text + "%'";
 
+            connection = new SqlConnection(connectionString);
+
+            //open the connection
+            connection.Open();
+
+            adapter = new SqlDataAdapter();
+            dataset = new DataSet();
+
+            command = new SqlCommand(searchQuery, connection);
+
+            adapter.SelectCommand = command;
+            adapter.Fill(dataset, "ATTENDANCE");
+
+            dataGridView1.DataSource = dataset;
+            dataGridView1.DataMember = "ATTENDANCE";
+
+            //close the connection
+            connection.Close();
+
+            txtStudentNumber.Focus();
+
+            //clear the text box
+            txtStudentNumber.Text = "";
         }
     }
 }

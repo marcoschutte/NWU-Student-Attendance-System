@@ -31,7 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblRR = new System.Windows.Forms.Label();
             this.lbl_ESN = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.btnShowAttendance = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,12 +64,12 @@
             this.lbl_ESN.TabIndex = 2;
             this.lbl_ESN.Text = "Enter student number: ";
             // 
-            // textBox1
+            // txtStudentNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 374);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtStudentNumber.Location = new System.Drawing.Point(148, 374);
+            this.txtStudentNumber.Name = "txtStudentNumber";
+            this.txtStudentNumber.Size = new System.Drawing.Size(141, 20);
+            this.txtStudentNumber.TabIndex = 3;
             // 
             // btnShowAttendance
             // 
@@ -88,7 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 499);
             this.Controls.Add(this.btnShowAttendance);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.lbl_ESN);
             this.Controls.Add(this.lblRR);
             this.Controls.Add(this.dataGridView1);
@@ -106,7 +106,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblRR;
         private System.Windows.Forms.Label lbl_ESN;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.Button btnShowAttendance;
     }
 }
