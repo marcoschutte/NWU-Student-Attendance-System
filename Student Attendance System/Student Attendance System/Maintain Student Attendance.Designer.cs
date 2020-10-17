@@ -71,6 +71,7 @@
             this.btnAddAttendance.TabIndex = 46;
             this.btnAddAttendance.Text = "Add Attendance";
             this.btnAddAttendance.UseVisualStyleBackColor = false;
+            this.btnAddAttendance.Click += new System.EventHandler(this.btnAddAttendance_Click);
             // 
             // btnDeleteAttendance
             // 

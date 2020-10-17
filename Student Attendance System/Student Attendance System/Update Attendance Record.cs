@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
-namespace Test
+namespace Student_Attendance_System
 {
-    public partial class Update_Attendance : Form
+    public partial class Update_Attendance_Record : Form
     {
-        public Update_Attendance()
+        public Update_Attendance_Record()
         {
             InitializeComponent();
         }
@@ -119,30 +119,6 @@ namespace Test
             lblErrorMessage.Text = "Record successfully updated!";
         }
 
-        private void Update_Attendance_Load(object sender, EventArgs e)
-        {
-            DisplayTable();
-
-            lblErrorMessage.Text = "";
-            lblMessage.Visible = false;
-            lbl1.Visible = false;
-            lbl2.Visible = false;
-            lbl3.Visible = false;
-            lbl4.Visible = false;
-            lbl5.Visible = false;
-            lbl6.Visible = false;
-            lblAttendanceID.Visible = false;
-            lblDate.Visible = false;
-            lblTime.Visible = false;
-            txtStudentID.Visible = false;
-            txtLecturerID.Visible = false;
-            txtModuleID.Visible = false;
-            btnUpdateRecord.Visible = false;
-
-            lblDate.Text = currentDate.ToString("MM/dd/yyyy");
-            lblTime.Text = currentTime.ToString("hh:mm tt");
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             attendanceID = txtAttendanceID.Text;
@@ -183,14 +159,13 @@ namespace Test
                     {
                         MessageBox.Show("The attendance record you are trying to update does not exist!\nPlease enter the Attendance ID of a valid record.");
                     }
-                    
+
                 }
                 catch (Exception error)
                 {
                     MessageBox.Show(error.Message);
                 }
             }
-            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -198,16 +173,35 @@ namespace Test
             ClearFields();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnUpdateRecord_Click(object sender, EventArgs e)
         {
             UpdateRecord();
             DisplayRecord();
             ClearFields();
+        }
+
+        private void Update_Attendance_Record_Load(object sender, EventArgs e)
+        {
+            DisplayTable();
+
+            lblErrorMessage.Text = "";
+            lblMessage.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+            lbl5.Visible = false;
+            lbl6.Visible = false;
+            lblAttendanceID.Visible = false;
+            lblDate.Visible = false;
+            lblTime.Visible = false;
+            txtStudentID.Visible = false;
+            txtLecturerID.Visible = false;
+            txtModuleID.Visible = false;
+            btnUpdateRecord.Visible = false;
+
+            lblDate.Text = currentDate.ToString("MM/dd/yyyy");
+            lblTime.Text = currentTime.ToString("hh:mm tt");
         }
     }
 }

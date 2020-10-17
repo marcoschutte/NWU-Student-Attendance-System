@@ -63,17 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add Attendance.cs">
+    <Compile Include="Add Attendance Record.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add Attendance.designer.cs">
-      <DependentUpon>Add Attendance.cs</DependentUpon>
+    <Compile Include="Add Attendance Record.Designer.cs">
+      <DependentUpon>Add Attendance Record.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delete Attendance.cs">
+    <Compile Include="Delete Attendance Record.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delete Attendance.designer.cs">
-      <DependentUpon>Delete Attendance.cs</DependentUpon>
+    <Compile Include="Delete Attendance Record.Designer.cs">
+      <DependentUpon>Delete Attendance Record.cs</DependentUpon>
     </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
@@ -130,11 +130,11 @@
     <Compile Include="Student Login.Designer.cs">
       <DependentUpon>Student Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update Attendance.cs">
+    <Compile Include="Update Attendance Record.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update Attendance.designer.cs">
-      <DependentUpon>Update Attendance.cs</DependentUpon>
+    <Compile Include="Update Attendance Record.Designer.cs">
+      <DependentUpon>Update Attendance Record.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
@@ -144,11 +144,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add Attendance.resx">
-      <DependentUpon>Add Attendance.cs</DependentUpon>
+    <EmbeddedResource Include="Add Attendance Record.resx">
+      <DependentUpon>Add Attendance Record.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delete Attendance.resx">
-      <DependentUpon>Delete Attendance.cs</DependentUpon>
+    <EmbeddedResource Include="Delete Attendance Record.resx">
+      <DependentUpon>Delete Attendance Record.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>
@@ -177,8 +177,8 @@
     <EmbeddedResource Include="Student Login.resx">
       <DependentUpon>Student Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update Attendance.resx">
-      <DependentUpon>Update Attendance.cs</DependentUpon>
+    <EmbeddedResource Include="Update Attendance Record.resx">
+      <DependentUpon>Update Attendance Record.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
