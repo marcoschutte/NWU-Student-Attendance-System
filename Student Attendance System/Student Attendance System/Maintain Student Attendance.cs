@@ -19,7 +19,20 @@ namespace Student_Attendance_System
 
         private void btnAddAttendance_Click(object sender, EventArgs e)
         {
-            Add_Attendance addAttendance = new Add_Attendance();
+            Add_Attendance_Record addAttendance = new Add_Attendance_Record();
+            addAttendance.Show();
+        }
+
+        private void btnDeleteAttendance_Click(object sender, EventArgs e)
+        {
+            Delete_Attendance_Record deleteAttendance = new Delete_Attendance_Record();
+            deleteAttendance.Show();
+        }
+
+        private void btnUpdateAttendance_Click(object sender, EventArgs e)
+        {
+            Update_Attendance_Record updateAttendance = new Update_Attendance_Record();
+            updateAttendance.Show();
         }
     }
 }

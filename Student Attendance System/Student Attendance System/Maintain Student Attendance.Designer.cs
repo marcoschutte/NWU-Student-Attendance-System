@@ -85,6 +85,7 @@
             this.btnDeleteAttendance.TabIndex = 47;
             this.btnDeleteAttendance.Text = "Delete Attendance";
             this.btnDeleteAttendance.UseVisualStyleBackColor = false;
+            this.btnDeleteAttendance.Click += new System.EventHandler(this.btnDeleteAttendance_Click);
             // 
             // btnUpdateAttendance
             // 
@@ -98,6 +99,7 @@
             this.btnUpdateAttendance.TabIndex = 48;
             this.btnUpdateAttendance.Text = "Update Attendance";
             this.btnUpdateAttendance.UseVisualStyleBackColor = false;
+            this.btnUpdateAttendance.Click += new System.EventHandler(this.btnUpdateAttendance_Click);
             // 
             // Maintain_Student_Attendance
             // 
