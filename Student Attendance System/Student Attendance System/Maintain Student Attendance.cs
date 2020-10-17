@@ -16,5 +16,33 @@ namespace Student_Attendance_System
         {
             InitializeComponent();
         }
+
+        private void btnAddAttendance_Click(object sender, EventArgs e)
+        {
+            Add_Attendance_Record addAttendance = new Add_Attendance_Record();
+            addAttendance.Show();
+            this.Close();
+        }
+
+        private void btnDeleteAttendance_Click(object sender, EventArgs e)
+        {
+            Delete_Attendance_Record deleteAttendance = new Delete_Attendance_Record();
+            deleteAttendance.Show();
+            this.Close();
+        }
+
+        private void btnUpdateAttendance_Click(object sender, EventArgs e)
+        {
+            Update_Attendance_Record updateAttendance = new Update_Attendance_Record();
+            updateAttendance.Show();
+            this.Close();
+        }
+
+        private void btnReturnToMainMenu_Click(object sender, EventArgs e)
+        {
+            Lecturer_Menu menu = new Lecturer_Menu();
+            menu.Show();
+            this.Close();
+        }
     }
 }

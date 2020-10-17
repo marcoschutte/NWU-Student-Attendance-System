@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
-namespace Test
+namespace Student_Attendance_System
 {
-    public partial class Delete_Attendance : Form
+    public partial class Delete_Attendance_Record : Form
     {
-        public Delete_Attendance()
+        public Delete_Attendance_Record()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace Test
         SqlDataAdapter adapter;
         DataSet dataset;
 
-        public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\marco\Desktop\Test\Test\Database1.mdf; Integrated Security = True";
+        public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security = True";
         public string attendanceID;
 
         public void DisplayTable()
@@ -84,7 +84,7 @@ namespace Test
         {
             attendanceID = txtAttendanceID.Text;
 
-            if(attendanceID == "")
+            if (attendanceID == "")
             {
                 lblErrorMessage.ForeColor = System.Drawing.Color.Red;
                 lblErrorMessage.Text = "Please enter a valid Attendance ID!";
@@ -93,7 +93,7 @@ namespace Test
             {
                 try
                 {
-                    if(CheckIfRecordExists() == 1)
+                    if (CheckIfRecordExists() == 1)
                     {
                         DeleteRecord();
                         DisplayTable();
@@ -111,20 +111,27 @@ namespace Test
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             DisplayTable();
         }
 
-        private void Delete_Attendance_Load(object sender, EventArgs e)
+        private void Delete_Attendance_Record_Load(object sender, EventArgs e)
         {
             DisplayTable();
             lblErrorMessage.Text = "";
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnReturnToAttendanceMenu_Click(object sender, EventArgs e)
         {
-            ClearFields();
+            Maintain_Student_Attendance menu = new Maintain_Student_Attendance();
+            menu.Show();
+            this.Close();
         }
     }
 }
