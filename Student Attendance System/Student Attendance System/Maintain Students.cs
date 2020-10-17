@@ -30,8 +30,7 @@ namespace Student_Attendance_System
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
         {
-            Lecturer_Menu menu = new Lecturer_Menu();
-            menu.Show();
+            Owner.Show();
             this.Close();
         }
 
@@ -47,7 +46,7 @@ namespace Student_Attendance_System
             {
                 if (maintainhelper.CheckID(id))
                 {
-                    if (maintainhelper.Insert('S', id, fname, lname, email, password))
+                    if (maintainhelper.Insert(id, fname, lname, email, password))
                     { 
                         MessageBox.Show("Record has been succesfully inserted.");
                         Reset();
@@ -64,7 +63,7 @@ namespace Student_Attendance_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Update('S', txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text))
+            if (maintainhelper.Update(txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text))
                 MessageBox.Show("Record has been succesfully updated.");
             else
                 MessageBox.Show("There was a problem updating the record.");

@@ -12,7 +12,8 @@ namespace Student_Attendance_System
 {
     public class Maintain_Helper
     {
-        public static string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security=True";
+        public static string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security=True";
+        public string id = "";
         SqlConnection conn = null;
 
         public string ConnectionString   
@@ -25,6 +26,8 @@ namespace Student_Attendance_System
         {
             if(conn == null)
                 conn = new SqlConnection(ConnectionString);
+
+            conn.Close();
         }
 
         public bool CheckEmail(string email)
@@ -48,7 +51,38 @@ namespace Student_Attendance_System
             return int.TryParse(id,out i);
         }
 
-        public bool Insert(char type, string id, string fname, string lname, string email, string password)
+        public bool CheckPrivilege(string id)
+        {
+            SqlDataReader dreader;
+            SqlCommand comm;
+
+            string sql = "SELECT Admin FROM LECTURERS WHERE Lecturer_ID = " + id;
+            bool admin = false;
+
+            try
+            {
+                Connect();
+                conn.Open();
+
+                comm = new SqlCommand(sql, conn);
+                dreader = comm.ExecuteReader();
+
+                while (dreader.Read())
+                {
+                    admin = Convert.ToBoolean(dreader.GetInt32(0));
+                }
+
+                conn.Close();
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+
+            return admin;
+        }
+
+        public bool Insert(string id, string fname, string lname, string email, string password)
         {
             int result = 0;
 
@@ -56,48 +90,73 @@ namespace Student_Attendance_System
 
             string table = "", fields = "";
 
-            if (type == 'S')
+            table = "STUDENTS ";
+            fields = "(Student_ID, Name, Last_Name, Email, Password)";
+
+            try
             {
-                table = "STUDENTS ";
-                fields = "(Student_ID, Name, Last_Name, Email, Password)";
+                string sql = "INSERT INTO " + table + fields + " VALUES (@id, @fname, @lname, @email, @password)";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+                comm.Parameters.AddWithValue("@fname", fname);
+                comm.Parameters.AddWithValue("@lname", lname);
+                comm.Parameters.AddWithValue("@email", email);
+                comm.Parameters.AddWithValue("@password", password);
+
+                conn.Open();
+                result = comm.ExecuteNonQuery();
+                conn.Close();
             }
-            else if (type == 'L')
+            catch (SqlException se)
             {
-                table = "LECTURERS ";
-                fields = "(Lecturer_ID, Name, Last_Name, Email, Password)";
-            }
-            else
-                table = null;
-
-            if (table != null)
-            {
-                try
-                {
-                    string sql = "INSERT INTO " + table + fields + " VALUES (@id, @fname, @lname, @email, @password)";
-
-                    SqlCommand comm = new SqlCommand(sql, conn);
-                    comm.Parameters.AddWithValue("@id", id);
-                    comm.Parameters.AddWithValue("@fname", fname);
-                    comm.Parameters.AddWithValue("@lname", lname);
-                    comm.Parameters.AddWithValue("@email", email);
-                    comm.Parameters.AddWithValue("@password", password);
-
-                    conn.Open();
-                    result = comm.ExecuteNonQuery();
-                    conn.Close();
-                }
-                catch(SqlException se)
-                {
-                    MessageBox.Show(se.Message);
-                }
+                MessageBox.Show(se.Message);
             }
 
-            if(result < 0)
+            if (result < 0)
                 return false;
             else
                 return true;
 
+        }
+
+        public bool Insert(string id, string fname, string lname, string email, string password, int admin)
+        {
+            int result = 0;
+
+            Connect();
+
+            string table = "", fields = "";
+
+            table = "LECTURERS ";
+            fields = "(Lecturer_ID, Name, Last_Name, Email, Password)";
+
+            try
+            {
+                string sql = "INSERT INTO " + table + fields + " VALUES (@id, @fname, @lname, @email, @password)";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+                comm.Parameters.AddWithValue("@fname", fname);
+                comm.Parameters.AddWithValue("@lname", lname);
+                comm.Parameters.AddWithValue("@email", email);
+                comm.Parameters.AddWithValue("@password", password);
+
+                conn.Open();
+                result = comm.ExecuteNonQuery();
+                conn.Close();
             }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+
+            if (result < 0)
+                return false;
+            else
+                return true;
+
+        }
 
         public bool Insert(string modID, string modDes)
         {
@@ -126,54 +185,85 @@ namespace Student_Attendance_System
                 return true;
         }
 
-        public bool Update(char type, string id, string fname, string lname, string email, string password)
+        public bool Update(string id, string fname, string lname, string email, string password)
         {
             int result = 0;
             string table = "", field = "";
 
-            if (type == 'S')
-            {
-                table = "STUDENTS ";
-                field = "Student_ID";
-            }
-            else if (type == 'L')
-            {
-                table = "LECTURERS ";
-                field = "Lecturer_ID";
-            }
-            else
-                table = null;
+            table = "STUDENTS ";
+            field = "Student_ID";
 
-            if (table != null)
+            string pw = "";
+
+            if (password != "")
+                pw = ", Password = '@password'";
+
+            string sql = "UPDATE " + table + " SET Name = @fname, Last_Name = @lname, Email = @email" + pw + " WHERE " + field + " = @id";
+
+            Connect();
+
+            try
             {
-                string pw = "";
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+                comm.Parameters.AddWithValue("@fname", fname);
+                comm.Parameters.AddWithValue("@lname", lname);
+                comm.Parameters.AddWithValue("@email", email);
 
                 if (password != "")
-                    pw = ", Password = '@password'";
+                    comm.Parameters.AddWithValue("@password", password);
 
-                string sql = "UPDATE " + table + " SET Name = @fname, Last_Name = @lname, Email = @email" + pw + " WHERE " + field + " = @id";
+                conn.Open();
+                result = comm.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
 
-                Connect();
+            if (result < 0)
+                return false;
+            else
+                return true;
+        }
 
-                try
-                {
-                    SqlCommand comm = new SqlCommand(sql, conn);
-                    comm.Parameters.AddWithValue("@id", id);
-                    comm.Parameters.AddWithValue("@fname", fname);
-                    comm.Parameters.AddWithValue("@lname", lname);
-                    comm.Parameters.AddWithValue("@email", email);
+        public bool Update(string id, string fname, string lname, string email, string password, int admin)
+        {
+            int result = 0;
+            string table = "", field = "";
 
-                    if (password != "")
-                        comm.Parameters.AddWithValue("@password", password);
+            table = "LECTURERS ";
+            field = "Lecturer_ID";
 
-                    conn.Open();
-                    result = comm.ExecuteNonQuery();
-                    conn.Close();
-                }
-                catch(SqlException se)
-                {
-                    MessageBox.Show(se.Message);
-                }
+            string pw = "";
+
+            if (password != "")
+                pw = ", Password = '@password'";
+
+            string sql = "UPDATE " + table + " SET Name = @fname, Last_Name = @lname, Email = @email, Admin = @admin" + pw + " WHERE " + field + " = @id";
+
+            Connect();
+
+            try
+            {
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+                comm.Parameters.AddWithValue("@fname", fname);
+                comm.Parameters.AddWithValue("@lname", lname);
+                comm.Parameters.AddWithValue("@email", email);
+                comm.Parameters.AddWithValue("@admin", admin);
+
+                if (password != "")
+                    comm.Parameters.AddWithValue("@password", password);
+
+                conn.Open();
+                result = comm.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
             }
 
             if (result < 0)

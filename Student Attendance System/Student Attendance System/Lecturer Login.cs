@@ -85,7 +85,7 @@ namespace Student_Attendance_System
                 {
                     if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
                     {
-                        Lecturer_Menu lecturerMenu = new Lecturer_Menu();
+                        Lecturer_Menu lecturerMenu = new Lecturer_Menu(_id);
                         lecturerMenu.Show();
                         _redButtonClicked = false;
                         this.Close();
