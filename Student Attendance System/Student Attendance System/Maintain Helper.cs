@@ -12,7 +12,7 @@ namespace Student_Attendance_System
 {
     public class Maintain_Helper
     {
-        public static string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security=True";
+        public static string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security=True";
         SqlConnection conn = null;
 
         public string ConnectionString   
@@ -59,7 +59,7 @@ namespace Student_Attendance_System
             if (type == 'S')
             {
                 table = "STUDENTS ";
-                fields = "(Student_ID, Name, Last_Name, Email, Password)";
+                fields = "(Student_ID, Name, Last_Name, Email, Password) ";
             }
             else if (type == 'L')
             {
@@ -81,7 +81,7 @@ namespace Student_Attendance_System
                     comm.Parameters.AddWithValue("@lname", lname);
                     comm.Parameters.AddWithValue("@email", email);
                     comm.Parameters.AddWithValue("@password", password);
-
+                    
                     conn.Open();
                     result = comm.ExecuteNonQuery();
                     conn.Close();
@@ -97,7 +97,7 @@ namespace Student_Attendance_System
             else
                 return true;
 
-            }
+        }
 
         public bool Insert(string modID, string modDes)
         {
