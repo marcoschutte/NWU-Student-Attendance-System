@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Attendance.designer.cs">
+      <DependentUpon>Add Attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add Attendance.resx">
+      <DependentUpon>Add Attendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>
     </EmbeddedResource>
