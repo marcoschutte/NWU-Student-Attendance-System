@@ -69,6 +69,12 @@
     <Compile Include="Add Attendance.designer.cs">
       <DependentUpon>Add Attendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Attendance.designer.cs">
+      <DependentUpon>Delete Attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add Attendance.resx">
       <DependentUpon>Add Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Attendance.resx">
+      <DependentUpon>Delete Attendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>
