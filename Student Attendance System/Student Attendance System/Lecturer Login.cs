@@ -44,12 +44,13 @@ namespace Student_Attendance_System
                 }
                 if (_i == 0)
                     MessageBox.Show("Database empty");
+                datRead.Close();
             }
             catch
             {
 
             }
-            datRead.Close();
+            
         }
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
@@ -97,13 +98,13 @@ namespace Student_Attendance_System
                             label5.ForeColor = Color.Red;
 
                             if (datRead.GetValue(0).ToString() != _id)
-                            {
                                 txtLecturerID.BackColor = Color.Red;
-                            }
+                            else
+                                txtLecturerID.BackColor = Color.White;
                             if (datRead.GetValue(1).ToString() != _pass)
-                            {
                                 txtPassword.BackColor = Color.Red;
-                            }
+                            else
+                                txtPassword.BackColor = Color.White;
                         }
                     }
                 }
