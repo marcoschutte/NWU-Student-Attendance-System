@@ -144,6 +144,9 @@
     <EmbeddedResource Include="Maintain Students.resx">
       <DependentUpon>Maintain Students.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Request Reports.resx">
+      <DependentUpon>Request Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student Attendance.resx">
       <DependentUpon>Student Attendance.cs</DependentUpon>
     </EmbeddedResource>
