@@ -63,12 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lecturer Attendance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lecturer Attendance.Designer.cs">
-      <DependentUpon>Lecturer Attendance.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +87,12 @@
     </Compile>
     <Compile Include="Maintain Modules.Designer.cs">
       <DependentUpon>Maintain Modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain Student Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain Student Attendance.Designer.cs">
+      <DependentUpon>Maintain Student Attendance.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintain Students.cs">
       <SubType>Form</SubType>
@@ -126,9 +126,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Lecturer Attendance.resx">
-      <DependentUpon>Lecturer Attendance.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain Modules.resx">
       <DependentUpon>Maintain Modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain Student Attendance.resx">
+      <DependentUpon>Maintain Student Attendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain Students.resx">
       <DependentUpon>Maintain Students.cs</DependentUpon>

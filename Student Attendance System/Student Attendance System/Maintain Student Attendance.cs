@@ -16,10 +16,5 @@ namespace Student_Attendance_System
         {
             InitializeComponent();
         }
-
-        private void btnAddAttendance_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
