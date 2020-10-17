@@ -46,7 +46,7 @@
             this.btnClear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Purple;
-            this.btnClear.Location = new System.Drawing.Point(372, 111);
+            this.btnClear.Location = new System.Drawing.Point(372, 129);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(83, 53);
@@ -60,7 +60,7 @@
             this.btnReturnToMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnReturnToMenu.ForeColor = System.Drawing.Color.Purple;
-            this.btnReturnToMenu.Location = new System.Drawing.Point(11, 172);
+            this.btnReturnToMenu.Location = new System.Drawing.Point(11, 190);
             this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
             this.btnReturnToMenu.Size = new System.Drawing.Size(215, 44);
@@ -71,18 +71,17 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(16, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(279, 20);
+            this.label5.Size = new System.Drawing.Size(439, 50);
             this.label5.TabIndex = 25;
             this.label5.Text = "Please enter your details below:";
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(132, 112);
+            this.txtStudentID.Location = new System.Drawing.Point(132, 130);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(232, 22);
@@ -93,7 +92,7 @@
             this.btnStudentLogIn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnStudentLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnStudentLogIn.ForeColor = System.Drawing.Color.Purple;
-            this.btnStudentLogIn.Location = new System.Drawing.Point(236, 172);
+            this.btnStudentLogIn.Location = new System.Drawing.Point(236, 190);
             this.btnStudentLogIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudentLogIn.Name = "btnStudentLogIn";
             this.btnStudentLogIn.Size = new System.Drawing.Size(220, 44);
@@ -106,7 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 111);
+            this.label4.Location = new System.Drawing.Point(16, 129);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 20);
@@ -127,7 +126,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(132, 142);
+            this.txtPassword.Location = new System.Drawing.Point(132, 160);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(232, 22);
@@ -137,7 +136,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 142);
+            this.label6.Location = new System.Drawing.Point(16, 160);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 20);
@@ -147,7 +146,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Student_Attendance_System.Properties.Resources.Building;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 224);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 242);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(444, 180);
@@ -159,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 418);
+            this.ClientSize = new System.Drawing.Size(468, 435);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnClear);

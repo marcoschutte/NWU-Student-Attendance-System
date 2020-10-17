@@ -14,7 +14,7 @@ namespace Student_Attendance_System
 {
     public partial class Lecturer_Login : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security = True");
+        SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security = True");
         
         SqlCommand comm;
         SqlDataReader datRead;
@@ -72,49 +72,49 @@ namespace Student_Attendance_System
             string _id = txtLecturerID.Text;
             string _pass = txtPassword.Text;
 
-            using (conn)
+            conn.Open();
+            EmptyDataBase();
+
+            comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
+
+            try
             {
-                conn.Open();
-                EmptyDataBase();
+                datRead = comm.ExecuteReader();
 
-                comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
-                try
+                while (datRead.Read())
                 {
-                    datRead = comm.ExecuteReader();
-
-                    while (datRead.Read())
+                    if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
                     {
-                        if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
-                        {
-                            Lecturer_Menu lecturerMenu = new Lecturer_Menu();
-                            lecturerMenu.Show();
-                            _redButtonClicked = false;
-                            this.Close();
-                            break;
-                        }
-                        else
-                        {
-                            label5.Text = "Red textboxes indicate incorrect fields!";
-                            label5.ForeColor = Color.Red;
+                        Lecturer_Menu lecturerMenu = new Lecturer_Menu();
+                        lecturerMenu.Show();
+                        _redButtonClicked = false;
+                        this.Close();
+                        break;
+                    }
+                    else
+                    {
+                        label5.Text = "Incorrect fields! Please enter your login credentials below:!";
+                        label5.ForeColor = Color.Red;
 
-                            if (datRead.GetValue(0).ToString() != _id)
-                                txtLecturerID.BackColor = Color.Red;
-                            else
-                                txtLecturerID.BackColor = Color.White;
-                            if (datRead.GetValue(1).ToString() != _pass)
-                                txtPassword.BackColor = Color.Red;
-                            else
-                                txtPassword.BackColor = Color.White;
-                        }
+                        if (datRead.GetValue(0).ToString() != _id)
+                            txtLecturerID.BackColor = Color.Red;
+                        else
+                            txtLecturerID.BackColor = Color.White;
+                        if (datRead.GetValue(1).ToString() != _pass)
+                            txtPassword.BackColor = Color.Red;
+                        else
+                            txtPassword.BackColor = Color.White;
                     }
                 }
-                catch (Exception er2)
-                {
-                    MessageBox.Show(er2.ToString());
-                }
+                conn.Close();
             }
-            
+
+            catch (Exception er2)
+            {
+                MessageBox.Show(er2.ToString());
+            }
         }
+          
 
         private void Lecturer_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -130,3 +130,4 @@ namespace Student_Attendance_System
         }
     }
 }
+

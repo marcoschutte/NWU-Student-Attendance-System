@@ -14,7 +14,7 @@ namespace Student_Attendance_System
 {
     public partial class Student_Login : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AttendanceDB.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security=True");
 
         SqlCommand comm;
         SqlDataReader datRead;
@@ -70,12 +70,9 @@ namespace Student_Attendance_System
 
         private void btnStudentLogIn_Click(object sender, EventArgs e)
         {
-            //if login credentials are valid & exist within STUDENT table --> open student attendance form
             string _id = txtStudentID.Text;
             string _pass = txtPassword.Text;
 
-            using (conn)
-            {
                 conn.Open();
                 EmptyDataBase();
 
@@ -96,7 +93,7 @@ namespace Student_Attendance_System
                         }
                         else
                         {
-                            label5.Text = "Red textboxes indicate incorrect fields!";
+                            label5.Text = "Incorrect fields! Please enter your login credentials below:";
                             label5.ForeColor = Color.Red;
 
                             if (datRead.GetValue(0).ToString() != _id)
@@ -110,12 +107,12 @@ namespace Student_Attendance_System
                                 txtPassword.BackColor = Color.White;
                         }
                     }
+                conn.Close();
                 }
                 catch (Exception er2)
                 {
                     MessageBox.Show(er2.ToString());
                 }
-            }
         }
 
         private void Student_Login_FormClosing(object sender, FormClosingEventArgs e)
