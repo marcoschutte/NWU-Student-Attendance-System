@@ -160,19 +160,29 @@ namespace Student_Attendance_System
 
         public bool Insert(string modID, string modDes)
         {
-            int result = 0;
-            string sql = "INSERT INTO MODULES (Module_ID, Description) VALUES (@modID, @modDes)";
 
-            SqlCommand comm = new SqlCommand(sql, conn);
-            comm.Parameters.AddWithValue("@modID", modID);
-            comm.Parameters.AddWithValue("@modDes", modDes);
+            int result = 0;
+
+            Connect();
+
+            string table = "", fields = "";
+
+            table = "MODULES ";
+            fields = "(Module_ID, Description)";
+
 
             try 
             {
-                Connect();
+                string sql = "INSERT INTO " + table + fields + " VALUES (@modID, @modDes)";
+
+                SqlCommand comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@modID", modID);
+                comm.Parameters.AddWithValue("@modDes", modDes);
+                
                 conn.Open();
                 result = comm.ExecuteNonQuery();
                 conn.Close();
+
             }
             catch (SqlException se)
             {
