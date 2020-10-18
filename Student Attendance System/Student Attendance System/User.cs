@@ -52,10 +52,10 @@ namespace Student_Attendance_System
             {
                 DialogResult _closingForm = MessageBox.Show("Are you sure you want to close the Program", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if (DialogResult.Yes == _closingForm)
-                    Environment.Exit(0);
-                else
+                if (DialogResult.No == _closingForm)
                     e.Cancel = true;
+               // else
+                  //  e.Cancel = true;
             }
         }
     }

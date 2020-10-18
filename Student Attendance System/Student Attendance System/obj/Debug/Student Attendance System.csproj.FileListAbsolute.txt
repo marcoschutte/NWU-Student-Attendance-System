@@ -100,8 +100,6 @@ C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student At
 C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.CoreCompileInputs.cache
 C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.exe
 C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.pdb
-C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB.mdf
-C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB_log.ldf
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Student_Attendance.resources
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Request_Reports.resources
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Add_Attendance_Record.resources
@@ -129,3 +127,5 @@ C:\Users\Kyle\Documents\Testing\CMPG223-Project\Student Attendance System\Studen
 C:\Users\Kyle\Documents\Testing\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.CoreCompileInputs.cache
 C:\Users\Kyle\Documents\Testing\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.exe
 C:\Users\Kyle\Documents\Testing\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.pdb
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB.mdf
+C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB_log.ldf
