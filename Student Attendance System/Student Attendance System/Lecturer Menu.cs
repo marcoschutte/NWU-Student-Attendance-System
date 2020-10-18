@@ -12,9 +12,18 @@ namespace Student_Attendance_System
 {
     public partial class Lecturer_Menu : Form
     {
+        Maintain_Helper maintainhelper = new Maintain_Helper();
+        string currentID;
+
         public Lecturer_Menu()
         {
             InitializeComponent();
+        }
+
+        public Lecturer_Menu(string id)
+        {
+            InitializeComponent();
+            currentID = id;
         }
 
         private void btnExitApplication_Click(object sender, EventArgs e)
@@ -28,30 +37,40 @@ namespace Student_Attendance_System
         private void btnMaintainStudents_Click(object sender, EventArgs e)
         {            
             Maintain_Students maintainStudents = new Maintain_Students();
-            maintainStudents.Show();
+            maintainStudents.Show(this);
             //Keep lecturer menu open for later use rather than closing it?
             this.Hide();
         }
 
         private void btnMaintainLecturers_Click(object sender, EventArgs e)
         {
-            Maintain_Lecturers maintainLecturers = new Maintain_Lecturers();
-            maintainLecturers.Show();
-            this.Hide();
+            if (maintainhelper.CheckPrivilege(currentID))
+            {
+                Maintain_Lecturers maintainLecturers = new Maintain_Lecturers();
+                maintainLecturers.Show(this);
+                this.Hide();
+            }
+            else
+                MessageBox.Show("Only admins may maintain admins");
         }
 
         private void btnMaintainModules_Click(object sender, EventArgs e)
         {
             Maintain_Modules maintainModules = new Maintain_Modules();
-            maintainModules.Show();
+            maintainModules.Show(this);
             this.Hide();
         }
 
         private void btnMaintainStudentAttendance_Click(object sender, EventArgs e)
         {
             Maintain_Student_Attendance maintainAttendance = new Maintain_Student_Attendance();
-            maintainAttendance.Show();
+            maintainAttendance.Show(this);
             this.Hide();
+        }
+
+        private void btnRequestReports_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
