@@ -104,13 +104,13 @@ namespace Student_Attendance_System
 
         public void ModuleSearch(string caller, string criteria)
         {
-            sql = "SELECT Module_ID, Description FROM STUDENTS WHERE " + caller + " LIKE  '%" + criteria + "%'";// FIELDS TO DISPLAY
+            sql = "SELECT Module_ID, Description FROM MODULES WHERE " + caller + " LIKE  '%" + criteria + "%'";// FIELDS TO DISPLAY
             SQLSubmit();
         }
 
         private void DisplayAll()
         {
-            sql = "SELECT Module_ID, Description FROM STUDENTS";
+            sql = "SELECT Module_ID, Description FROM MODULES";
             SQLSubmit();
         }
 
