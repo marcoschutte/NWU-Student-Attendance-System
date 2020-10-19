@@ -129,8 +129,7 @@ namespace Student_Attendance_System
 
         private void btnReturnToAttendanceMenu_Click(object sender, EventArgs e)
         {
-            Maintain_Student_Attendance menu = new Maintain_Student_Attendance();
-            menu.Show();
+            Owner.Show();
             this.Close();
         }
     }
