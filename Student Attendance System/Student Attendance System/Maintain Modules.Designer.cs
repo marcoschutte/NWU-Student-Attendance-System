@@ -47,6 +47,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
+            this.lblErrorMessage2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModules)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,10 +57,10 @@
             this.btnReturnToMenu.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReturnToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnReturnToMenu.ForeColor = System.Drawing.Color.Purple;
-            this.btnReturnToMenu.Location = new System.Drawing.Point(827, 441);
-            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturnToMenu.Location = new System.Drawing.Point(727, 418);
+            this.btnReturnToMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturnToMenu.Name = "btnReturnToMenu";
-            this.btnReturnToMenu.Size = new System.Drawing.Size(215, 44);
+            this.btnReturnToMenu.Size = new System.Drawing.Size(234, 44);
             this.btnReturnToMenu.TabIndex = 61;
             this.btnReturnToMenu.Text = "Return To Menu";
             this.btnReturnToMenu.UseVisualStyleBackColor = false;
@@ -81,10 +83,10 @@
             this.btnDeleteModule.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDeleteModule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnDeleteModule.ForeColor = System.Drawing.Color.Purple;
-            this.btnDeleteModule.Location = new System.Drawing.Point(124, 366);
-            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteModule.Location = new System.Drawing.Point(140, 418);
+            this.btnDeleteModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteModule.Name = "btnDeleteModule";
-            this.btnDeleteModule.Size = new System.Drawing.Size(220, 44);
+            this.btnDeleteModule.Size = new System.Drawing.Size(223, 44);
             this.btnDeleteModule.TabIndex = 4;
             this.btnDeleteModule.Text = "Delete Module";
             this.btnDeleteModule.UseVisualStyleBackColor = false;
@@ -95,8 +97,8 @@
             this.btnAddModule.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddModule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddModule.ForeColor = System.Drawing.Color.Purple;
-            this.btnAddModule.Location = new System.Drawing.Point(124, 133);
-            this.btnAddModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddModule.Location = new System.Drawing.Point(140, 168);
+            this.btnAddModule.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddModule.Name = "btnAddModule";
             this.btnAddModule.Size = new System.Drawing.Size(220, 44);
             this.btnAddModule.TabIndex = 2;
@@ -106,8 +108,8 @@
             // 
             // txtModuleID2
             // 
-            this.txtModuleID2.Location = new System.Drawing.Point(124, 336);
-            this.txtModuleID2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleID2.Location = new System.Drawing.Point(140, 388);
+            this.txtModuleID2.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleID2.Name = "txtModuleID2";
             this.txtModuleID2.Size = new System.Drawing.Size(223, 22);
             this.txtModuleID2.TabIndex = 3;
@@ -117,7 +119,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(21, 271);
+            this.label3.Location = new System.Drawing.Point(38, 292);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(302, 48);
@@ -126,16 +128,16 @@
             // 
             // txtModuleDescription
             // 
-            this.txtModuleDescription.Location = new System.Drawing.Point(124, 103);
-            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleDescription.Location = new System.Drawing.Point(137, 138);
+            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleDescription.Name = "txtModuleDescription";
             this.txtModuleDescription.Size = new System.Drawing.Size(223, 22);
             this.txtModuleDescription.TabIndex = 1;
             // 
             // txtModuleID
             // 
-            this.txtModuleID.Location = new System.Drawing.Point(124, 73);
-            this.txtModuleID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModuleID.Location = new System.Drawing.Point(137, 108);
+            this.txtModuleID.Margin = new System.Windows.Forms.Padding(4);
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(223, 22);
             this.txtModuleID.TabIndex = 0;
@@ -144,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 73);
+            this.label6.Location = new System.Drawing.Point(15, 108);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 20);
@@ -155,7 +157,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 103);
+            this.label4.Location = new System.Drawing.Point(15, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
@@ -167,7 +169,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(41, 9);
+            this.label2.Location = new System.Drawing.Point(53, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(252, 48);
@@ -178,7 +180,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 336);
+            this.label1.Location = new System.Drawing.Point(15, 388);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
@@ -192,7 +194,7 @@
             this.dgvModules.Margin = new System.Windows.Forms.Padding(4);
             this.dgvModules.Name = "dgvModules";
             this.dgvModules.RowHeadersWidth = 51;
-            this.dgvModules.Size = new System.Drawing.Size(541, 286);
+            this.dgvModules.Size = new System.Drawing.Size(470, 286);
             this.dgvModules.TabIndex = 63;
             // 
             // btnSelect
@@ -200,7 +202,7 @@
             this.btnSelect.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSelect.ForeColor = System.Drawing.Color.Purple;
-            this.btnSelect.Location = new System.Drawing.Point(491, 439);
+            this.btnSelect.Location = new System.Drawing.Point(491, 418);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(228, 44);
@@ -211,17 +213,17 @@
             // 
             // txtMID
             // 
-            this.txtMID.Location = new System.Drawing.Point(491, 73);
+            this.txtMID.Location = new System.Drawing.Point(560, 97);
             this.txtMID.Margin = new System.Windows.Forms.Padding(4);
             this.txtMID.MaxLength = 25;
             this.txtMID.Name = "txtMID";
-            this.txtMID.Size = new System.Drawing.Size(201, 22);
+            this.txtMID.Size = new System.Drawing.Size(159, 22);
             this.txtMID.TabIndex = 64;
             this.txtMID.TextChanged += new System.EventHandler(this.txtMID_TextChanged);
             // 
             // txtMDescription
             // 
-            this.txtMDescription.Location = new System.Drawing.Point(831, 73);
+            this.txtMDescription.Location = new System.Drawing.Point(762, 97);
             this.txtMDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtMDescription.MaxLength = 25;
             this.txtMDescription.Name = "txtMDescription";
@@ -233,30 +235,30 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(487, 99);
+            this.label5.Location = new System.Drawing.Point(556, 73);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 20);
+            this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 66;
-            this.label5.Text = "Module ID";
+            this.label5.Text = "Module ID:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(827, 99);
+            this.label7.Location = new System.Drawing.Point(756, 70);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
+            this.label7.Size = new System.Drawing.Size(112, 20);
             this.label7.TabIndex = 67;
-            this.label7.Text = "Description";
+            this.label7.Text = "Description:";
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Purple;
-            this.btnUpdate.Location = new System.Drawing.Point(124, 194);
+            this.btnUpdate.Location = new System.Drawing.Point(140, 220);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(220, 44);
@@ -265,11 +267,35 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMessage.Location = new System.Drawing.Point(15, 73);
+            this.lblErrorMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(145, 20);
+            this.lblErrorMessage.TabIndex = 69;
+            this.lblErrorMessage.Text = "[Error Message]";
+            // 
+            // lblErrorMessage2
+            // 
+            this.lblErrorMessage2.AutoSize = true;
+            this.lblErrorMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMessage2.Location = new System.Drawing.Point(15, 351);
+            this.lblErrorMessage2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorMessage2.Name = "lblErrorMessage2";
+            this.lblErrorMessage2.Size = new System.Drawing.Size(145, 20);
+            this.lblErrorMessage2.TabIndex = 70;
+            this.lblErrorMessage2.Text = "[Error Message]";
+            // 
             // Maintain_Modules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 496);
+            this.ClientSize = new System.Drawing.Size(976, 470);
+            this.Controls.Add(this.lblErrorMessage2);
+            this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -320,5 +346,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblErrorMessage;
+        private System.Windows.Forms.Label lblErrorMessage2;
     }
 }

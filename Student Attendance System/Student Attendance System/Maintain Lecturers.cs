@@ -47,7 +47,10 @@ namespace Student_Attendance_System
                 if (maintainhelper.CheckID(id))
                 {
                     if (maintainhelper.Insert(id, fname, lname, email, password, admin))
+                    {
                         MessageBox.Show("Record has been succesfully inserted.");
+                        Reset();
+                    }
                     else
                         MessageBox.Show("There was a problem inserting the record.");
                 }

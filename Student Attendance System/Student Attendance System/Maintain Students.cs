@@ -51,8 +51,8 @@ namespace Student_Attendance_System
                         MessageBox.Show("Record has been succesfully inserted.");
                         Reset();
                     }   
-                else
-                    MessageBox.Show("There was a problem inserting the record.");
+                    else
+                        MessageBox.Show("There was a problem inserting the record.");
                 }
                 else
                     MessageBox.Show("Incorrect id");

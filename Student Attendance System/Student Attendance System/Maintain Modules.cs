@@ -32,15 +32,23 @@ namespace Student_Attendance_System
         {
             string modID = txtModuleID.Text;
             string modDes = txtModuleDescription.Text;
-            
-            if (maintainhelper.Insert(modID, modDes))
-            {
-                MessageBox.Show("Record has been succesfully inserted.");
-                Reset();
-            }
 
+            if(modID == "" || modDes == "")
+            {
+                lblErrorMessage.ForeColor = System.Drawing.Color.Red;
+                lblErrorMessage.Text = "Please fill in all the fields!";
+            }
             else
-                 MessageBox.Show("There was a problem inserting the record.");
+            {
+                if (maintainhelper.Insert(modID, modDes))
+                {
+                    MessageBox.Show("Record has been succesfully inserted.");
+                    Reset();
+                }
+
+                else
+                    MessageBox.Show("There was a problem inserting the record.");
+            }
         }
 
         private void btnReturnToMenu_Click(object sender, EventArgs e)
@@ -51,10 +59,18 @@ namespace Student_Attendance_System
 
         private void btnDeleteModule_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Delete(txtModuleID2.Text))
-                MessageBox.Show("Record has been succesfully deleted.");
+            if (txtModuleID2.Text == "")
+            {
+                lblErrorMessage2.ForeColor = System.Drawing.Color.Red;
+                lblErrorMessage2.Text = "Please fill in the field below!";
+            }
             else
-                MessageBox.Show("There was a problem deleting the record.");
+            {
+                if (maintainhelper.Delete(txtModuleID2.Text))
+                    MessageBox.Show("Record has been succesfully deleted.");
+                else
+                    MessageBox.Show("There was a problem deleting the record.");
+            }
 
             Reset();
         }
@@ -175,6 +191,8 @@ namespace Student_Attendance_System
 
         private void Maintain_Modules_Load_1(object sender, EventArgs e)
         {
+            lblErrorMessage.Text = "Please enter the module details below:";
+            lblErrorMessage2.Text = "Please enter the module ID:";
             DisplayAll();
         }
     }
