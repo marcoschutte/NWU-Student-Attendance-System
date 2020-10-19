@@ -29,84 +29,166 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblRR = new System.Windows.Forms.Label();
-            this.lbl_ESN = new System.Windows.Forms.Label();
-            this.txtStudentNumber = new System.Windows.Forms.TextBox();
-            this.btnShowAttendance = new System.Windows.Forms.Button();
+            this.rbtnAll = new System.Windows.Forms.RadioButton();
+            this.rbtnSpesific = new System.Windows.Forms.RadioButton();
+            this.btnSelectStudent = new System.Windows.Forms.Button();
+            this.gbxStudents = new System.Windows.Forms.GroupBox();
+            this.cbxModules = new System.Windows.Forms.ComboBox();
+            this.calStart = new System.Windows.Forms.MonthCalendar();
+            this.calEnd = new System.Windows.Forms.MonthCalendar();
+            this.btnSelectDate = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbxStudents.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(269, 41);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(723, 314);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 489);
             this.dataGridView1.TabIndex = 0;
             // 
-            // lblRR
+            // rbtnAll
             // 
-            this.lblRR.AutoSize = true;
-            this.lblRR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRR.Location = new System.Drawing.Point(13, 333);
-            this.lblRR.Name = "lblRR";
-            this.lblRR.Size = new System.Drawing.Size(332, 24);
-            this.lblRR.TabIndex = 1;
-            this.lblRR.Text = "Request report of the selected student:";
+            this.rbtnAll.AutoSize = true;
+            this.rbtnAll.Checked = true;
+            this.rbtnAll.Location = new System.Drawing.Point(17, 28);
+            this.rbtnAll.Name = "rbtnAll";
+            this.rbtnAll.Size = new System.Drawing.Size(36, 17);
+            this.rbtnAll.TabIndex = 5;
+            this.rbtnAll.TabStop = true;
+            this.rbtnAll.Text = "All";
+            this.rbtnAll.UseVisualStyleBackColor = true;
+            this.rbtnAll.CheckedChanged += new System.EventHandler(this.rbtnAll_CheckedChanged);
             // 
-            // lbl_ESN
+            // rbtnSpesific
             // 
-            this.lbl_ESN.AutoSize = true;
-            this.lbl_ESN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ESN.Location = new System.Drawing.Point(12, 374);
-            this.lbl_ESN.Name = "lbl_ESN";
-            this.lbl_ESN.Size = new System.Drawing.Size(139, 16);
-            this.lbl_ESN.TabIndex = 2;
-            this.lbl_ESN.Text = "Enter student number: ";
+            this.rbtnSpesific.AutoSize = true;
+            this.rbtnSpesific.Location = new System.Drawing.Point(72, 28);
+            this.rbtnSpesific.Name = "rbtnSpesific";
+            this.rbtnSpesific.Size = new System.Drawing.Size(62, 17);
+            this.rbtnSpesific.TabIndex = 6;
+            this.rbtnSpesific.TabStop = true;
+            this.rbtnSpesific.Text = "Spesific";
+            this.rbtnSpesific.UseVisualStyleBackColor = true;
+            this.rbtnSpesific.CheckedChanged += new System.EventHandler(this.rbtnAll_CheckedChanged);
             // 
-            // txtStudentNumber
+            // btnSelectStudent
             // 
-            this.txtStudentNumber.Location = new System.Drawing.Point(148, 374);
-            this.txtStudentNumber.Name = "txtStudentNumber";
-            this.txtStudentNumber.Size = new System.Drawing.Size(141, 20);
-            this.txtStudentNumber.TabIndex = 3;
+            this.btnSelectStudent.Enabled = false;
+            this.btnSelectStudent.Location = new System.Drawing.Point(17, 71);
+            this.btnSelectStudent.Name = "btnSelectStudent";
+            this.btnSelectStudent.Size = new System.Drawing.Size(227, 28);
+            this.btnSelectStudent.TabIndex = 7;
+            this.btnSelectStudent.Text = "Select Student";
+            this.btnSelectStudent.UseVisualStyleBackColor = true;
+            this.btnSelectStudent.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // btnShowAttendance
+            // gbxStudents
             // 
-            this.btnShowAttendance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAttendance.Location = new System.Drawing.Point(12, 415);
-            this.btnShowAttendance.Name = "btnShowAttendance";
-            this.btnShowAttendance.Size = new System.Drawing.Size(139, 23);
-            this.btnShowAttendance.TabIndex = 4;
-            this.btnShowAttendance.Text = "Show Attendance";
-            this.btnShowAttendance.UseVisualStyleBackColor = true;
-            this.btnShowAttendance.Click += new System.EventHandler(this.btnShowAttendance_Click);
+            this.gbxStudents.Controls.Add(this.rbtnSpesific);
+            this.gbxStudents.Controls.Add(this.rbtnAll);
+            this.gbxStudents.Location = new System.Drawing.Point(17, 13);
+            this.gbxStudents.Name = "gbxStudents";
+            this.gbxStudents.Size = new System.Drawing.Size(227, 52);
+            this.gbxStudents.TabIndex = 8;
+            this.gbxStudents.TabStop = false;
+            this.gbxStudents.Text = "Students";
+            // 
+            // cbxModules
+            // 
+            this.cbxModules.FormattingEnabled = true;
+            this.cbxModules.Location = new System.Drawing.Point(17, 115);
+            this.cbxModules.Name = "cbxModules";
+            this.cbxModules.Size = new System.Drawing.Size(227, 21);
+            this.cbxModules.TabIndex = 9;
+            this.cbxModules.SelectedIndexChanged += new System.EventHandler(this.cbxModules_SelectedIndexChanged);
+            // 
+            // calStart
+            // 
+            this.calStart.Location = new System.Drawing.Point(17, 148);
+            this.calStart.MaxSelectionCount = 1;
+            this.calStart.Name = "calStart";
+            this.calStart.TabIndex = 11;
+            this.calStart.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calStart_DateChanged);
+            // 
+            // calEnd
+            // 
+            this.calEnd.Location = new System.Drawing.Point(17, 328);
+            this.calEnd.MaxSelectionCount = 1;
+            this.calEnd.Name = "calEnd";
+            this.calEnd.TabIndex = 12;
+            // 
+            // btnSelectDate
+            // 
+            this.btnSelectDate.Enabled = false;
+            this.btnSelectDate.Location = new System.Drawing.Point(17, 502);
+            this.btnSelectDate.Name = "btnSelectDate";
+            this.btnSelectDate.Size = new System.Drawing.Size(227, 28);
+            this.btnSelectDate.TabIndex = 13;
+            this.btnSelectDate.Text = "Select Date";
+            this.btnSelectDate.UseVisualStyleBackColor = true;
+            this.btnSelectDate.Click += new System.EventHandler(this.btnSelectDate_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Enabled = false;
+            this.btnReset.Location = new System.Drawing.Point(17, 538);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(227, 28);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Enabled = false;
+            this.btnReturn.Location = new System.Drawing.Point(776, 538);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(227, 28);
+            this.btnReturn.TabIndex = 15;
+            this.btnReturn.Text = "Return to Menu ";
+            this.btnReturn.UseVisualStyleBackColor = true;
             // 
             // Request_Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 499);
-            this.Controls.Add(this.btnShowAttendance);
-            this.Controls.Add(this.txtStudentNumber);
-            this.Controls.Add(this.lbl_ESN);
-            this.Controls.Add(this.lblRR);
+            this.ClientSize = new System.Drawing.Size(1015, 578);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnSelectDate);
+            this.Controls.Add(this.calEnd);
+            this.Controls.Add(this.calStart);
+            this.Controls.Add(this.cbxModules);
+            this.Controls.Add(this.gbxStudents);
+            this.Controls.Add(this.btnSelectStudent);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Request_Reports";
             this.Text = "Request_Reports";
             this.Load += new System.EventHandler(this.Request_Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gbxStudents.ResumeLayout(false);
+            this.gbxStudents.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblRR;
-        private System.Windows.Forms.Label lbl_ESN;
-        private System.Windows.Forms.TextBox txtStudentNumber;
-        private System.Windows.Forms.Button btnShowAttendance;
+        private System.Windows.Forms.RadioButton rbtnAll;
+        private System.Windows.Forms.RadioButton rbtnSpesific;
+        private System.Windows.Forms.Button btnSelectStudent;
+        private System.Windows.Forms.GroupBox gbxStudents;
+        private System.Windows.Forms.ComboBox cbxModules;
+        private System.Windows.Forms.MonthCalendar calStart;
+        private System.Windows.Forms.MonthCalendar calEnd;
+        private System.Windows.Forms.Button btnSelectDate;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

@@ -136,3 +136,4 @@ C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Stude
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Update_Attendance_Record.resources
 C:\Users\marco\Desktop\CMPG223 - Student Attendance System\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Existing_IDs.resources
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Existing_IDs.resources
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.frmStudent_Select.resources

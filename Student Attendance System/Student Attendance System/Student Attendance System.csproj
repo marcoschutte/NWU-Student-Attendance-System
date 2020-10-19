@@ -81,6 +81,12 @@
     <Compile Include="Existing IDs.Designer.cs">
       <DependentUpon>Existing IDs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStudent_Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudent_Select.Designer.cs">
+      <DependentUpon>frmStudent_Select.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Existing IDs.resx">
       <DependentUpon>Existing IDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudent_Select.resx">
+      <DependentUpon>frmStudent_Select.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer Login.resx">
       <DependentUpon>Lecturer Login.cs</DependentUpon>

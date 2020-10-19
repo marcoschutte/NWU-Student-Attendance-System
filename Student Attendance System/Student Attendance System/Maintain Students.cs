@@ -217,5 +217,10 @@ namespace Student_Attendance_System
         {
             DisplayAll();
         }
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

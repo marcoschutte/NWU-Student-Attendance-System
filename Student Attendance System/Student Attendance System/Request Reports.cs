@@ -13,81 +13,117 @@ namespace Student_Attendance_System
 {
     public partial class Request_Reports : Form
     {
+        Maintain_Helper maintainhelper = new Maintain_Helper();
+
+        SqlConnection conn = null;
+        SqlCommand comm;
+        SqlDataAdapter adap;
+        DataSet ds;
+        SqlDataReader dreader;
+
         public Request_Reports()
         {
             InitializeComponent();
         }
 
-        //declare and initialize the connection string
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\Database1.mdf;Integrated Security=True";
-
-        //using System.Data.SqlClient namespace
-        public SqlConnection connection;
-        public SqlCommand command;
-        public SqlDataAdapter adapter;
-        public DataSet dataset;
-
-        private void DisplayTable()
-        {
-            //query statement
-            string selectAll = "SELECT * FROM ATTENDANCE";
-
-            connection = new SqlConnection(connectionString);
-
-            //open the connection
-            connection.Open();
-
-            command = new SqlCommand(selectAll, connection);
-
-            dataset = new DataSet();
-            adapter = new SqlDataAdapter();
-
-            adapter.SelectCommand = command;
-            adapter.Fill(dataset, "ATTENDANCE");
-
-            dataGridView1.DataSource = dataset;
-            dataGridView1.DataMember = "ATTENDANCE";
-
-            //close the connection
-            connection.Close();
-
-            txtStudentNumber.Focus();
-        }
-
-
         private void Request_Reports_Load(object sender, EventArgs e)
         {
-            DisplayTable();
+            
         }
 
-        private void btnShowAttendance_Click(object sender, EventArgs e)
+        private void Connect()
         {
-            //query statement
-            string searchQuery = "SELECT * FROM ATTENDANCE WHERE Student_ID LIKE '" + txtStudentNumber.Text + "%'";
-
-            connection = new SqlConnection(connectionString);
-
-            //open the connection
-            connection.Open();
-
-            adapter = new SqlDataAdapter();
-            dataset = new DataSet();
-
-            command = new SqlCommand(searchQuery, connection);
-
-            adapter.SelectCommand = command;
-            adapter.Fill(dataset, "ATTENDANCE");
-
-            dataGridView1.DataSource = dataset;
-            dataGridView1.DataMember = "ATTENDANCE";
-
-            //close the connection
-            connection.Close();
-
-            txtStudentNumber.Focus();
-
-            //clear the text box
-            txtStudentNumber.Text = "";
+            if (conn == null)
+                conn = new SqlConnection(maintainhelper.ConnectionString);
         }
+        
+        private void rbtnAll_CheckedChanged(object sender, EventArgs e)
+        {
+            btnSelectStudent.Enabled = rbtnSpesific.Checked;
+        }
+
+        private void cbxModules_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnSelectDate.Enabled = true;
+        }
+
+        private void calStart_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            calEnd.MinDate = calStart.SelectionStart;
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            using (var frmstudent = new frmStudent_Select())
+            {
+                var result = frmstudent.ShowDialog();
+
+                if(result == DialogResult.OK)
+                {
+                    string id = frmstudent.StudentID;
+
+                    SpesificStudent(id);
+                }
+                else if(result == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Student select was canceled");
+                }
+            }
+        }
+
+        private void btnSelectDate_Click(object sender, EventArgs e)
+        {
+            string module = cbxModules.SelectedItem.ToString();
+
+            if (cbxModules.SelectedIndex == -1)
+            {
+
+            }
+            else if (cbxModules.SelectedIndex == 0)
+            {
+
+            }
+            else
+            {
+                SpesificModules(module);
+            }
+        }
+
+        private void SpesificStudent(string id)
+        {
+            string modulesql = "SELECT DISTINCT Module_ID FROM ATTENDANCE WHERE Student_ID = @id";
+
+            Connect();
+            cbxModules.Items.Clear();
+            cbxModules.Items.Add("ALL");
+
+            try
+            {
+                conn.Open();
+
+                comm = new SqlCommand(modulesql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+
+                dreader = comm.ExecuteReader();
+
+                while (dreader.Read())
+                {
+                    cbxModules.Items.Add(dreader.GetString(0));
+                }
+
+                conn.Close();
+            }
+            catch(SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+        }
+
+        private void SpesificModules(string module)
+        {
+
+        }
+
+
     }
 }
