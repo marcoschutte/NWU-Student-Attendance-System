@@ -14,9 +14,10 @@ namespace Student_Attendance_System
     public partial class Student_Attendance : Form
     {
         
-        public Student_Attendance()
+        public Student_Attendance(string studentID)
         {
             InitializeComponent();
+            lblStudentID.Text = studentID;
         }
 
         // Global variables.

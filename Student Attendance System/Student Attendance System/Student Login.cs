@@ -85,7 +85,7 @@ namespace Student_Attendance_System
                     {
                         if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
                         {
-                            Student_Attendance studentAttendance = new Student_Attendance();
+                            Student_Attendance studentAttendance = new Student_Attendance(txtStudentID.Text);
                             studentAttendance.Show();
                             _redButtonClicked = false;
                             this.Close();
