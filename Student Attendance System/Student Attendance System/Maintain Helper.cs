@@ -122,18 +122,15 @@ namespace Student_Attendance_System
 
         public bool Insert(string id, string fname, string lname, string email, string password, int admin)
         {
-            int result = 0;
-
             Connect();
 
-            string table = "", fields = "";
-
-            table = "LECTURERS ";
-            fields = "(Lecturer_ID, Name, Last_Name, Email, Password)";
+            int result = 0;
+            string table = "LECTURERS ";
+            string fields = "(Lecturer_ID, Name, Last_Name, Email, Password, Admin)";
 
             try
             {
-                string sql = "INSERT INTO " + table + fields + " VALUES (@id, @fname, @lname, @email, @password)";
+                string sql = "INSERT INTO " + table + fields + " VALUES (@id, @fname, @lname, @email, @password, @admin)";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@id", id);
@@ -141,6 +138,7 @@ namespace Student_Attendance_System
                 comm.Parameters.AddWithValue("@lname", lname);
                 comm.Parameters.AddWithValue("@email", email);
                 comm.Parameters.AddWithValue("@password", password);
+                comm.Parameters.AddWithValue("@admin", admin);
 
                 conn.Open();
                 result = comm.ExecuteNonQuery();
