@@ -59,15 +59,18 @@ namespace Student_Attendance_System
 
         private void btnDeleteModule_Click(object sender, EventArgs e)
         {
-            if (txtModuleID2.Text == "")
+            if (txtModuleID.Text == "")
             {
-                lblErrorMessage2.ForeColor = System.Drawing.Color.Red;
-                lblErrorMessage2.Text = "Please fill in the field below!";
+                lblErrorMessage.ForeColor = System.Drawing.Color.Red;
+                lblErrorMessage.Text = "Please fill in the field below!";
             }
             else
             {
-                if (maintainhelper.Delete(txtModuleID2.Text))
+                if (maintainhelper.Delete(txtModuleID.Text))
+                { 
                     MessageBox.Show("Record has been succesfully deleted.");
+                    Reset();
+                }
                 else
                     MessageBox.Show("There was a problem deleting the record.");
             }
@@ -81,31 +84,42 @@ namespace Student_Attendance_System
 
             sql = "SELECT Module_ID, Description FROM MODULES WHERE Module_ID = @id";
 
-            Connect();
-            conn.Open();
-
-            comm = new SqlCommand(sql, conn);
-            comm.Parameters.AddWithValue("@id", id);
-
-            dreader = comm.ExecuteReader();
-
-            while (dreader.Read())
+            try 
             {
-                txtModuleID.Text = dreader.GetString(0);
-                txtModuleDescription.Text = dreader.GetString(1);
+                Connect();
+                conn.Open();
+
+                comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+
+                dreader = comm.ExecuteReader();
+
+                while (dreader.Read())
+                {
+                    txtModuleID.Text = dreader.GetString(0);
+                    txtModuleDescription.Text = dreader.GetString(1);
+                }
+
+                conn.Close();
+
+                btnUpdate.Enabled = true;
+                btnDeleteModule.Enabled = true;
             }
-
-            conn.Close();
-
-            btnUpdate.Enabled = true;
-            btnDeleteModule.Enabled = true;
+            catch(SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            
 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (maintainhelper.Update(txtModuleID.Text, txtModuleDescription.Text))
+            {
                 MessageBox.Show("Record has been succesfully updated.");
+                Reset();
+            }
             else
                 MessageBox.Show("There was a problem updating the record.");
 
@@ -191,10 +205,8 @@ namespace Student_Attendance_System
             ModuleSearch("Description", txtMDescription.Text);
         }
 
-        private void Maintain_Modules_Load_1(object sender, EventArgs e)
+        private void Maintain_Modules_Load(object sender, EventArgs e)
         {
-            lblErrorMessage.Text = "Please enter the module details below:";
-            lblErrorMessage2.Text = "Please enter the module ID:";
             DisplayAll();
         }
     }

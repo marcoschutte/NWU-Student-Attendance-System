@@ -287,6 +287,7 @@ namespace Student_Attendance_System
             {
                 SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@modDes", modDes);
+                comm.Parameters.AddWithValue("@id", id);
 
                 conn.Open();
                 result = comm.ExecuteNonQuery();
