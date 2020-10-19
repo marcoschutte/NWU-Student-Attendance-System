@@ -79,12 +79,14 @@ namespace Student_Attendance_System
         {
             string id = dgvModules.CurrentRow.Cells[0].Value.ToString();
 
-            sql = "SELECT Module_ID, Description FROM MODULES WHERE Module_ID = " + id;
+            sql = "SELECT Module_ID, Description FROM MODULES WHERE Module_ID = @id";
 
             Connect();
             conn.Open();
 
             comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@id", id);
+
             dreader = comm.ExecuteReader();
 
             while (dreader.Read())

@@ -239,11 +239,8 @@ namespace Student_Attendance_System
         public bool Update(string id, string fname, string lname, string email, string password, int admin)
         {
             int result = 0;
-            string table = "", field = "";
-
-            table = "LECTURERS ";
-            field = "Lecturer_ID";
-
+            string table = "LECTURERS ";
+            string field = "Lecturer_ID";
             string pw = "";
 
             if (password != "")

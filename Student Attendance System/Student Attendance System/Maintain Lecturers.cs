@@ -85,7 +85,7 @@ namespace Student_Attendance_System
         {
             string id = dgvLecturers.CurrentRow.Cells[0].Value.ToString();
 
-            sql = "SELECT Lecturer_ID, Last_Name, Name, Email, Admin FROM LECTURERS WHERE Lecturer_ID = " + id;
+            sql = "SELECT Lecturer_ID, Last_Name, Name, Email, Admin FROM LECTURERS WHERE Lecturer_ID = @id";
 
             try
             {
@@ -93,6 +93,8 @@ namespace Student_Attendance_System
                 conn.Open();
 
                 comm = new SqlCommand(sql, conn);
+                comm.Parameters.AddWithValue("@id", id);
+
                 dreader = comm.ExecuteReader();
 
                 while (dreader.Read())

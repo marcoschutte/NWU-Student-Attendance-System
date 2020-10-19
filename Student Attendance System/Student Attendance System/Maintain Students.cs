@@ -85,12 +85,14 @@ namespace Student_Attendance_System
         {
             string id = dgvStudents.CurrentRow.Cells[0].Value.ToString();
 
-            sql = "SELECT Student_ID, Last_Name, Name, Email FROM STUDENTS WHERE Student_ID = " + id;
+            sql = "SELECT Student_ID, Last_Name, Name, Email FROM STUDENTS WHERE Student_ID = @id";
 
             Connect();
             conn.Open();
 
             comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@id", id);
+
             dreader = comm.ExecuteReader();
 
             while(dreader.Read())
