@@ -40,7 +40,7 @@ namespace Student_Attendance_System
 
         private void btnReturnToMainMenu_Click(object sender, EventArgs e)
         {
-            Owner.Show(this);
+            Owner.Show();
             this.Close();
         }
     }

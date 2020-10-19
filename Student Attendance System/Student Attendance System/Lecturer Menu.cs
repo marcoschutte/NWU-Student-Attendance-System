@@ -70,7 +70,9 @@ namespace Student_Attendance_System
 
         private void btnRequestReports_Click(object sender, EventArgs e)
         {
-
+            Request_Reports requestreports = new Request_Reports();
+            requestreports.Show(this);
+            this.Hide();
         }
     }
 }

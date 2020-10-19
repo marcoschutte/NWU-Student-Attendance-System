@@ -75,9 +75,6 @@ C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Stude
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.CoreCompileInputs.cache
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.exe
 C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.pdb
-C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB.mdf
-C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\AttendanceDB_log.ldf
-C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Attendance.resources
 C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\Database1.mdf
 C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\Database1_log.ldf
 C:\Users\bernh\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.exe.config
@@ -134,3 +131,8 @@ C:\Users\rynoh\Desktop\Semester2\223\Project Git\CMPG223-Project\Student Attenda
 C:\Users\rynoh\Desktop\Semester2\223\Project Git\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Student_Attendance.resources
 C:\Users\rynoh\Desktop\Semester2\223\Project Git\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Request_Reports.resources
 C:\Users\rynoh\Desktop\Semester2\223\Project Git\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Update_Attendance_Record.resources
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Add_Attendance_Record.resources
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Delete_Attendance_Record.resources
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Student_Attendance.resources
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Request_Reports.resources
+C:\Users\Kyle\Documents\CMPG 223\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Update_Attendance_Record.resources
