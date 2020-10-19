@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnReturnToAttendanceMenu = new System.Windows.Forms.Button();
+            this.btnDisplayIDs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,11 +251,26 @@
             this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
             this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
             // 
+            // btnDisplayIDs
+            // 
+            this.btnDisplayIDs.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDisplayIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDisplayIDs.ForeColor = System.Drawing.Color.Purple;
+            this.btnDisplayIDs.Location = new System.Drawing.Point(406, 416);
+            this.btnDisplayIDs.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayIDs.Name = "btnDisplayIDs";
+            this.btnDisplayIDs.Size = new System.Drawing.Size(182, 57);
+            this.btnDisplayIDs.TabIndex = 120;
+            this.btnDisplayIDs.Text = "Display Existing IDs";
+            this.btnDisplayIDs.UseVisualStyleBackColor = false;
+            this.btnDisplayIDs.Click += new System.EventHandler(this.btnDisplayIDs_Click);
+            // 
             // Add_Attendance_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 481);
+            this.Controls.Add(this.btnDisplayIDs);
             this.Controls.Add(this.btnReturnToAttendanceMenu);
             this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.btnClear);
@@ -302,5 +318,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnReturnToAttendanceMenu;
+        private System.Windows.Forms.Button btnDisplayIDs;
     }
 }

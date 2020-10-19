@@ -56,6 +56,7 @@ namespace Student_Attendance_System
                 }
                 catch (Exception error)
                 {
+                    MessageBox.Show("Only IDs that exist within the Student Attendance System can be used for submitting attendance!\n\nClick on the Display Existing IDs button to view a list of IDs that can be used for submitting attendance!");
                     MessageBox.Show(error.Message);
                 }
             }
@@ -131,6 +132,12 @@ namespace Student_Attendance_System
         {
             Owner.Show();
             this.Close();
+        }
+
+        private void btnDisplayIDs_Click(object sender, EventArgs e)
+        {
+            Existing_IDs formIds = new Existing_IDs();
+            formIds.Show();
         }
     }
 }

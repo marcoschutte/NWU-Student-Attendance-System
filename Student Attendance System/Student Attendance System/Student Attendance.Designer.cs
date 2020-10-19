@@ -44,6 +44,7 @@
             this.txtLecturer_ID = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblStudentID = new System.Windows.Forms.Label();
+            this.btnDisplayIDs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loverslanePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,7 +175,7 @@
             this.btnExitApplication.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExitApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnExitApplication.ForeColor = System.Drawing.Color.Purple;
-            this.btnExitApplication.Location = new System.Drawing.Point(523, 374);
+            this.btnExitApplication.Location = new System.Drawing.Point(494, 364);
             this.btnExitApplication.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitApplication.Name = "btnExitApplication";
             this.btnExitApplication.Size = new System.Drawing.Size(153, 57);
@@ -228,11 +229,26 @@
             this.lblStudentID.TabIndex = 53;
             this.lblStudentID.Text = "[Student ID]";
             // 
+            // btnDisplayIDs
+            // 
+            this.btnDisplayIDs.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDisplayIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDisplayIDs.ForeColor = System.Drawing.Color.Purple;
+            this.btnDisplayIDs.Location = new System.Drawing.Point(305, 364);
+            this.btnDisplayIDs.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayIDs.Name = "btnDisplayIDs";
+            this.btnDisplayIDs.Size = new System.Drawing.Size(182, 57);
+            this.btnDisplayIDs.TabIndex = 54;
+            this.btnDisplayIDs.Text = "Display Existing IDs";
+            this.btnDisplayIDs.UseVisualStyleBackColor = false;
+            this.btnDisplayIDs.Click += new System.EventHandler(this.btnDisplayIDs_Click);
+            // 
             // Student_Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 444);
+            this.Controls.Add(this.btnDisplayIDs);
             this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtLecturer_ID);
@@ -277,5 +293,6 @@
         private System.Windows.Forms.TextBox txtLecturer_ID;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblStudentID;
+        private System.Windows.Forms.Button btnDisplayIDs;
     }
 }
