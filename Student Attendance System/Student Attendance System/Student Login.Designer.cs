@@ -83,6 +83,7 @@
             // 
             this.txtStudentID.Location = new System.Drawing.Point(132, 130);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(232, 22);
             this.txtStudentID.TabIndex = 0;

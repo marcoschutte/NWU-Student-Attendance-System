@@ -102,6 +102,7 @@
             // 
             this.txtLecturerID.Location = new System.Drawing.Point(134, 123);
             this.txtLecturerID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLecturerID.MaxLength = 8;
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.Size = new System.Drawing.Size(232, 22);
             this.txtLecturerID.TabIndex = 0;
