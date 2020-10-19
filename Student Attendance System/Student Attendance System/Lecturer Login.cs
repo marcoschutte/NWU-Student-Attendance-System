@@ -70,49 +70,50 @@ namespace Student_Attendance_System
         private void btnLecturerLogIn_Click(object sender, EventArgs e)
         {
             string _id = txtLecturerID.Text;
-            string _pass = txtPassword.Text;
+             string _pass = txtPassword.Text;
 
-            conn.Open();
-            EmptyDataBase();
+             conn.Open();
+             EmptyDataBase();
 
-            comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
+             comm = new SqlCommand("SELECT Lecturer_ID,Password FROM LECTURERS", conn);
 
-            try
-            {
-                datRead = comm.ExecuteReader();
+             try
+             {
+                 datRead = comm.ExecuteReader();
 
-                while (datRead.Read())
-                {
-                    if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
-                    {
-                        Lecturer_Menu lecturerMenu = new Lecturer_Menu(_id);
-                        lecturerMenu.Show();
-                        _redButtonClicked = false;
-                        this.Close();
-                        break;
-                    }
-                    else
-                    {
-                        label5.Text = "Incorrect fields! Please enter your login credentials below:";
-                        label5.ForeColor = Color.Red;
+                 while (datRead.Read())
+                 {
+                     if ((datRead.GetValue(0).ToString() == _id) && (datRead.GetValue(1).ToString() == _pass))
+                     {
+                         Lecturer_Menu lecturerMenu = new Lecturer_Menu(_id);
+                         lecturerMenu.Show();
+                         _redButtonClicked = false;
+                         this.Close();
+                         break;
+                     }
+                     else
+                     {
+                         label5.Text = "Incorrect fields! Please enter your login credentials below:";
+                         label5.ForeColor = Color.Red;
 
-                        if (datRead.GetValue(0).ToString() != _id)
-                            txtLecturerID.BackColor = Color.Red;
-                        else
-                            txtLecturerID.BackColor = Color.White;
-                        if (datRead.GetValue(1).ToString() != _pass)
-                            txtPassword.BackColor = Color.Red;
-                        else
-                            txtPassword.BackColor = Color.White;
-                    }
-                }
-                conn.Close();
-            }
+                         if (datRead.GetValue(0).ToString() != _id)
+                             txtLecturerID.BackColor = Color.Red;
+                         else
+                             txtLecturerID.BackColor = Color.White;
+                         if (datRead.GetValue(1).ToString() != _pass)
+                             txtPassword.BackColor = Color.Red;
+                         else
+                             txtPassword.BackColor = Color.White;
+                     }
+                 }
+                 conn.Close();
+             }
 
-            catch (Exception er2)
-            {
-                MessageBox.Show(er2.ToString());
-            }
+             catch (Exception er2)
+             {
+                 MessageBox.Show(er2.ToString());
+             }            
+            
         }
           
 
