@@ -110,6 +110,7 @@
             // 
             this.txtModuleID.Location = new System.Drawing.Point(432, 174);
             this.txtModuleID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModuleID.MaxLength = 7;
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(215, 22);
             this.txtModuleID.TabIndex = 1;
@@ -197,6 +198,7 @@
             // 
             this.txtLecturer_ID.Location = new System.Drawing.Point(432, 144);
             this.txtLecturer_ID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLecturer_ID.MaxLength = 8;
             this.txtLecturer_ID.Name = "txtLecturer_ID";
             this.txtLecturer_ID.Size = new System.Drawing.Size(215, 22);
             this.txtLecturer_ID.TabIndex = 0;
