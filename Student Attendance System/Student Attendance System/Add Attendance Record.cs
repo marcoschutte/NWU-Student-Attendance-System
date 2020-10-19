@@ -27,11 +27,7 @@ namespace Student_Attendance_System
         DateTime currentDate = DateTime.Now;
         DateTime currentTime = DateTime.Now;
 
-        //public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security = True";
-        public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Test\Test\bin\Debug\SAS_DB.mdf;Integrated Security = True; Connect Timeout = 30";
-
-
-
+        public string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SAS_DB.mdf;Integrated Security = True";
         public string studentID; 
         public string lecturerID;
         public string moduleID;
@@ -107,9 +103,7 @@ namespace Student_Attendance_System
             connection = new SqlConnection(connectionString);
             connection.Open();
 
-            //string insertQuery = "INSERT INTO ATTENDANCE (Student_ID,Lecturer_ID,Module_ID,Attendance_Date,Attendance_Time) VALUES (@Student_ID,@Lecturer_ID,@Module_ID,@Attendance_Date,@Attendance_Time)";
-
-            string insertQuery = "INSERT INTO ATTENDANCE (Student_ID,Lecturer_ID,Module_ID,Attendance_Date,Attendance_Time) VALUES ('" + studentID + "','" + lecturerID + "','" + moduleID + "','" + date + "','" + time + "')";
+            string insertQuery = "INSERT INTO ATTENDANCE (Student_ID,Lecturer_ID,Module_ID,Attendance_Date,Attendance_Time) VALUES (@Student_ID,@Lecturer_ID,@Module_ID,@Attendance_Date,@Attendance_Time)";
 
             command = new SqlCommand(insertQuery, connection);
             command.Parameters.AddWithValue("@Student_ID", studentID);
