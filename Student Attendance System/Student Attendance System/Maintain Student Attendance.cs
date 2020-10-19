@@ -19,7 +19,6 @@ namespace Student_Attendance_System
 
         private void btnAddAttendance_Click(object sender, EventArgs e)
         {
-            
             Add_Attendance_Record addAttendance = new Add_Attendance_Record();
             addAttendance.Show(this);
             this.Hide();
