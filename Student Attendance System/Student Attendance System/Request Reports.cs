@@ -21,6 +21,8 @@ namespace Student_Attendance_System
         DataSet ds;
         SqlDataReader dreader;
 
+        string spesificid;
+
         public Request_Reports()
         {
             InitializeComponent();
@@ -92,6 +94,7 @@ namespace Student_Attendance_System
         private void SpesificStudent(string id)
         {
             string modulesql = "SELECT DISTINCT Module_ID FROM ATTENDANCE WHERE Student_ID = @id";
+            spesificid = id;
 
             Connect();
             cbxModules.Items.Clear();
@@ -121,7 +124,42 @@ namespace Student_Attendance_System
 
         private void SpesificModules(string module)
         {
+            DateTime start = calStart.SelectionStart;
+            DateTime end = calEnd.SelectionStart;
 
+            string datesql = "SELECT Attendance_Date, Module_ID FROM ATTENDANCE WHERE (Attendance_Date BETWEEN @datestart AND @dateend) AND (Module_ID = @module) AND (Student_ID = @id)";
+
+            Connect();
+            
+            try
+            {
+                conn.Open();
+
+                comm = new SqlCommand(datesql, conn);
+                adap = new SqlDataAdapter();
+                ds = new DataSet();
+
+                comm.Parameters.AddWithValue("@datestart", start.ToString("d"));
+                comm.Parameters.AddWithValue("@dateend", end.ToString("d"));
+                comm.Parameters.AddWithValue("@module", module);
+                comm.Parameters.AddWithValue("@id", spesificid);
+
+                adap.SelectCommand = comm;
+                adap.Fill(ds, "ATTENDANCE");
+
+                dgvReport.DataSource = ds;
+                dgvReport.DataMember = "ATTENDANCE";
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+
+            dgvReport.Columns[0].Width = 150;
+            dgvReport.Columns[1].Width = 150;
+
+
+            conn.Close();
         }
 
 

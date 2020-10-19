@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvReport = new System.Windows.Forms.DataGridView();
             this.rbtnAll = new System.Windows.Forms.RadioButton();
             this.rbtnSpesific = new System.Windows.Forms.RadioButton();
             this.btnSelectStudent = new System.Windows.Forms.Button();
@@ -39,17 +39,17 @@
             this.btnSelectDate = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.gbxStudents.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvReport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(269, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(734, 489);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReport.Location = new System.Drawing.Point(269, 41);
+            this.dgvReport.Name = "dgvReport";
+            this.dgvReport.Size = new System.Drawing.Size(734, 489);
+            this.dgvReport.TabIndex = 0;
             // 
             // rbtnAll
             // 
@@ -166,11 +166,11 @@
             this.Controls.Add(this.cbxModules);
             this.Controls.Add(this.gbxStudents);
             this.Controls.Add(this.btnSelectStudent);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvReport);
             this.Name = "Request_Reports";
             this.Text = "Request_Reports";
             this.Load += new System.EventHandler(this.Request_Reports_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.gbxStudents.ResumeLayout(false);
             this.gbxStudents.PerformLayout();
             this.ResumeLayout(false);
@@ -179,7 +179,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvReport;
         private System.Windows.Forms.RadioButton rbtnAll;
         private System.Windows.Forms.RadioButton rbtnSpesific;
         private System.Windows.Forms.Button btnSelectStudent;
