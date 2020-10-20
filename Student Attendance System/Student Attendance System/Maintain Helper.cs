@@ -82,7 +82,7 @@ namespace Student_Attendance_System
             return admin;
         }
 
-        public bool Insert(string id, string fname, string lname, string email, string password)
+        public int Insert(string id, string fname, string lname, string email, string password)
         {
             int result = 0;
 
@@ -113,14 +113,10 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
-
+            return result;
         }
 
-        public bool Insert(string id, string fname, string lname, string email, string password, int admin)
+        public int Insert(string id, string fname, string lname, string email, string password, int admin)
         {
             Connect();
 
@@ -149,14 +145,10 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
-
+            return result;
         }
 
-        public bool Insert(string modID, string modDes)
+        public int Insert(string modID, string modDes)
         {
 
             int result = 0;
@@ -187,13 +179,10 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
-        public bool Update(string id, string fname, string lname, string email, string password)
+        public int Update(string id, string fname, string lname, string email, string password)
         {
             int result = 0;
             string table = "", field = "";
@@ -230,13 +219,10 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
-        public bool Update(string id, string fname, string lname, string email, string password, int admin)
+        public int Update(string id, string fname, string lname, string email, string password, int admin)
         {
             int result = 0;
             string table = "LECTURERS ";
@@ -271,13 +257,10 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
-        public bool Update(string modID, string modDes)
+        public int Update(string modID, string modDes)
         {
             int result = 0;
             string sql = "UPDATE MODULES SET Description = @modDes WHERE Module_ID = @id";
@@ -298,13 +281,10 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
-        public bool Delete(char type, string id)
+        public int Delete(char type, string id)
         {
             int result = 0;
             string table = "", field = "";
@@ -343,13 +323,10 @@ namespace Student_Attendance_System
                 }
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
-        public bool Delete(string id)
+        public int Delete(string id)
         {
             int result = 0; 
             string sql = "DELETE FROM MODULES WHERE Module_ID = @id";
@@ -370,10 +347,7 @@ namespace Student_Attendance_System
                 MessageBox.Show(se.Message);
             }
 
-            if (result < 0)
-                return false;
-            else
-                return true;
+            return result;
         }
     }
 }

@@ -46,10 +46,16 @@ namespace Student_Attendance_System
             {
                 if (maintainhelper.CheckID(id))
                 {
-                    if (maintainhelper.Insert(id, fname, lname, email, password, admin))
+                    int result = maintainhelper.Insert(id, fname, lname, email, password, admin);
+
+                    if (result > 0)
                     {
                         MessageBox.Show("Record has been succesfully inserted.");
                         Reset();
+                    }
+                    else if (result == 0)
+                    {
+                        MessageBox.Show("No record could be inserted");
                     }
                     else
                         MessageBox.Show("There was a problem inserting the record.");
@@ -63,8 +69,17 @@ namespace Student_Attendance_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Update(txtLecturerID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text, Convert.ToInt32(cbxAdmin.Checked)))
+            int result = maintainhelper.Update(txtLecturerID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text, Convert.ToInt32(cbxAdmin.Checked));
+
+            if (result > 0)
+            {
                 MessageBox.Show("Record has been succesfully updated.");
+                Reset();
+            }
+            else if (result == 0)
+            {
+                MessageBox.Show("No record could be updated");
+            }
             else
                 MessageBox.Show("There was a problem updating the record.");
 
@@ -73,8 +88,17 @@ namespace Student_Attendance_System
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Delete('L', txtLecturerID.Text))
+            int result = maintainhelper.Delete('L', txtLecturerID.Text);
+
+            if (result > 0)
+            {
                 MessageBox.Show("Record has been succesfully deleted.");
+                Reset();
+            }
+            else if (result == 0)
+            {
+                MessageBox.Show("No record could be deleted");
+            }
             else
                 MessageBox.Show("There was a problem deleting the record.");
 

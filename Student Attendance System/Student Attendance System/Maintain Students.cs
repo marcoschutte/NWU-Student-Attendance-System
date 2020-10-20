@@ -46,11 +46,17 @@ namespace Student_Attendance_System
             {
                 if (maintainhelper.CheckID(id))
                 {
-                    if (maintainhelper.Insert(id, fname, lname, email, password))
+                    int result = maintainhelper.Insert(id, fname, lname, email, password);
+
+                    if (result > 0)
                     { 
                         MessageBox.Show("Record has been succesfully inserted.");
                         Reset();
                     }   
+                    else if(result == 0)
+                    {
+                        MessageBox.Show("No record could be inserted");
+                    }
                     else
                         MessageBox.Show("There was a problem inserting the record.");
                 }
@@ -63,18 +69,36 @@ namespace Student_Attendance_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Update(txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text))
+            int result = maintainhelper.Update(txtStudentID.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPassword.Text);
+
+            if (result > 0)
+            {
                 MessageBox.Show("Record has been succesfully updated.");
+                Reset();
+            }
+            else if (result == 0)
+            {
+                MessageBox.Show("No record could be updated");
+            }
             else
                 MessageBox.Show("There was a problem updating the record.");
-            
+
             Reset();
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Delete('S', txtStudentID.Text))
+            int result = maintainhelper.Delete('S', txtStudentID.Text);
+
+            if (result > 0)
+            {
                 MessageBox.Show("Record has been succesfully deleted.");
+                Reset();
+            }
+            else if (result == 0)
+            {
+                MessageBox.Show("No record could be deleted");
+            }
             else
                 MessageBox.Show("There was a problem deleting the record.");
 

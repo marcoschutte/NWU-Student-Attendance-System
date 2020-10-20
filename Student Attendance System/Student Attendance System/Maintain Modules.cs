@@ -40,14 +40,19 @@ namespace Student_Attendance_System
             }
             else
             {
-                if (maintainhelper.Insert(modID, modDes))
+                int result = maintainhelper.Insert(modID, modDes);
+
+                if (result > 0)
                 {
-                    MessageBox.Show("Record has been succesfully inserted.");
+                    MessageBox.Show("Record has been succesfully updated.");
                     Reset();
                 }
-
+                else if (result == 0)
+                {
+                    MessageBox.Show("No record could be updated.");
+                }
                 else
-                    MessageBox.Show("There was a problem inserting the record.");
+                    MessageBox.Show("There was a problem updating the record.");
             }
         }
 
@@ -66,10 +71,16 @@ namespace Student_Attendance_System
             }
             else
             {
-                if (maintainhelper.Delete(txtModuleID.Text))
-                { 
+                int result = maintainhelper.Delete(txtModuleID.Text);
+
+                if (result > 0)
+                {
                     MessageBox.Show("Record has been succesfully deleted.");
                     Reset();
+                }
+                else if (result == 0)
+                {
+                    MessageBox.Show("No record could be deleted.");
                 }
                 else
                     MessageBox.Show("There was a problem deleting the record.");
@@ -115,10 +126,16 @@ namespace Student_Attendance_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (maintainhelper.Update(txtModuleID.Text, txtModuleDescription.Text))
+            int result = maintainhelper.Update(txtModuleID.Text, txtModuleDescription.Text);
+
+            if (result > 0)
             {
                 MessageBox.Show("Record has been succesfully updated.");
                 Reset();
+            }
+            else if (result == 0)
+            {
+                MessageBox.Show("No record could be updated.");
             }
             else
                 MessageBox.Show("There was a problem updating the record.");
