@@ -44,7 +44,8 @@ namespace Student_Attendance_System
 
             if (studentID == "" || lecturerID == "" || moduleID == "" || date == "" || time == "")
             {
-                
+                lblErrorMessage.ForeColor = System.Drawing.Color.Red;
+                lblErrorMessage.Text = "Please fill in all the fields!";
             }
             else
             {
