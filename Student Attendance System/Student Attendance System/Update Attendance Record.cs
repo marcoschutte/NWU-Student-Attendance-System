@@ -175,9 +175,17 @@ namespace Student_Attendance_System
 
         private void btnUpdateRecord_Click(object sender, EventArgs e)
         {
-            UpdateRecord();
-            DisplayRecord();
-            ClearFields();
+            try
+            {
+                UpdateRecord();
+                DisplayRecord();
+                ClearFields();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
         }
 
         private void Update_Attendance_Record_Load(object sender, EventArgs e)
