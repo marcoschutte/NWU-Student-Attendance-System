@@ -30,7 +30,16 @@ namespace Student_Attendance_System
 
         private void Request_Reports_Load(object sender, EventArgs e)
         {
-            
+            AllStudents();
+
+            int year = DateTime.Now.Year;
+            DateTime firstDay = new DateTime(year-1, 1, 1);
+
+            calStart.MinDate = firstDay;
+            calStart.MaxDate = DateTime.Now;
+
+            calEnd.MinDate = firstDay;
+            calEnd.MaxDate = DateTime.Now;
         }
 
         private void Connect()
@@ -42,6 +51,9 @@ namespace Student_Attendance_System
         private void rbtnAll_CheckedChanged(object sender, EventArgs e)
         {
             btnSelectStudent.Enabled = rbtnSpesific.Checked;
+
+            if(rbtnAll.Checked)
+                AllStudents();
         }
 
         private void cbxModules_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,15 +91,42 @@ namespace Student_Attendance_System
 
             if (cbxModules.SelectedIndex == -1)
             {
-
-            }
-            else if (cbxModules.SelectedIndex == 0)
-            {
-
+                MessageBox.Show("Please Select a Module");
             }
             else
             {
-                SpesificModules(module);
+                if (rbtnAll.Checked)
+                    AStudentsSModules(module);
+                else
+                    SStudentsSModules(module);
+            }
+        }
+
+        private void AllStudents()
+        {
+            string modulesql = "SELECT Module_ID FROM MODULES";
+
+            Connect();
+            cbxModules.Items.Clear();
+
+            try
+            {
+                conn.Open();
+
+                comm = new SqlCommand(modulesql, conn);
+
+                dreader = comm.ExecuteReader();
+
+                while (dreader.Read())
+                {
+                    cbxModules.Items.Add(dreader.GetString(0));
+                }
+
+                conn.Close();
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
             }
         }
 
@@ -98,7 +137,6 @@ namespace Student_Attendance_System
 
             Connect();
             cbxModules.Items.Clear();
-            cbxModules.Items.Add("ALL");
 
             try
             {
@@ -122,7 +160,7 @@ namespace Student_Attendance_System
             }
         }
 
-        private void SpesificModules(string module)
+        private void SStudentsSModules(string module)
         {
             DateTime start = calStart.SelectionStart;
             DateTime end = calEnd.SelectionStart;
@@ -162,6 +200,47 @@ namespace Student_Attendance_System
             conn.Close();
         }
 
+        private void AStudentsSModules(string module)
+        {
+            DateTime start = calStart.SelectionStart;
+            DateTime end = calEnd.SelectionStart;
 
+            string datesql =  "SELECT DISTINCT ATTENDANCE.Student_ID, (COUNT(CASE WHEN ATTENDANCE.Module_ID =  @module THEN 1 END)) AS Classes " +
+                              "FROM ATTENDANCE " +
+                              "WHERE ATTENDANCE_Date BETWEEN @datestart AND @dateend " +
+                              "GROUP BY ATTENDANCE.Student_ID " +
+                              "HAVING COUNT(CASE WHEN ATTENDANCE.Module_ID =  @module THEN 1 END) > 0 " + 
+                              "ORDER BY ATTENDANCE.Student_ID";
+
+            Connect();
+
+            try
+            {
+                conn.Open();
+
+                comm = new SqlCommand(datesql, conn);
+                adap = new SqlDataAdapter();
+                ds = new DataSet();
+
+                comm.Parameters.AddWithValue("@datestart", start.ToString("d"));
+                comm.Parameters.AddWithValue("@dateend", end.ToString("d"));
+                comm.Parameters.AddWithValue("@module", module);
+
+                adap.SelectCommand = comm;
+                adap.Fill(ds, "ATTENDANCE");
+
+                dgvReport.DataSource = ds;
+                dgvReport.DataMember = "ATTENDANCE";
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+
+            dgvReport.Columns[0].Width = 150;
+            dgvReport.Columns[1].Width = 150;
+
+            conn.Close();
+        }
     }
 }

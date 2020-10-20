@@ -37,7 +37,6 @@
             this.calStart = new System.Windows.Forms.MonthCalendar();
             this.calEnd = new System.Windows.Forms.MonthCalendar();
             this.btnSelectDate = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.gbxStudents.SuspendLayout();
@@ -133,16 +132,6 @@
             this.btnSelectDate.UseVisualStyleBackColor = true;
             this.btnSelectDate.Click += new System.EventHandler(this.btnSelectDate_Click);
             // 
-            // btnReset
-            // 
-            this.btnReset.Enabled = false;
-            this.btnReset.Location = new System.Drawing.Point(17, 538);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(227, 28);
-            this.btnReset.TabIndex = 14;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            // 
             // btnReturn
             // 
             this.btnReturn.Enabled = false;
@@ -159,7 +148,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 578);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSelectDate);
             this.Controls.Add(this.calEnd);
             this.Controls.Add(this.calStart);
@@ -188,7 +176,6 @@
         private System.Windows.Forms.MonthCalendar calStart;
         private System.Windows.Forms.MonthCalendar calEnd;
         private System.Windows.Forms.Button btnSelectDate;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnReturn;
     }
 }
