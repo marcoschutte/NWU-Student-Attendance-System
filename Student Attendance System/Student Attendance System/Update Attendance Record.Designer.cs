@@ -52,6 +52,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReturnToAttendanceMenu = new System.Windows.Forms.Button();
+            this.btnDisplayIDs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -318,11 +319,26 @@
             this.btnReturnToAttendanceMenu.UseVisualStyleBackColor = false;
             this.btnReturnToAttendanceMenu.Click += new System.EventHandler(this.btnReturnToAttendanceMenu_Click);
             // 
+            // btnDisplayIDs
+            // 
+            this.btnDisplayIDs.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDisplayIDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDisplayIDs.ForeColor = System.Drawing.Color.Purple;
+            this.btnDisplayIDs.Location = new System.Drawing.Point(400, 607);
+            this.btnDisplayIDs.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayIDs.Name = "btnDisplayIDs";
+            this.btnDisplayIDs.Size = new System.Drawing.Size(177, 57);
+            this.btnDisplayIDs.TabIndex = 148;
+            this.btnDisplayIDs.Text = "Display Existing IDs";
+            this.btnDisplayIDs.UseVisualStyleBackColor = false;
+            this.btnDisplayIDs.Click += new System.EventHandler(this.btnDisplayIDs_Click);
+            // 
             // Update_Attendance_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 672);
+            this.Controls.Add(this.btnDisplayIDs);
             this.Controls.Add(this.btnReturnToAttendanceMenu);
             this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.lblAttendanceID);
@@ -382,5 +398,6 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReturnToAttendanceMenu;
+        private System.Windows.Forms.Button btnDisplayIDs;
     }
 }

@@ -99,12 +99,6 @@ namespace Student_Attendance_System
 
         public void UpdateRecord()
         {
-            studentID = txtStudentID.Text;
-            lecturerID = txtLecturerID.Text;
-            moduleID = txtModuleID.Text;
-            date = currentDate.ToString();
-            time = currentDate.ToString();
-
             connection = new SqlConnection(connectionString);
             connection.Open();
 
@@ -154,6 +148,7 @@ namespace Student_Attendance_System
                         txtLecturerID.Visible = true;
                         txtModuleID.Visible = true;
                         btnUpdateRecord.Visible = true;
+                        btnDisplayIDs.Visible = true;
                     }
                     else
                     {
@@ -175,15 +170,30 @@ namespace Student_Attendance_System
 
         private void btnUpdateRecord_Click(object sender, EventArgs e)
         {
-            try
+            studentID = txtStudentID.Text;
+            lecturerID = txtLecturerID.Text;
+            moduleID = txtModuleID.Text;
+            date = currentDate.ToString();
+            time = currentDate.ToString();
+
+            if (studentID == "" || lecturerID == "" || moduleID == "")
             {
-                UpdateRecord();
-                DisplayRecord();
-                ClearFields();
+                lblErrorMessage.ForeColor = System.Drawing.Color.Red;
+                lblErrorMessage.Text = "Please fill in all the fields!";
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                try
+                {
+                    UpdateRecord();
+                    DisplayRecord();
+                    ClearFields();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                    MessageBox.Show("Only IDs that exist within the Student Attendance System can be used for submitting attendance!\n\nClick on the Display Existing IDs button to view a list of IDs that can be used for submitting attendance!");
+                }
             }
 
         }
@@ -207,6 +217,7 @@ namespace Student_Attendance_System
             txtLecturerID.Visible = false;
             txtModuleID.Visible = false;
             btnUpdateRecord.Visible = false;
+            btnDisplayIDs.Visible = false;
 
             lblDate.Text = currentDate.ToString("MM/dd/yyyy");
             lblTime.Text = currentTime.ToString("hh:mm tt");
@@ -216,6 +227,12 @@ namespace Student_Attendance_System
         {
             Owner.Show();
             this.Close();
+        }
+
+        private void btnDisplayIDs_Click(object sender, EventArgs e)
+        {
+            Existing_IDs formIds = new Existing_IDs();
+            formIds.Show();
         }
     }
 }
