@@ -187,3 +187,6 @@ C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Stude
 C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Menu_Help.resources
 C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB.mdf
 C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB_log.ldf
+C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB.mdf
+C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB_log.ldf
+C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Menu_Help.resources

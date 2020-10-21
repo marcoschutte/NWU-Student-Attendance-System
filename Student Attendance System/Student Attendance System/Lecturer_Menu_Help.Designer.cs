@@ -50,7 +50,7 @@
             // 
             this.pictureBox1.Image = global::Student_Attendance_System.Properties.Resources.lecturer12;
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(553, 517);
             this.pictureBox1.TabIndex = 0;
@@ -65,8 +65,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 60);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome to the help file for Lecturer Menu\r\n\r\nThe aim is to guide the admin to th" +
-    "e correct function";
+            this.label1.Text = "Welcome to the help file for the Lecturer Menu\r\n\r\nThe aim is to guide the admin t" +
+    "o the correct function";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
@@ -142,7 +142,7 @@
             this.label8.Location = new System.Drawing.Point(579, 162);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(319, 13);
+            this.label8.Size = new System.Drawing.Size(447, 18);
             this.label8.TabIndex = 8;
             this.label8.Text = "Maintain Students is used to modify,add and delete student records";
             // 
@@ -153,7 +153,7 @@
             this.label9.Location = new System.Drawing.Point(579, 226);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(323, 13);
+            this.label9.Size = new System.Drawing.Size(452, 18);
             this.label9.TabIndex = 9;
             this.label9.Text = "Maintain Lecturers is used to modify,add and delete lecturer records";
             // 
@@ -164,7 +164,7 @@
             this.label10.Location = new System.Drawing.Point(579, 289);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(319, 13);
+            this.label10.Size = new System.Drawing.Size(447, 18);
             this.label10.TabIndex = 10;
             this.label10.Text = "Maintain Modules is used to modify,add and delete module records";
             // 
@@ -175,7 +175,7 @@
             this.label11.Location = new System.Drawing.Point(579, 354);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(380, 13);
+            this.label11.Size = new System.Drawing.Size(532, 18);
             this.label11.TabIndex = 11;
             this.label11.Text = "Maintain Student Attendance is used to modify,add and delete attedance records";
             // 
@@ -205,7 +205,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(324, 552);
+            this.btnReturn.Location = new System.Drawing.Point(384, 539);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(185, 41);
             this.btnReturn.TabIndex = 14;
@@ -234,7 +234,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Lecturer_Menu_Help";
             this.Text = "Lecturer_Menu_Help";
             this.Load += new System.EventHandler(this.Lecturer_Menu_Help_Load);

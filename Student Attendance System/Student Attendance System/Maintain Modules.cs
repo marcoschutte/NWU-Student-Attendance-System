@@ -35,6 +35,7 @@ namespace Student_Attendance_System
 
             if(modID == "" || modDes == "")
             {
+                lblErrorMessage.Visible = true;
                 lblErrorMessage.ForeColor = System.Drawing.Color.Red;
                 lblErrorMessage.Text = "Please fill in all the fields!";
             }
@@ -224,6 +225,7 @@ namespace Student_Attendance_System
 
         private void Maintain_Modules_Load(object sender, EventArgs e)
         {
+            lblErrorMessage.Visible = false;
             DisplayAll();
         }
     }
