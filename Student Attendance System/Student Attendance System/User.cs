@@ -24,8 +24,6 @@ namespace Student_Attendance_System
             _redButtonClicked = false;
             DialogResult close = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-             
-
             if (DialogResult.Yes == close)
                 Application.Exit();
         }

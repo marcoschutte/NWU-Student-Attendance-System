@@ -160,3 +160,30 @@ C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student At
 C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.User.resources
 C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Properties.Resources.resources
 C:\Users\marco\Source\Repos\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.GenerateResource.Cache
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.exe.config
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.exe
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\Student Attendance System.pdb
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csprojAssemblyReference.cache
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Add_Attendance_Record.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Delete_Attendance_Record.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Existing_IDs.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.frmStudent_Select.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Login.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Menu.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Lecturers.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Modules.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Student_Attendance.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Maintain_Students.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Request_Reports.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Student_Attendance.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Student_Login.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Update_Attendance_Record.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.User.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Properties.Resources.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.GenerateResource.cache
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.csproj.CoreCompileInputs.cache
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.exe
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student Attendance System.pdb
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\obj\Debug\Student_Attendance_System.Lecturer_Menu_Help.resources
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB.mdf
+C:\Users\AntiAlligat3r\Documents\CMPG223-Project\Student Attendance System\Student Attendance System\bin\Debug\SAS_DB_log.ldf

@@ -74,5 +74,12 @@ namespace Student_Attendance_System
             requestreports.Show(this);
             this.Hide();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Lecturer_Menu_Help _help = new Lecturer_Menu_Help();
+            _help.ShowDialog();
+
+        }
     }
 }

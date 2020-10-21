@@ -99,6 +99,12 @@
     <Compile Include="Lecturer Menu.Designer.cs">
       <DependentUpon>Lecturer Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lecturer_Menu_Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer_Menu_Help.Designer.cs">
+      <DependentUpon>Lecturer_Menu_Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintain Helper.cs" />
     <Compile Include="Maintain Lecturers.cs">
       <SubType>Form</SubType>
@@ -123,6 +129,11 @@
     </Compile>
     <Compile Include="Maintain Students.Designer.cs">
       <DependentUpon>Maintain Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Request Reports.cs">
       <SubType>Form</SubType>
@@ -174,6 +185,9 @@
     <EmbeddedResource Include="Lecturer Menu.resx">
       <DependentUpon>Lecturer Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer_Menu_Help.resx">
+      <DependentUpon>Lecturer_Menu_Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maintain Lecturers.resx">
       <DependentUpon>Maintain Lecturers.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,14 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -232,11 +241,19 @@
     <Content Include="Resources\Building3.png" />
     <Content Include="Resources\Database.png" />
     <Content Include="Resources\Lecturer.png" />
+    <Content Include="Resources\lecturer12.JPG" />
     <Content Include="Resources\Logo.png" />
     <Content Include="Resources\Logo2.png" />
     <Content Include="Resources\LoversLane.png" />
     <Content Include="Resources\NWU.png" />
     <Content Include="Resources\Student.png" />
+    <Content Include="SAS_DB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SAS_DB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SAS_DB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
