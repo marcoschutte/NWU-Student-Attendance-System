@@ -37,11 +37,11 @@
             this.calStart = new System.Windows.Forms.MonthCalendar();
             this.calEnd = new System.Windows.Forms.MonthCalendar();
             this.btnSelectDate = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.gbxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,7 +52,7 @@
             this.dgvReport.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReport.Location = new System.Drawing.Point(345, 244);
-            this.dgvReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvReport.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.Size = new System.Drawing.Size(507, 421);
             this.dgvReport.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.rbtnAll.AutoSize = true;
             this.rbtnAll.Checked = true;
             this.rbtnAll.Location = new System.Drawing.Point(23, 34);
-            this.rbtnAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnAll.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnAll.Name = "rbtnAll";
             this.rbtnAll.Size = new System.Drawing.Size(52, 24);
             this.rbtnAll.TabIndex = 5;
@@ -75,7 +75,7 @@
             // 
             this.rbtnSpesific.AutoSize = true;
             this.rbtnSpesific.Location = new System.Drawing.Point(96, 34);
-            this.rbtnSpesific.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnSpesific.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnSpesific.Name = "rbtnSpesific";
             this.rbtnSpesific.Size = new System.Drawing.Size(98, 24);
             this.rbtnSpesific.TabIndex = 6;
@@ -91,7 +91,7 @@
             this.btnSelectStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSelectStudent.Location = new System.Drawing.Point(23, 88);
-            this.btnSelectStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectStudent.Name = "btnSelectStudent";
             this.btnSelectStudent.Size = new System.Drawing.Size(304, 32);
             this.btnSelectStudent.TabIndex = 7;
@@ -106,9 +106,9 @@
             this.gbxStudents.Controls.Add(this.rbtnAll);
             this.gbxStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.gbxStudents.Location = new System.Drawing.Point(23, 16);
-            this.gbxStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxStudents.Margin = new System.Windows.Forms.Padding(4);
             this.gbxStudents.Name = "gbxStudents";
-            this.gbxStudents.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxStudents.Padding = new System.Windows.Forms.Padding(4);
             this.gbxStudents.Size = new System.Drawing.Size(304, 64);
             this.gbxStudents.TabIndex = 8;
             this.gbxStudents.TabStop = false;
@@ -120,7 +120,7 @@
             this.cbxModules.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cbxModules.FormattingEnabled = true;
             this.cbxModules.Location = new System.Drawing.Point(23, 136);
-            this.cbxModules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxModules.Margin = new System.Windows.Forms.Padding(4);
             this.cbxModules.Name = "cbxModules";
             this.cbxModules.Size = new System.Drawing.Size(304, 28);
             this.cbxModules.TabIndex = 9;
@@ -150,27 +150,13 @@
             this.btnSelectDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnSelectDate.ForeColor = System.Drawing.Color.Purple;
             this.btnSelectDate.Location = new System.Drawing.Point(23, 677);
-            this.btnSelectDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectDate.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectDate.Name = "btnSelectDate";
             this.btnSelectDate.Size = new System.Drawing.Size(304, 58);
             this.btnSelectDate.TabIndex = 13;
             this.btnSelectDate.Text = "Select Date";
             this.btnSelectDate.UseVisualStyleBackColor = true;
             this.btnSelectDate.Click += new System.EventHandler(this.btnSelectDate_Click);
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.Enabled = false;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnReturn.ForeColor = System.Drawing.Color.Purple;
-            this.btnReturn.Location = new System.Drawing.Point(549, 678);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(303, 57);
-            this.btnReturn.TabIndex = 15;
-            this.btnReturn.Text = "Return to Menu ";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // label3
             // 
@@ -219,16 +205,28 @@
             this.label2.TabIndex = 115;
             this.label2.Text = "Generated Report:";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Purple;
+            this.button1.Location = new System.Drawing.Point(609, 672);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(243, 63);
+            this.button1.TabIndex = 117;
+            this.button1.Text = "Return To Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Request_Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 747);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnSelectDate);
             this.Controls.Add(this.calEnd);
             this.Controls.Add(this.calStart);
@@ -236,7 +234,7 @@
             this.Controls.Add(this.gbxStudents);
             this.Controls.Add(this.btnSelectStudent);
             this.Controls.Add(this.dgvReport);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Request_Reports";
             this.Text = "Request_Reports";
             this.Load += new System.EventHandler(this.Request_Reports_Load);
@@ -260,10 +258,10 @@
         private System.Windows.Forms.MonthCalendar calStart;
         private System.Windows.Forms.MonthCalendar calEnd;
         private System.Windows.Forms.Button btnSelectDate;
-        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
