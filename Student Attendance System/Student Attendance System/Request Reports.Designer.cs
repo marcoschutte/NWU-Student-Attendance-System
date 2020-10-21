@@ -38,25 +38,33 @@
             this.calEnd = new System.Windows.Forms.MonthCalendar();
             this.btnSelectDate = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.gbxStudents.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvReport
             // 
+            this.dgvReport.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReport.Location = new System.Drawing.Point(269, 41);
+            this.dgvReport.Location = new System.Drawing.Point(345, 244);
+            this.dgvReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvReport.Name = "dgvReport";
-            this.dgvReport.Size = new System.Drawing.Size(734, 489);
+            this.dgvReport.Size = new System.Drawing.Size(507, 421);
             this.dgvReport.TabIndex = 0;
             // 
             // rbtnAll
             // 
             this.rbtnAll.AutoSize = true;
             this.rbtnAll.Checked = true;
-            this.rbtnAll.Location = new System.Drawing.Point(17, 28);
+            this.rbtnAll.Location = new System.Drawing.Point(23, 34);
+            this.rbtnAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnAll.Name = "rbtnAll";
-            this.rbtnAll.Size = new System.Drawing.Size(36, 17);
+            this.rbtnAll.Size = new System.Drawing.Size(52, 24);
             this.rbtnAll.TabIndex = 5;
             this.rbtnAll.TabStop = true;
             this.rbtnAll.Text = "All";
@@ -66,49 +74,63 @@
             // rbtnSpesific
             // 
             this.rbtnSpesific.AutoSize = true;
-            this.rbtnSpesific.Location = new System.Drawing.Point(72, 28);
+            this.rbtnSpesific.Location = new System.Drawing.Point(96, 34);
+            this.rbtnSpesific.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnSpesific.Name = "rbtnSpesific";
-            this.rbtnSpesific.Size = new System.Drawing.Size(62, 17);
+            this.rbtnSpesific.Size = new System.Drawing.Size(98, 24);
             this.rbtnSpesific.TabIndex = 6;
             this.rbtnSpesific.TabStop = true;
-            this.rbtnSpesific.Text = "Spesific";
+            this.rbtnSpesific.Text = "Specific";
             this.rbtnSpesific.UseVisualStyleBackColor = true;
             this.rbtnSpesific.CheckedChanged += new System.EventHandler(this.rbtnAll_CheckedChanged);
             // 
             // btnSelectStudent
             // 
+            this.btnSelectStudent.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSelectStudent.Enabled = false;
-            this.btnSelectStudent.Location = new System.Drawing.Point(17, 71);
+            this.btnSelectStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSelectStudent.Location = new System.Drawing.Point(23, 88);
+            this.btnSelectStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelectStudent.Name = "btnSelectStudent";
-            this.btnSelectStudent.Size = new System.Drawing.Size(227, 28);
+            this.btnSelectStudent.Size = new System.Drawing.Size(304, 32);
             this.btnSelectStudent.TabIndex = 7;
             this.btnSelectStudent.Text = "Select Student";
-            this.btnSelectStudent.UseVisualStyleBackColor = true;
+            this.btnSelectStudent.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSelectStudent.UseVisualStyleBackColor = false;
             this.btnSelectStudent.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // gbxStudents
             // 
             this.gbxStudents.Controls.Add(this.rbtnSpesific);
             this.gbxStudents.Controls.Add(this.rbtnAll);
-            this.gbxStudents.Location = new System.Drawing.Point(17, 13);
+            this.gbxStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gbxStudents.Location = new System.Drawing.Point(23, 16);
+            this.gbxStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxStudents.Name = "gbxStudents";
-            this.gbxStudents.Size = new System.Drawing.Size(227, 52);
+            this.gbxStudents.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxStudents.Size = new System.Drawing.Size(304, 64);
             this.gbxStudents.TabIndex = 8;
             this.gbxStudents.TabStop = false;
             this.gbxStudents.Text = "Students";
             // 
             // cbxModules
             // 
+            this.cbxModules.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.cbxModules.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cbxModules.FormattingEnabled = true;
-            this.cbxModules.Location = new System.Drawing.Point(17, 115);
+            this.cbxModules.Location = new System.Drawing.Point(23, 136);
+            this.cbxModules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxModules.Name = "cbxModules";
-            this.cbxModules.Size = new System.Drawing.Size(227, 21);
+            this.cbxModules.Size = new System.Drawing.Size(304, 28);
             this.cbxModules.TabIndex = 9;
+            this.cbxModules.Text = "Select Module";
             this.cbxModules.SelectedIndexChanged += new System.EventHandler(this.cbxModules_SelectedIndexChanged);
             // 
             // calStart
             // 
-            this.calStart.Location = new System.Drawing.Point(17, 148);
+            this.calStart.Location = new System.Drawing.Point(23, 220);
+            this.calStart.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.calStart.MaxSelectionCount = 1;
             this.calStart.Name = "calStart";
             this.calStart.TabIndex = 11;
@@ -116,7 +138,8 @@
             // 
             // calEnd
             // 
-            this.calEnd.Location = new System.Drawing.Point(17, 328);
+            this.calEnd.Location = new System.Drawing.Point(23, 467);
+            this.calEnd.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.calEnd.MaxSelectionCount = 1;
             this.calEnd.Name = "calEnd";
             this.calEnd.TabIndex = 12;
@@ -124,9 +147,12 @@
             // btnSelectDate
             // 
             this.btnSelectDate.Enabled = false;
-            this.btnSelectDate.Location = new System.Drawing.Point(17, 502);
+            this.btnSelectDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSelectDate.ForeColor = System.Drawing.Color.Purple;
+            this.btnSelectDate.Location = new System.Drawing.Point(23, 677);
+            this.btnSelectDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelectDate.Name = "btnSelectDate";
-            this.btnSelectDate.Size = new System.Drawing.Size(227, 28);
+            this.btnSelectDate.Size = new System.Drawing.Size(304, 58);
             this.btnSelectDate.TabIndex = 13;
             this.btnSelectDate.Text = "Select Date";
             this.btnSelectDate.UseVisualStyleBackColor = true;
@@ -135,18 +161,73 @@
             // btnReturn
             // 
             this.btnReturn.Enabled = false;
-            this.btnReturn.Location = new System.Drawing.Point(776, 538);
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReturn.ForeColor = System.Drawing.Color.Purple;
+            this.btnReturn.Location = new System.Drawing.Point(549, 678);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(227, 28);
+            this.btnReturn.Size = new System.Drawing.Size(303, 57);
             this.btnReturn.TabIndex = 15;
             this.btnReturn.Text = "Return to Menu ";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 189);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 20);
+            this.label3.TabIndex = 112;
+            this.label3.Text = "Select Starting Date:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 438);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 20);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "Select End Date:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Student_Attendance_System.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(345, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(507, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 114;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(341, 216);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.TabIndex = 115;
+            this.label2.Text = "Generated Report:";
             // 
             // Request_Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 578);
+            this.ClientSize = new System.Drawing.Size(865, 747);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnSelectDate);
             this.Controls.Add(this.calEnd);
@@ -155,13 +236,16 @@
             this.Controls.Add(this.gbxStudents);
             this.Controls.Add(this.btnSelectStudent);
             this.Controls.Add(this.dgvReport);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Request_Reports";
             this.Text = "Request_Reports";
             this.Load += new System.EventHandler(this.Request_Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.gbxStudents.ResumeLayout(false);
             this.gbxStudents.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,5 +261,9 @@
         private System.Windows.Forms.MonthCalendar calEnd;
         private System.Windows.Forms.Button btnSelectDate;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

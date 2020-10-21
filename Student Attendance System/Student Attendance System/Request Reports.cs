@@ -242,5 +242,15 @@ namespace Student_Attendance_System
 
             conn.Close();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

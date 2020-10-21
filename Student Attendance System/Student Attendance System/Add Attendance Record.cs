@@ -39,7 +39,8 @@ namespace Student_Attendance_System
             studentID = txtStudentID.Text;
             lecturerID = txtLecturerID.Text;
             moduleID = txtModuleID.Text;
-            
+            date = currentDate.ToString();
+            time = currentTime.ToString();
 
             if (studentID == "" || lecturerID == "" || moduleID == "" || date == "" || time == "")
             {
